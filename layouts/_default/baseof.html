@@ -10,6 +10,9 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ .Permalink }}">
     <title>{{ if .IsHome }}Conjuror: Keep your hands on the keyboard.{{ else }}{{ .Title }} | Conjuror{{ end }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;display=swap">
     {{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
   </head>

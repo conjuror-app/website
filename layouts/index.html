@@ -14,7 +14,7 @@
 <main id="top">
   <section class="hero section-dark" aria-labelledby="hero-title">
     <div class="hero-copy reveal">
-      <h1 id="hero-title">Keep your hands<br>on the keyboard.</h1>
+      <h1 id="hero-title">Keep your hands<br>on the <em>keyboard</em>.</h1>
       <p>Open apps, get an answer, grab an emoji, or run a Shortcut. Your mouse can sit this one out.</p>
       <div class="hero-actions">
         <a class="button" href="https://github.com/conjuror-app/conjuror/releases/latest">
@@ -38,32 +38,60 @@
     </div>
   </section>
 
-  <section class="launch-feature section-dark" id="features" aria-labelledby="launch-title">
-    <div class="section-heading reveal">
-      <h2 id="launch-title">Launch apps.<br>Hands on keys.</h2>
-      <p>Press <kbd>⌥ Space</kbd> from anywhere, type a few letters, then use <kbd>↑</kbd> and <kbd>↓</kbd> to choose. Press <kbd>Return</kbd> to open.</p>
+  <section class="modes-feature section-dark" id="features" aria-labelledby="modes-title">
+    <div class="modes-copy reveal">
+      <div class="screenshot-frame modes-image">
+        <img src="/images/screenshots/placeholder.svg" alt="Conjuror mode switcher screenshot placeholder" width="1600" height="1000">
+      </div>
+      <div class="modes-text">
+        <h2 id="modes-title">Three modes, one <kbd>tab</kbd> apart.</h2>
+        <p>Press <kbd>Tab</kbd> to cycle through Apps, Shortcuts, and Emoji. When you land on the one you want, just start typing.</p>
+      </div>
     </div>
-    <ol class="steps reveal" data-delay="1">
-      <li><span>01</span><strong>Open</strong><small>⌥ Space</small></li>
-      <li><span>02</span><strong>Choose</strong><small>Type, then ↑ or ↓</small></li>
-      <li><span>03</span><strong>Launch</strong><small>Return</small></li>
+    <ol class="mode-list reveal" data-delay="1">
+      <li>
+        <span>01</span>
+        <strong>Apps</strong>
+        <small>Open an app or type a calculation.</small>
+      </li>
+      <li>
+        <span>02</span>
+        <strong>Shortcuts</strong>
+        <small>Find a Shortcut and run it.</small>
+      </li>
+      <li>
+        <span>03</span>
+        <strong>Emoji</strong>
+        <small>Search, choose, and copy.</small>
+      </li>
     </ol>
-    <div class="screenshot-frame screenshot-frame--launch reveal" data-delay="2">
+  </section>
+
+  <section class="launch-feature section-dark" aria-labelledby="launch-title">
+    <div class="section-heading reveal">
+      <h2 id="launch-title">Type it.<br><em>Launch</em> it.</h2>
+      <p>Press <kbd>⌥ + Space</kbd>, type the app you’re after. Hit <kbd>Return</kbd> and you’re off.</p>
+    </div>
+    <div class="screenshot-frame screenshot-frame--launch reveal" data-delay="1">
       <img src="/images/screenshots/placeholder.svg" alt="Conjuror application search screenshot placeholder" width="1600" height="1000">
     </div>
   </section>
 
   <section class="calculate-feature" aria-labelledby="calculate-title">
     <div class="calculate-copy reveal">
-      <h2 id="calculate-title">Calculate.<br>Copy the result.</h2>
-      <p>Type an expression in the same place you launch apps. Use <kbd>↑</kbd> and <kbd>↓</kbd> to select the answer, then press <kbd>Return</kbd> to copy it.</p>
+      <h2 id="calculate-title"><em>Calculate</em>.<br>Copy the result.</h2>
+      <p>Type what you want to work out. Hit <kbd>Return</kbd> to copy the answer.</p>
       <dl class="answer-examples">
-        <div><dt>Arithmetic</dt><dd><code>123 + 25% + 10%</code><span>→</span><code>169.125</code></dd></div>
+        <div><dt>Arithmetic</dt><dd><code>2 plus 3 times 4</code><span>→</span><code>14</code></dd></div>
+        <div><dt>Percentages</dt><dd><code>123 + 25% + 10%</code><span>→</span><code>169.125</code></dd></div>
+        <div><dt>Functions</dt><dd><code>sqrt 9 + abs(-5)</code><span>→</span><code>8</code></dd></div>
         <div><dt>Units</dt><dd><code>10 km to miles</code><span>→</span><code>6.21371 mi</code></dd></div>
+        <div><dt>Temperature</dt><dd><code>30 °C to °F</code><span>→</span><code>86 °F</code></dd></div>
+        <div><dt>Data</dt><dd><code>1 GiB to MiB</code><span>→</span><code>1024 MiB</code></dd></div>
         <div><dt>Number bases</dt><dd><code>255 to hex</code><span>→</span><code>0xFF</code></dd></div>
         <div><dt>Relative dates</dt><dd><code>5 days from now</code></dd></div>
         <div><dt>Timezones</dt><dd><code>9am GMT</code><span>→</span><code>PDT</code></dd></div>
-        <div><dt>Currencies <small>(optional)</small></dt><dd><code>100 USD to EUR</code></dd></div>
+        <div><dt>Currencies</dt><dd><code>100 USD to EUR</code></dd></div>
       </dl>
     </div>
     <div class="screenshot-frame screenshot-frame--calculate reveal" data-delay="1">
@@ -73,11 +101,8 @@
 
   <section class="emoji-feature section-dark" aria-labelledby="emoji-title">
     <div class="emoji-copy reveal">
-      <h2 id="emoji-title">Find emoji.<br>Without the mouse.</h2>
-      <p>Type <strong>:</strong> to enter emoji mode—or use its global shortcut. Search by name, move with all four arrow keys, and press <kbd>Return</kbd> to copy.</p>
-      <div class="emoji-flow" aria-label="Type colon, search, choose with arrow keys, then press Return">
-        <code>:</code><span>→</span><strong>Type</strong><span>→</span><strong>↑ ↓ ← →</strong><span>→</span><strong>Return</strong>
-      </div>
+      <h2 id="emoji-title">Pick an emoji.<br><em>Any</em> emoji.</h2>
+      <p>Press <kbd>⌥ + ⇧ + E</kbd>, search by name, and hit <kbd>Return</kbd> to copy.</p>
     </div>
     <div class="emoji-stage reveal" data-delay="1">
       <span class="floating-emoji emoji-one" aria-hidden="true">✨</span>
@@ -91,8 +116,8 @@
 
   <section class="shortcuts-feature section-dark" aria-labelledby="shortcuts-title">
     <div class="shortcuts-copy reveal">
-      <h2 id="shortcuts-title">Run Shortcuts.<br>Stay on the <em>keyboard.</em></h2>
-      <p>Type <strong>&gt;</strong> to enter Shortcuts mode—or use its global shortcut. Search by name, choose with <kbd>↑</kbd> and <kbd>↓</kbd>, and press <kbd>Return</kbd> to run.</p>
+      <h2 id="shortcuts-title">Shortcuts.<br>Up your <em>sleeve</em>.</h2>
+      <p>Press <kbd>⌥ + ⇧ + Space</kbd> to open Shortcuts mode. Search by name and press <kbd>Return</kbd> to run.</p>
     </div>
     <div class="screenshot-frame screenshot-frame--shortcuts reveal" data-delay="1">
       <img src="/images/screenshots/placeholder.svg" alt="Conjuror Apple Shortcuts screenshot placeholder" width="1600" height="1000">
@@ -100,6 +125,7 @@
   </section>
 
   <section class="closing section-dark" aria-labelledby="closing-title">
+    <span class="closing-star" aria-hidden="true">✦</span>
     <div class="closing-inner reveal">
       <h2 id="closing-title">Less pointing.<br><em>More doing.</em></h2>
       <a class="button" href="https://github.com/conjuror-app/conjuror/releases/latest">
