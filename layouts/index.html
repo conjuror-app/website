@@ -1,0 +1,121 @@
+{{ define "main" }}
+<header class="site-header" data-header>
+  <a class="brand" href="#top" aria-label="Conjuror home">
+    {{ partial "app-icon.html" (dict "class" "app-icon--small") }}
+    <span>Conjuror</span>
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="#features">Features</a>
+    <a href="/docs/">Docs</a>
+    <a class="button button--small" href="https://github.com/conjuror-app/conjuror/releases/latest">Download</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero section-dark" aria-labelledby="hero-title">
+    <div class="hero-copy reveal">
+      <h1 id="hero-title">Your Mac,<br>at your fingertips.</h1>
+      <p>Launch apps, work things out, find the right emoji, and run Shortcuts without leaving the keyboard.</p>
+      <div class="hero-actions">
+        <a class="button" href="https://github.com/conjuror-app/conjuror/releases/latest">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg>
+          Download for macOS
+        </a>
+        <span>Requires macOS 14+</span>
+      </div>
+    </div>
+
+    <div class="hero-product reveal" data-delay="1">
+      <div class="magic-trail" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="screenshot-frame screenshot-frame--hero">
+        <img src="/images/screenshots/placeholder.svg" alt="Conjuror launcher screenshot placeholder" width="1600" height="1000">
+      </div>
+      <div class="hotkey" aria-label="Option Space">
+        <kbd>⌥</kbd><kbd>Space</kbd>
+      </div>
+    </div>
+  </section>
+
+  <section class="launch-feature section-dark" id="features" aria-labelledby="launch-title">
+    <div class="section-heading reveal">
+      <h2 id="launch-title">Launch apps.<br>Hands on keys.</h2>
+      <p>Press <kbd>⌥ Space</kbd> from anywhere, type a few letters, then use <kbd>↑</kbd> and <kbd>↓</kbd> to choose. Press <kbd>Return</kbd> to open.</p>
+    </div>
+    <ol class="steps reveal" data-delay="1">
+      <li><span>01</span><strong>Open</strong><small>⌥ Space</small></li>
+      <li><span>02</span><strong>Choose</strong><small>Type, then ↑ or ↓</small></li>
+      <li><span>03</span><strong>Launch</strong><small>Return</small></li>
+    </ol>
+    <div class="screenshot-frame screenshot-frame--launch reveal" data-delay="2">
+      <img src="/images/screenshots/placeholder.svg" alt="Conjuror application search screenshot placeholder" width="1600" height="1000">
+    </div>
+  </section>
+
+  <section class="calculate-feature" aria-labelledby="calculate-title">
+    <div class="calculate-copy reveal">
+      <h2 id="calculate-title">Calculate.<br>Keep your flow.</h2>
+      <p>Type an expression where you launch apps. Use <kbd>↑</kbd> and <kbd>↓</kbd> to select an answer, then press <kbd>Return</kbd> to copy it.</p>
+      <dl class="answer-examples">
+        <div><dt>Arithmetic</dt><dd><code>123 + 25% + 10%</code><span>→</span><code>169.125</code></dd></div>
+        <div><dt>Units</dt><dd><code>10 km to miles</code><span>→</span><code>6.21371 mi</code></dd></div>
+        <div><dt>Number bases</dt><dd><code>255 to hex</code><span>→</span><code>0xFF</code></dd></div>
+        <div><dt>Relative dates</dt><dd><code>5 days from now</code></dd></div>
+        <div><dt>Timezones</dt><dd><code>9am GMT</code><span>→</span><code>PDT</code></dd></div>
+        <div><dt>Currencies <small>(optional)</small></dt><dd><code>100 USD to EUR</code></dd></div>
+      </dl>
+    </div>
+    <div class="screenshot-frame screenshot-frame--calculate reveal" data-delay="1">
+      <img src="/images/screenshots/placeholder.svg" alt="Conjuror calculator screenshot placeholder" width="1600" height="1000">
+    </div>
+  </section>
+
+  <section class="emoji-feature section-dark" aria-labelledby="emoji-title">
+    <div class="emoji-copy reveal">
+      <h2 id="emoji-title">Find emoji.<br>Without the mouse.</h2>
+      <p>Type <strong>:</strong> to enter emoji mode, search by name, and use the arrow keys to choose. Press <kbd>Return</kbd> to copy.</p>
+      <div class="emoji-flow" aria-label="Type colon, search, choose with arrow keys, then press Return">
+        <code>:</code><span>→</span><strong>Type</strong><span>→</span><strong>↑ ↓</strong><span>→</span><strong>Return</strong>
+      </div>
+    </div>
+    <div class="emoji-stage reveal" data-delay="1">
+      <span class="floating-emoji emoji-one" aria-hidden="true">✨</span>
+      <span class="floating-emoji emoji-two" aria-hidden="true">🥳</span>
+      <span class="floating-emoji emoji-three" aria-hidden="true">🎉</span>
+      <div class="screenshot-frame screenshot-frame--emoji">
+        <img src="/images/screenshots/placeholder.svg" alt="Conjuror emoji picker screenshot placeholder" width="1600" height="1000">
+      </div>
+    </div>
+  </section>
+
+  <section class="shortcuts-feature section-dark" aria-labelledby="shortcuts-title">
+    <div class="shortcuts-copy reveal">
+      <h2 id="shortcuts-title">Run Shortcuts.<br>Stay on the <em>keyboard.</em></h2>
+      <p>Type <strong>&gt;</strong> to enter Shortcuts mode, search by name, and use <kbd>↑</kbd> and <kbd>↓</kbd> to choose. Press <kbd>Return</kbd> to run.</p>
+    </div>
+    <div class="screenshot-frame screenshot-frame--shortcuts reveal" data-delay="1">
+      <img src="/images/screenshots/placeholder.svg" alt="Conjuror Apple Shortcuts screenshot placeholder" width="1600" height="1000">
+    </div>
+  </section>
+
+  <section class="closing section-dark" aria-labelledby="closing-title">
+    <div class="closing-inner reveal">
+      <h2 id="closing-title">Less pointing.<br><em>More doing.</em></h2>
+      <a class="button" href="https://github.com/conjuror-app/conjuror/releases/latest">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg>
+        Download for macOS
+      </a>
+      <span>Requires macOS 14+</span>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <a class="brand" href="#top">
+    {{ partial "app-icon.html" (dict "class" "app-icon--small") }}
+    <span>Conjuror</span>
+  </a>
+  <div><a href="/docs/">Docs</a><a href="https://github.com/conjuror-app/conjuror">GitHub</a><a href="/privacy/">Privacy</a><span>© 2026 Tom Bell</span></div>
+</footer>
+{{ end }}

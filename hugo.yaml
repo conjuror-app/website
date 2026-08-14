@@ -1,0 +1,8 @@
+baseURL: https://conjuror.app/
+locale: en_GB
+title: Conjuror
+disableKinds:
+  - taxonomy
+  - term
+params:
+  description: A keyboard-first macOS launcher for apps, emoji, Apple Shortcuts, calculations, conversions, dates, and timezones.

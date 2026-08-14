@@ -1,0 +1,44 @@
+{{ define "main" }}
+<header class="site-header docs-header" data-header>
+  <a class="brand" href="/" aria-label="Conjuror home">
+    {{ partial "app-icon.html" (dict "class" "app-icon--small") }}
+    <span>Conjuror</span>
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="/#features">Features</a>
+    <a class="nav-active" href="/docs/" aria-current="page">Docs</a>
+    <a class="button button--small" href="https://github.com/conjuror-app/conjuror/releases/latest">Download</a>
+  </nav>
+</header>
+
+<main class="docs-shell">
+  <aside class="docs-sidebar" aria-label="Documentation sections">
+    <nav>
+      <a class="active" href="#getting-started">Getting started</a>
+      <a href="#launcher-basics">Launcher basics</a>
+      <a href="#applications">Applications</a>
+      <a href="#calculations">Calculations</a>
+      <a href="#emoji">Emoji</a>
+      <a href="#apple-shortcuts">Apple Shortcuts</a>
+      <a href="#settings">Settings</a>
+      <a href="#permissions">Permissions</a>
+    </nav>
+  </aside>
+
+  <article class="docs-copy">
+    <header class="docs-intro">
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Params.description }}</p>
+    </header>
+    {{ .Content }}
+  </article>
+</main>
+
+<footer class="site-footer docs-footer">
+  <a class="brand" href="/">
+    {{ partial "app-icon.html" (dict "class" "app-icon--small") }}
+    <span>Conjuror</span>
+  </a>
+  <div><a href="https://github.com/conjuror-app/conjuror">GitHub</a><a href="/privacy/">Privacy</a><span>© 2026 Tom Bell</span></div>
+</footer>
+{{ end }}

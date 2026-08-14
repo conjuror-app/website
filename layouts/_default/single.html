@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <main class="legal-shell">
+    <a class="brand legal-brand" href="/" aria-label="Conjuror home">
+      {{ partial "app-icon.html" (dict "class" "app-icon--small") }}
+      <span>Conjuror</span>
+    </a>
+    <article class="legal-copy">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </article>
+  </main>
+{{ end }}

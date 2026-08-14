@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#070a18">
+    <meta name="description" content="{{ site.Params.description }}">
+    <meta property="og:title" content="{{ if .IsHome }}Conjuror: Your Mac, at your fingertips.{{ else }}{{ .Title }} | Conjuror{{ end }}">
+    <meta property="og:description" content="{{ site.Params.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <title>{{ if .IsHome }}Conjuror: Your Mac, at your fingertips.{{ else }}{{ .Title }} | Conjuror{{ end }}</title>
+    {{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+  </head>
+  <body>
+    {{ block "main" . }}{{ end }}
+    {{ $script := resources.Get "js/main.js" | minify | fingerprint }}
+    <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+  </body>
+</html>
