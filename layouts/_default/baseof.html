@@ -28,7 +28,14 @@
   </head>
   <body>
     {{ block "main" . }}{{ end }}
-    {{ $script := resources.Get "js/main.js" | minify | fingerprint }}
+    {{ $script := slice
+      (resources.Get "js/reveal.js")
+      (resources.Get "js/header.js")
+      (resources.Get "js/docs-navigation.js")
+      | resources.Concat "js/main.js"
+      | minify
+      | fingerprint
+    }}
     <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
   </body>
 </html>
