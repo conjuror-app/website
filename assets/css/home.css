@@ -186,6 +186,7 @@ h1 { max-width: 10ch; font-size: clamp(4rem, 6.8vw, 7rem); }
 .calculate-trail i:nth-child(2) { top: -2.6rem; left: 42%; color: #50a0f6; font-size: 2.2rem; text-shadow: 0 0 1rem #50a0f6; transform: rotate(8deg); }
 .calculate-trail i:nth-child(3) { top: -1.25rem; right: 8%; font-size: 2.3rem; text-shadow: 0 0 1rem var(--violet); transform: rotate(15deg); }
 .calculate-trail i:nth-child(4) { top: 1rem; right: 0; color: var(--cyan); font-size: 1.2rem; text-shadow: 0 0 1rem var(--cyan); }
+.calculate-trail i:nth-child(5) { top: -.7rem; right: 29%; color: var(--yellow); font-size: 2.4rem; text-shadow: 0 0 1rem var(--yellow), 0 0 1.8rem rgba(243,200,75,.72); transform: rotate(-8deg); }
 .answer-examples { display: grid; gap: 0; width: min(100%, 40rem); margin: 0; }
 .answer-examples > div {
   display: grid;
