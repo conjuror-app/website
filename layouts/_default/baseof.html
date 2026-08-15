@@ -1,15 +1,20 @@
 <!doctype html>
 <html lang="{{ site.Language.Locale }}">
   <head>
+    {{ $description := .Description | default site.Params.description }}
+    {{ $title := printf "%s | %s" .Title site.Title }}
+    {{ if .IsHome }}{{ $title = site.Params.homeTitle }}{{ end }}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#070a18">
-    <meta name="description" content="{{ site.Params.description }}">
-    <meta property="og:title" content="{{ if .IsHome }}Conjuror: Keep your hands on the keyboard.{{ else }}{{ .Title }} | Conjuror{{ end }}">
-    <meta property="og:description" content="{{ site.Params.description }}">
+    <meta name="description" content="{{ $description }}">
+    <meta property="og:title" content="{{ $title }}">
+    <meta property="og:description" content="{{ $description }}">
+    <meta property="og:site_name" content="{{ site.Title }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ .Permalink }}">
-    <title>{{ if .IsHome }}Conjuror: Keep your hands on the keyboard.{{ else }}{{ .Title }} | Conjuror{{ end }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    <title>{{ $title }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;display=swap">
@@ -25,6 +30,7 @@
       | fingerprint
     }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+    {{ block "head" . }}{{ end }}
   </head>
   <body>
     {{ block "main" . }}{{ end }}
@@ -37,5 +43,6 @@
       | fingerprint
     }}
     <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+    {{ block "scripts" . }}{{ end }}
   </body>
 </html>
