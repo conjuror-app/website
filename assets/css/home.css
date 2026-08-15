@@ -145,7 +145,7 @@ h1 { max-width: 10ch; font-size: clamp(4rem, 6.8vw, 7rem); }
 .modes-feature .modes-copy p kbd { border-color: rgba(11,16,34,.24); color: var(--ink); background: rgba(255,255,255,.3); }
 .files-feature {
   display: grid;
-  grid-template-columns: minmax(24rem, .8fr) minmax(36rem, 1.2fr);
+  grid-template-columns: minmax(36rem, 1.2fr) minmax(24rem, .8fr);
   align-items: center;
   gap: clamp(3rem, 7vw, 7rem);
   min-height: 50rem;
@@ -153,8 +153,9 @@ h1 { max-width: 10ch; font-size: clamp(4rem, 6.8vw, 7rem); }
   border-top: 1px solid rgba(255,255,255,.06);
 }
 
+.files-copy { grid-column: 2; grid-row: 1; }
 .files-copy h2 em { color: #50a0f6; font-style: italic; font-weight: 400; }
-.files-stage { position: relative; }
+.files-stage { position: relative; grid-column: 1; grid-row: 1; }
 .screenshot-frame--files { width: 100%; }
 .file-flourish { position: absolute; z-index: 3; top: -2.6rem; right: 1.2rem; width: 4.8rem; height: 6.2rem; border: 2px solid var(--cyan); border-radius: .45rem; background: #f3f1e9; box-shadow: 0 1.2rem 2.5rem rgba(0,0,0,.38), 0 0 1.2rem rgba(87,205,238,.18); transform: rotate(8deg); }
 .file-flourish::before { content: ""; position: absolute; top: -2px; right: -2px; width: 1.5rem; height: 1.5rem; border-bottom: 2px solid var(--cyan); border-left: 2px solid var(--cyan); background: var(--night-soft); clip-path: polygon(0 0, 100% 100%, 0 100%); }

@@ -28,6 +28,7 @@
   .launch-stage { margin-top: 5rem; }
   .launch-stage .screenshot-frame--launch { margin-top: 0; }
   .files-feature { min-height: auto; padding-top: 6rem; padding-bottom: 6rem; }
+  .files-copy, .files-stage { grid-column: 1; grid-row: auto; }
   .calculate-feature { min-height: auto; padding-top: 6rem; padding-bottom: 6rem; }
   .emoji-feature { min-height: 60rem; padding-top: 6rem; align-content: start; }
   .emoji-copy, .emoji-stage { grid-column: 1; }
