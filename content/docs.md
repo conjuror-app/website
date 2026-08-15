@@ -9,57 +9,54 @@ url: /docs/
 
 1. **Download Conjuror.** Get the latest release from the [Conjuror download page](https://github.com/conjuror-app/conjuror/releases/latest).
 2. **Move it to Applications.** Put Conjuror in your Applications folder so it is easy to find and update.
-3. **Press `⌥ Space`.** Show the launcher from anywhere on your Mac and start typing.
+3. **Press `⌥ + Space`.** Show the launcher from anywhere on your Mac and start typing.
 
 ### The essentials
 
 | Keys | Action |
 | --- | --- |
-| `⌥ Space` | Show or hide Conjuror |
+| `⌥ + Space` | Show or hide Conjuror |
 | `↑` `↓` | Move through results |
 | `←` `→` | Move through the emoji grid |
+| `Tab` | Cycle through Applications, Apple Shortcuts, and Emoji modes |
 | `Return` | Open, copy, or run the selection |
-| `Escape` | Clear the query, leave a mode, or close Conjuror |
+| `Escape` | Clear the query, or close Conjuror when the query is empty |
 
 ### Three modes, one launcher
 
 | Mode | How to enter it | What Return does |
 | --- | --- | --- |
-| Applications | Type normally | Opens the selected app or copies a calculation |
+| Applications | Type normally, or start with `;` from another mode | Opens the selected app or copies a calculation |
 | Emoji | Start with `:` | Copies the selected emoji |
 | Apple Shortcuts | Start with `>` | Runs the selected Shortcut |
 
+Press `Tab` to cycle between all three modes. You can also type a mode prefix at any time: `;` for Applications, `>` for Apple Shortcuts, or `:` for Emoji. The prefix is removed from the search query.
+
 ## Launcher basics
 
-Conjuror runs as a single Dockless window. Press the global keyboard shortcut to show or hide it, type a query, use the arrow keys to select a result, and press Return to act.
+Press `⌥ + Space` to show Conjuror, then start typing. Use the arrow keys to select a result and press Return to open, copy, or run it. Conjuror hides after completing the action.
 
-The default shortcut is `⌥ Space`. You can record a different shortcut in Settings. Conjuror also supports the usual text-editing shortcuts for copy, paste, cut, select all, undo, and redo while the search field is active.
+To change the main shortcut, open Settings and record a new key combination. You can also enable shortcuts that open Apple Shortcuts or Emoji mode directly. Their defaults are `⌥ + ⇧ + Space` and `⌥ + ⇧ + E`.
 
-The menu bar item provides quick access to Settings and Quit.
+While the search field is active, you can use the standard shortcuts for copy, paste, cut, select all, undo, and redo.
+
+Use the menu bar item to open Settings or quit Conjuror.
 
 ## Applications
 
-Type part of an application name to find it. Conjuror ranks matching installed applications and gives recently launched apps more weight, so the results adapt to what you open.
+Start typing any part of an application’s name. Conjuror searches your installed apps, including user-facing menu bar apps, and uses recent launches to order similarly matched results.
 
-Conjuror scans these locations:
-
-- `/Applications`
-- `/System/Applications`
-- `/System/Applications/Utilities`
-- `~/Applications`
-- Application folders on mounted volumes
-
-Use `↑` and `↓` to change the selection, then press Return or click a result to open it.
+Use `↑` and `↓` to select an app, then press Return or click the result to open it. Background-only apps, embedded helpers, and Conjuror itself do not appear in the results.
 
 ## Calculations
 
-Calculations work directly in application mode. When Conjuror recognises a complete expression, its answer appears above matching applications. Select the answer and press Return to copy its compact value.
+Type a calculation while you’re in Applications mode. When Conjuror has an answer, it appears above the application results. Select it and press Return—or click it—to copy the answer and close the launcher.
 
-Plain numbers and incomplete expressions remain normal application searches.
+A plain decimal number on its own or an unfinished expression remains an application search.
 
 ### Arithmetic
 
-Conjuror supports parentheses, powers, percentages, `mod`, `pi`, `e`, `sqrt`, `abs`, implicit multiplication, and word operators such as `plus`, `minus`, `times`, `divided by`, and `over`.
+Enter arithmetic with symbols or words. Conjuror supports parentheses, powers, percentages, `mod`, `pi`, `e`, `sqrt`, `abs`, implicit multiplication, and operators such as `plus`, `minus`, `times`, `divided by`, and `over`.
 
 ```text
 2 plus 3 times 4
@@ -68,11 +65,11 @@ Conjuror supports parentheses, powers, percentages, `mod`, `pi`, `e`, `sqrt`, `a
 2pi
 ```
 
-Chained percentage changes compound against each intermediate result. For example, `123 + 25% + 10%` produces `169.125`. Use parentheses to apply percentages to the same source value: `123 + (25% + 10%)` produces `166.05`.
+Percentage changes apply in sequence, so `123 + 25% + 10%` produces `169.125`. To apply both percentages to the original value, group them with parentheses: `123 + (25% + 10%)` produces `166.05`.
 
 ### Number bases
 
-Convert integers between decimal, hexadecimal, octal, and binary. Use full names or `dec`, `hex`, `oct`, and `bin`.
+Use `to`, `in`, `->`, or `→` to convert an integer between decimal, hexadecimal, octal, and binary. You can use the full base names or shorten them to `dec`, `hex`, `oct`, and `bin`.
 
 ```text
 255 to hex
@@ -81,11 +78,11 @@ Convert integers between decimal, hexadecimal, octal, and binary. Use full names
 -42 to hex
 ```
 
-Results use the standard `0x`, `0o`, and `0b` prefixes. Negative signs appear before the prefix.
+Hexadecimal, octal, and binary answers use the standard `0x`, `0o`, and `0b` prefixes. For negative values, the minus sign appears before the prefix.
 
 ### Units
 
-Quantity calculations support length, mass, duration, temperature, volume, and decimal or binary data units. Use `to`, `in`, `->`, or `→` to choose a target.
+Use `to`, `in`, `->`, or `→` to convert a quantity to a specific unit. You can also add or subtract compatible units and enter composite quantities such as `5 ft 3 in`. Conjuror supports length, mass, duration, temperature, volume, and decimal or binary data units.
 
 ```text
 10 km to miles
@@ -95,11 +92,11 @@ Quantity calculations support length, mass, duration, temperature, volume, and d
 100 lbs
 ```
 
-A quantity without a target converts to a useful counterpart automatically. US customary volume units use US definitions.
+If you omit the target unit, Conjuror chooses a common counterpart—for example, pounds to kilograms, centimetres to inches, or miles to kilometres. US customary volume units use US definitions.
 
 ### Relative dates
 
-Use `from now` or `ago` with minutes, hours, days, weeks, months, and years. Results include the local date and time.
+Enter a duration followed by `from now` or `ago` to calculate a relative date. You can use minutes, hours, days, weeks, months, or years. The answer includes the resulting local date and time.
 
 ```text
 5 days from now
@@ -107,11 +104,11 @@ Use `from now` or `ago` with minutes, hours, days, weeks, months, and years. Res
 2 weeks ago
 ```
 
-Minutes, hours, days, and weeks can be decimal values. Months and years must be whole numbers.
+You can use decimal values for minutes, hours, days, and weeks. Use whole numbers for months and years.
 
 ### Timezones
 
-Convert 12-hour or 24-hour times between timezone abbreviations recognised by macOS.
+Enter a 12-hour or 24-hour time and use `to`, `in`, `->`, or `→` to convert it between timezone abbreviations recognised by macOS.
 
 ```text
 10:00 BST in EST
@@ -119,11 +116,11 @@ Convert 12-hour or 24-hour times between timezone abbreviations recognised by ma
 1:00 pm in PDT
 ```
 
-If you omit the source timezone, Conjuror uses your Mac's current timezone and daylight-saving rules for the current date.
+If you omit the source timezone, Conjuror starts from your Mac’s current timezone and applies its daylight-saving rules for the current date.
 
 ### Currencies
 
-Currency conversion is optional and disabled by default. Enable it under **Settings → Calculator** to use ISO codes and common symbols.
+To convert currencies, first enable **Currency conversion** under **Settings → Calculator**. You can then enter ISO currency codes or common symbols and use `to`, `in`, `->`, or `→` to choose the target currency.
 
 ```text
 100 USD to EUR
@@ -132,37 +129,39 @@ $50 in GBP
 1 CAD
 ```
 
-A currency without a target converts to the currency from your regional settings. Conjuror downloads a complete rate snapshot from [Frankfurter](https://frankfurter.dev) at most once per day. Search text is never sent, the latest snapshot works offline, and disabling currency conversion removes cached rates.
+If you omit the target currency, Conjuror uses the currency from your regional settings. It downloads a complete rate snapshot from [Frankfurter](https://frankfurter.dev) at most once per day; your search text is never sent. The latest snapshot remains available offline, and disabling currency conversion removes the cached rates.
 
 ## Emoji
 
-Type `:` to open the emoji grid. Search the full Unicode catalog by name, including gender and skin-tone variants, then use all four arrow keys to navigate. Press Return or click an emoji to copy it and hide Conjuror.
+Type `:` to switch to Emoji mode, then search by emoji name or common keyword. For example, `lol` finds 😂 even though the word is not part of its Unicode name. Results include gender and skin-tone variants from the latest Unicode catalog.
 
-When the emoji query is empty, recently copied emoji appear first. Choose a preferred skin tone under **Settings → Emoji** to apply it automatically when an emoji supports it.
+Use all four arrow keys to move through the grid. Press Return—or click an emoji—to copy it and close the launcher.
+
+Leave the search empty to see recently copied emoji first. To apply the same skin tone to supported emoji automatically, choose one under **Settings → Emoji**. Searching for a specific skin tone shows that variant instead.
 
 ## Apple Shortcuts
 
-Type `>` to switch to Apple Shortcuts, search by name, and press Return or click a result to run it. Conjuror remembers recent runs to improve ordering.
+Type `>` to switch to Apple Shortcuts mode, then search by name or subtitle. Use `↑` and `↓` to select a Shortcut, then press Return—or click the result—to run it.
 
-Shortcuts that require input are currently excluded.
+Recently run Shortcuts appear first when the search is empty and can rank higher among similar matches. Shortcuts that require input do not appear in the results.
 
 ## Settings
 
-Open Settings from the menu bar item or press `⌘ ,` while Conjuror is active.
+Open Settings from the menu bar item, or press `⌘ + ,` while Conjuror is active.
 
-- **General:** Record the global keyboard shortcut and choose between 3 and 10 visible results before scrolling.
-- **Emoji:** Select the preferred skin tone applied to supported emoji.
-- **Calculator:** Enable or disable optional currency conversion.
-- **About:** View the installed version, GitHub repository, and licence.
+- **General:** Change the main shortcut, enable shortcuts that open Apple Shortcuts or Emoji mode directly, turn launch at login on or off, and choose how many results appear before scrolling.
+- **Emoji:** Choose the skin tone Conjuror applies to supported emoji by default.
+- **Calculator:** Turn optional currency conversion on or off.
+- **About:** Check the installed version or open the GitHub repository and licence.
 
-General settings can be reset to their defaults from the General tab.
+The visible-results setting accepts values from 3 to 10. Launch at login is off by default. If macOS requires approval after you enable it, use **Open Login Items Settings** to finish the setup.
+
+Use **Reset to Defaults** in General to restore the keyboard shortcuts, visible-results setting, and preferred emoji skin tone.
 
 ## Permissions
 
-macOS asks for Automation permission the first time Conjuror accesses Shortcuts Events. Grant this permission if you want to search and run Apple Shortcuts.
+To search and run Apple Shortcuts, allow Conjuror to control Shortcuts Events when macOS first asks. This Automation permission is only required for Apple Shortcuts mode.
 
-Currency conversion requires network access only when it downloads a daily exchange-rate snapshot. Application search, calculations, unit conversion, date and timezone handling, and emoji search stay on your Mac.
+Currency conversion uses the network to download an exchange-rate snapshot at most once per day. Your search text is never sent, and the latest rates remain available offline.
 
-## Requirements
-
-Conjuror requires macOS 26 or later.
+Application and emoji search, arithmetic, unit conversion, relative dates, and timezone conversion stay on your Mac and do not require network access.

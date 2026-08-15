@@ -30,7 +30,8 @@ if (docsSidebar) {
   const updateCurrentSection = () => {
     const marker = Math.min(window.innerHeight * 0.25, 160);
     const visibleSections = sections.filter(({ section }) => section.getBoundingClientRect().top <= marker);
-    const nextSection = visibleSections.at(-1) ?? sections[0];
+    const atPageEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 1;
+    const nextSection = atPageEnd ? sections.at(-1) : (visibleSections.at(-1) ?? sections[0]);
 
     if (nextSection && nextSection !== currentSection) {
       sections.forEach(({ link }) => {

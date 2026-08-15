@@ -359,7 +359,7 @@ h1 { max-width: 10ch; font-size: clamp(4rem, 6.8vw, 7rem); }
 .docs-copy ol:first-of-type li::before { content: counter(docs-steps); position: absolute; z-index: 1; left: 0; top: 0.5rem; display: grid; place-items: center; width: 2.4rem; aspect-ratio: 1; border-radius: 50%; color: white; background: var(--violet); box-shadow: 0 0.5rem 1rem rgba(60, 37, 165, 0.28); font-weight: 720; }
 .docs-copy strong { color: var(--ivory); }
 .docs-copy a { color: var(--yellow); text-decoration: underline; text-underline-offset: 0.22em; }
-.docs-copy code { padding: 0.12em 0.34em; border: 1px solid rgba(171, 183, 247, 0.2); border-radius: 0.35rem; color: #eeeaff; background: rgba(255, 255, 255, 0.055); font: 0.88em/1.5 ui-monospace, "SFMono-Regular", Menlo, monospace; }
+.docs-copy code { padding: 0.12em 0.34em; border: 1px solid rgba(171, 183, 247, 0.2); border-radius: 0.35rem; color: #eeeaff; background: rgba(255, 255, 255, 0.055); font: 0.88em/1.5 ui-monospace, "SFMono-Regular", Menlo, monospace; white-space: nowrap; }
 .docs-copy pre { margin: 1.25rem 0 1.8rem; overflow-x: auto; border: 1px solid var(--line); border-radius: 0.9rem; background: rgba(12, 17, 37, 0.82); }
 .docs-copy pre code { display: block; padding: 1rem 1.15rem; border: 0; background: none; line-height: 1.8; }
 .docs-copy table { width: 100%; margin: 1.25rem 0 2.25rem; overflow: hidden; border-collapse: separate; border-spacing: 0; border: 1px solid var(--line); border-radius: 0.9rem; background: rgba(10, 15, 33, 0.66); }
