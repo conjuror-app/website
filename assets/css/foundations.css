@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/instrument-serif-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/instrument-serif-italic.woff2") format("woff2");
+}
+
 :root {
   --night: #070a18;
   --night-soft: #0d1227;
@@ -32,4 +48,3 @@ kbd { font: inherit; }
     radial-gradient(circle at 75% 30%, rgba(71, 88, 182, 0.1), transparent 32rem),
     var(--night);
 }
-
