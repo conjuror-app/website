@@ -165,4 +165,4 @@ Currency conversion requires network access only when it downloads a daily excha
 
 ## Requirements
 
-Conjuror requires macOS 14 or later.
+Conjuror requires macOS 26 or later.
