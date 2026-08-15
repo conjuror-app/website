@@ -35,9 +35,9 @@ launch:
   screenshotAlt: Conjuror application search screenshot placeholder
 files:
   title:
-    firstLine: Find the file.
-    emphasis: Open
-    suffix: it.
+    firstLine: Pick a file.
+    emphasis: Any
+    suffix: file.
   descriptionHTML: Type <kbd>/</kbd>, search by name, and press <kbd>Return</kbd>. Files and folders indexed by Spotlight, without leaving the keyboard.
   screenshotAlt: Conjuror file and folder search screenshot placeholder
 calculate:
