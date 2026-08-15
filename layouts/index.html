@@ -1,11 +1,12 @@
 {{ define "main" }}
+{{ $home := hugo.Data.home }}
 {{ partial "site-header.html" (dict "homeHref" "#top" "featuresHref" "#features") }}
 
 <main id="top">
   <section class="hero section-dark" aria-labelledby="hero-title">
     <div class="hero-copy reveal">
-      <h1 id="hero-title">Keep your hands<br>on the <em>keyboard</em>.</h1>
-      <p>Open apps, get an answer, grab an emoji, or run a Shortcut. Your mouse can sit this one out.</p>
+      <h1 id="hero-title">{{ $home.hero.title.firstLine }}<br>{{ $home.hero.title.secondLine }} <em>{{ $home.hero.title.emphasis }}</em>.</h1>
+      <p>{{ $home.hero.description }}</p>
       <div class="hero-actions">
         {{ partial "download-button.html" (dict "icon" true) }}
         <span>Requires macOS {{ site.Params.minimumMacOS }}+</span>
@@ -16,105 +17,76 @@
       <div class="magic-trail" aria-hidden="true">
         <span></span><span></span><span></span>
       </div>
-      <div class="screenshot-frame screenshot-frame--hero">
-        <img src="/images/screenshots/placeholder.svg" alt="Conjuror launcher screenshot placeholder" width="1600" height="1000">
-      </div>
-      <div class="hotkey" aria-label="Option Space">
-        <kbd>⌥</kbd><kbd>Space</kbd>
+      {{ partial "screenshot.html" (dict "class" "screenshot-frame--hero" "alt" $home.hero.screenshotAlt) }}
+      <div class="hotkey" aria-label="{{ $home.hero.hotkey.label }}">
+        {{ range $home.hero.hotkey.keys }}<kbd>{{ . }}</kbd>{{ end }}
       </div>
     </div>
   </section>
 
   <section class="modes-feature section-dark" id="features" aria-labelledby="modes-title">
     <div class="modes-copy reveal">
-      <div class="screenshot-frame modes-image">
-        <img src="/images/screenshots/placeholder.svg" alt="Conjuror mode switcher screenshot placeholder" width="1600" height="1000">
-      </div>
+      {{ partial "screenshot.html" (dict "class" "modes-image" "alt" $home.modes.screenshotAlt) }}
       <div class="modes-text">
-        <h2 id="modes-title">Three modes, one <kbd>tab</kbd> apart.</h2>
-        <p>Press <kbd>Tab</kbd> to cycle through Apps, Shortcuts, and Emoji. When you land on the one you want, just start typing.</p>
+        <h2 id="modes-title">{{ $home.modes.title.prefix }} <kbd>{{ $home.modes.title.key }}</kbd> {{ $home.modes.title.suffix }}</h2>
+        <p>{{ $home.modes.descriptionHTML | safeHTML }}</p>
       </div>
     </div>
     <ol class="mode-list reveal" data-delay="1">
-      <li>
-        <span>01</span>
-        <strong>Apps</strong>
-        <small>Open an app or type a calculation.</small>
-      </li>
-      <li>
-        <span>02</span>
-        <strong>Shortcuts</strong>
-        <small>Find a Shortcut and run it.</small>
-      </li>
-      <li>
-        <span>03</span>
-        <strong>Emoji</strong>
-        <small>Search, choose, and copy.</small>
-      </li>
+      {{ range $index, $mode := $home.modes.items }}
+        <li>
+          <span>{{ printf "%02d" (add $index 1) }}</span>
+          <strong>{{ $mode.name }}</strong>
+          <small>{{ $mode.description }}</small>
+        </li>
+      {{ end }}
     </ol>
   </section>
 
   <section class="launch-feature section-dark" aria-labelledby="launch-title">
     <div class="section-heading reveal">
-      <h2 id="launch-title">Type it.<br><em>Launch</em> it.</h2>
-      <p>Press <kbd>⌥ + Space</kbd>, type the app you’re after. Hit <kbd>Return</kbd> and you’re off.</p>
+      <h2 id="launch-title">{{ $home.launch.title.firstLine }}<br><em>{{ $home.launch.title.emphasis }}</em> {{ $home.launch.title.suffix }}</h2>
+      <p>{{ $home.launch.descriptionHTML | safeHTML }}</p>
     </div>
-    <div class="screenshot-frame screenshot-frame--launch reveal" data-delay="1">
-      <img src="/images/screenshots/placeholder.svg" alt="Conjuror application search screenshot placeholder" width="1600" height="1000">
-    </div>
+    {{ partial "screenshot.html" (dict "class" "screenshot-frame--launch reveal" "alt" $home.launch.screenshotAlt "delay" "1") }}
   </section>
 
   <section class="calculate-feature" aria-labelledby="calculate-title">
     <div class="calculate-copy reveal">
-      <h2 id="calculate-title"><em>Calculate</em>.<br>Copy the result.</h2>
-      <p>Type what you want to work out. Hit <kbd>Return</kbd> to copy the answer.</p>
+      <h2 id="calculate-title"><em>{{ $home.calculate.title.emphasis }}</em>.<br>{{ $home.calculate.title.secondLine }}</h2>
+      <p>{{ $home.calculate.descriptionHTML | safeHTML }}</p>
       <dl class="answer-examples">
-        <div><dt>Arithmetic</dt><dd><code>2 plus 3 times 4</code><span>→</span><code>14</code></dd></div>
-        <div><dt>Percentages</dt><dd><code>123 + 25% + 10%</code><span>→</span><code>169.125</code></dd></div>
-        <div><dt>Functions</dt><dd><code>sqrt 9 + abs(-5)</code><span>→</span><code>8</code></dd></div>
-        <div><dt>Units</dt><dd><code>10 km to miles</code><span>→</span><code>6.21371 mi</code></dd></div>
-        <div><dt>Temperature</dt><dd><code>30 °C to °F</code><span>→</span><code>86 °F</code></dd></div>
-        <div><dt>Data</dt><dd><code>1 GiB to MiB</code><span>→</span><code>1024 MiB</code></dd></div>
-        <div><dt>Number bases</dt><dd><code>255 to hex</code><span>→</span><code>0xFF</code></dd></div>
-        <div><dt>Relative dates</dt><dd><code>5 days from now</code></dd></div>
-        <div><dt>Timezones</dt><dd><code>9am GMT</code><span>→</span><code>PDT</code></dd></div>
-        <div><dt>Currencies</dt><dd><code>100 USD to EUR</code></dd></div>
+        {{ range $home.calculate.examples }}
+          <div><dt>{{ .label }}</dt><dd><code>{{ .input }}</code>{{ with .output }}<span>→</span><code>{{ . }}</code>{{ end }}</dd></div>
+        {{ end }}
       </dl>
     </div>
-    <div class="screenshot-frame screenshot-frame--calculate reveal" data-delay="1">
-      <img src="/images/screenshots/placeholder.svg" alt="Conjuror calculator screenshot placeholder" width="1600" height="1000">
-    </div>
+    {{ partial "screenshot.html" (dict "class" "screenshot-frame--calculate reveal" "alt" $home.calculate.screenshotAlt "delay" "1") }}
   </section>
 
   <section class="emoji-feature section-dark" aria-labelledby="emoji-title">
     <div class="emoji-copy reveal">
-      <h2 id="emoji-title">Pick an emoji.<br><em>Any</em> emoji.</h2>
-      <p>Press <kbd>⌥ + ⇧ + E</kbd>, search by name, and hit <kbd>Return</kbd> to copy.</p>
+      <h2 id="emoji-title">{{ $home.emoji.title.firstLine }}<br><em>{{ $home.emoji.title.emphasis }}</em> {{ $home.emoji.title.suffix }}</h2>
+      <p>{{ $home.emoji.descriptionHTML | safeHTML }}</p>
     </div>
     <div class="emoji-stage reveal" data-delay="1">
-      <span class="floating-emoji emoji-one" aria-hidden="true">✨</span>
-      <span class="floating-emoji emoji-two" aria-hidden="true">🥳</span>
-      <span class="floating-emoji emoji-three" aria-hidden="true">🎉</span>
-      <div class="screenshot-frame screenshot-frame--emoji">
-        <img src="/images/screenshots/placeholder.svg" alt="Conjuror emoji picker screenshot placeholder" width="1600" height="1000">
-      </div>
+      {{ range $home.emoji.decorations }}<span class="floating-emoji {{ .class }}" aria-hidden="true">{{ .symbol }}</span>{{ end }}
+      {{ partial "screenshot.html" (dict "class" "screenshot-frame--emoji" "alt" $home.emoji.screenshotAlt) }}
     </div>
   </section>
 
   <section class="shortcuts-feature section-dark" aria-labelledby="shortcuts-title">
     <div class="shortcuts-copy reveal">
-      <h2 id="shortcuts-title">Shortcuts.<br>Up your <em>sleeve</em>.</h2>
-      <p>Press <kbd>⌥ + ⇧ + Space</kbd> to open Shortcuts mode. Search by name and press <kbd>Return</kbd> to run.</p>
+      <h2 id="shortcuts-title">{{ $home.shortcuts.title.firstLine }}<br>{{ $home.shortcuts.title.secondLine }} <em>{{ $home.shortcuts.title.emphasis }}</em>.</h2>
+      <p>{{ $home.shortcuts.descriptionHTML | safeHTML }}</p>
     </div>
-    <div class="screenshot-frame screenshot-frame--shortcuts reveal" data-delay="1">
-      <img src="/images/screenshots/placeholder.svg" alt="Conjuror Apple Shortcuts screenshot placeholder" width="1600" height="1000">
-    </div>
+    {{ partial "screenshot.html" (dict "class" "screenshot-frame--shortcuts reveal" "alt" $home.shortcuts.screenshotAlt "delay" "1") }}
   </section>
 
   <section class="closing section-dark" aria-labelledby="closing-title">
     <span class="closing-star" aria-hidden="true">✦</span>
     <div class="closing-inner reveal">
-      <h2 id="closing-title">Less pointing.<br><em>More doing.</em></h2>
+      <h2 id="closing-title">{{ $home.closing.title.firstLine }}<br><em>{{ $home.closing.title.emphasis }}</em></h2>
       {{ partial "download-button.html" (dict "icon" true) }}
       <span>Requires macOS {{ site.Params.minimumMacOS }}+</span>
     </div>
