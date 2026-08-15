@@ -4,14 +4,9 @@
 <main class="docs-shell">
   <aside class="docs-sidebar" aria-label="Documentation sections" data-docs-sidebar>
     <nav>
-      <a href="#getting-started">Getting started</a>
-      <a href="#launcher-basics">Launcher basics</a>
-      <a href="#applications">Applications</a>
-      <a href="#calculations">Calculations</a>
-      <a href="#emoji">Emoji</a>
-      <a href="#apple-shortcuts">Apple Shortcuts</a>
-      <a href="#settings">Settings</a>
-      <a href="#permissions">Permissions</a>
+      {{ range (index .Fragments.Headings 0).Headings }}
+        <a href="#{{ .ID }}">{{ .Title | plainify }}</a>
+      {{ end }}
     </nav>
   </aside>
 
