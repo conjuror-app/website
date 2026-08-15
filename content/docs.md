@@ -50,7 +50,7 @@ Use `↑` and `↓` to select an app, then press Return or click the result to o
 
 ## Calculations
 
-Type a calculation while you’re in Applications mode. When Conjuror has an answer, it appears above the application results. Select it and press Return—or click it—to copy the answer and close the launcher.
+Type a calculation while you’re in Applications mode. When Conjuror has an answer, it appears above the application results. Select it and press Return, or click it, to copy the answer and close the launcher.
 
 A plain decimal number on its own or an unfinished expression remains an application search.
 
@@ -92,7 +92,7 @@ Use `to`, `in`, `->`, or `→` to convert a quantity to a specific unit. You can
 100 lbs
 ```
 
-If you omit the target unit, Conjuror chooses a common counterpart—for example, pounds to kilograms, centimetres to inches, or miles to kilometres. US customary volume units use US definitions.
+If you omit the target unit, Conjuror chooses a common counterpart. For example, it converts pounds to kilograms, centimetres to inches, or miles to kilometres. US customary volume units use US definitions.
 
 ### Relative dates
 
@@ -135,13 +135,13 @@ If you omit the target currency, Conjuror uses the currency from your regional s
 
 Type `:` to switch to Emoji mode, then search by emoji name or common keyword. For example, `lol` finds 😂 even though the word is not part of its Unicode name. Results include gender and skin-tone variants from the latest Unicode catalog.
 
-Use all four arrow keys to move through the grid. Press Return—or click an emoji—to copy it and close the launcher.
+Use all four arrow keys to move through the grid. Press Return, or click an emoji, to copy it and close the launcher.
 
 Leave the search empty to see recently copied emoji first. To apply the same skin tone to supported emoji automatically, choose one under **Settings → Emoji**. Searching for a specific skin tone shows that variant instead.
 
 ## Apple Shortcuts
 
-Type `>` to switch to Apple Shortcuts mode, then search by name or subtitle. Use `↑` and `↓` to select a Shortcut, then press Return—or click the result—to run it.
+Type `>` to switch to Apple Shortcuts mode, then search by name or subtitle. Use `↑` and `↓` to select a Shortcut, then press Return, or click the result, to run it.
 
 Recently run Shortcuts appear first when the search is empty and can rank higher among similar matches. Shortcuts that require input do not appear in the results.
 
