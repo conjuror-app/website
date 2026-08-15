@@ -153,10 +153,11 @@ h1 { max-width: 10ch; font-size: clamp(4rem, 6.8vw, 7rem); }
 .files-copy h2 em { color: #50a0f6; font-style: italic; font-weight: 400; }
 .files-stage { position: relative; }
 .screenshot-frame--files { width: 100%; }
-.file-flourish { position: absolute; z-index: 3; top: -2.5rem; right: -1.5rem; width: 6.5rem; height: 8rem; border: 2px solid var(--violet); border-radius: .7rem; background: var(--night-soft); box-shadow: 0 1.2rem 2.5rem rgba(0,0,0,.35); transform: rotate(8deg); }
-.file-flourish::before { content: ""; position: absolute; inset: 1rem; border-top: 2px solid var(--cyan); border-bottom: 2px solid rgba(255,255,255,.26); }
-.file-flourish i { position: absolute; z-index: -1; inset: .7rem -.9rem -.7rem .9rem; border: 1px solid rgba(243,200,75,.7); border-radius: .7rem; transform: rotate(5deg); }
-.file-flourish i + i { inset: 1.4rem -1.5rem -1.4rem 1.6rem; border-color: rgba(87,205,238,.55); }
+.file-flourish { position: absolute; z-index: 3; top: -2.6rem; right: 1.2rem; width: 4.8rem; height: 6.2rem; border: 2px solid var(--cyan); border-radius: .45rem; background: #f3f1e9; box-shadow: 0 1.2rem 2.5rem rgba(0,0,0,.38), 0 0 1.2rem rgba(87,205,238,.18); transform: rotate(8deg); }
+.file-flourish::before { content: ""; position: absolute; top: -2px; right: -2px; width: 1.5rem; height: 1.5rem; border-bottom: 2px solid var(--cyan); border-left: 2px solid var(--cyan); background: var(--night-soft); clip-path: polygon(0 0, 100% 100%, 0 100%); }
+.file-flourish::after { content: "✦"; position: absolute; right: -1.35rem; bottom: -.95rem; color: var(--yellow); font-size: 1.5rem; filter: drop-shadow(0 0 .65rem rgba(243,200,75,.8)); transform: rotate(-8deg); }
+.file-flourish i { position: absolute; left: .8rem; right: .8rem; top: 2.7rem; height: 2px; background: var(--violet); }
+.file-flourish i + i { top: 3.65rem; right: 1.35rem; background: #50a0f6; }
 .calculate-feature {
   display: grid;
   grid-template-columns: minmax(22rem, .8fr) minmax(32rem, 1.2fr);
