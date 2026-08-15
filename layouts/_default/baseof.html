@@ -13,7 +13,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;display=swap">
-    {{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
+    {{ $styles := slice
+      (resources.Get "css/foundations.css")
+      (resources.Get "css/components.css")
+      (resources.Get "css/home.css")
+      (resources.Get "css/legal.css")
+      (resources.Get "css/docs.css")
+      (resources.Get "css/responsive.css")
+      | resources.Concat "css/main.css"
+      | minify
+      | fingerprint
+    }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
   </head>
   <body>

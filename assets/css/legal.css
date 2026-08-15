@@ -1,0 +1,7 @@
+.legal-shell { min-height: 100vh; padding: 2rem var(--gutter) 7rem; background: var(--night); }
+.legal-brand { margin-bottom: 6rem; }
+.legal-copy { width: min(100%,48rem); margin: 0 auto; }
+.legal-copy h1 { max-width: none; font-size: clamp(3.5rem,7vw,6rem); }
+.legal-copy p { color: #cfced1; font-size: 1.1rem; line-height: 1.75; }
+.legal-copy a { color: var(--yellow); text-decoration: underline; text-underline-offset: .2em; }
+
