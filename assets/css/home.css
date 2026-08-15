@@ -159,7 +159,7 @@ h1 { max-width: 10ch; font-size: clamp(4rem, 6.8vw, 7rem); }
 .screenshot-frame--files { width: 100%; }
 .file-fan { position: absolute; z-index: 3; top: -4.2rem; right: -.5rem; width: 12rem; height: 8rem; filter: drop-shadow(0 1.2rem 1.5rem rgba(0,0,0,.42)); }
 .file-fan i { position: absolute; left: 50%; bottom: 0; width: 3.8rem; height: 5.2rem; border: 2px solid currentColor; border-radius: .42rem; color: var(--violet); background: #f3f1e9; transform-origin: 50% 115%; }
-.file-fan i::before { content: ""; position: absolute; top: -2px; right: -2px; width: 1.15rem; height: 1.15rem; border-bottom: 2px solid currentColor; border-left: 2px solid currentColor; background: var(--night-soft); clip-path: polygon(0 0, 100% 100%, 0 100%); }
+.file-fan i::before { content: ""; position: absolute; top: -2px; right: -2px; width: 1.2rem; height: 1.2rem; border-bottom: 2px solid currentColor; border-left: 2px solid currentColor; background: #d9d6cc; box-shadow: -.12rem .14rem .25rem rgba(11,16,34,.16); clip-path: polygon(0 0, 100% 100%, 0 100%); }
 .file-fan i::after { content: attr(data-suit); position: absolute; left: .55rem; top: .45rem; font: 700 1.2rem/1 Georgia, serif; text-shadow: 0 0 .65rem currentColor; }
 .file-fan i:nth-child(1) { color: var(--violet); transform: translateX(-112%) rotate(-25deg); }
 .file-fan i:nth-child(2) { color: #df4e86; transform: translateX(-72%) rotate(-9deg); }
