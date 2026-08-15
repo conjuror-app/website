@@ -60,7 +60,7 @@
       <p>{{ $home.files.descriptionHTML | safeHTML }}</p>
     </div>
     <div class="files-stage reveal" data-delay="1">
-      <span class="file-fan" aria-hidden="true"><i data-suit="♠"></i><i data-suit="♥"></i><i data-suit="♦"></i><i data-suit="♣"></i></span>
+      <span class="file-fan" aria-hidden="true"><i data-suit="♠"></i><i data-suit="♥"></i><i data-suit="♣"></i><i data-suit="♦"></i><i data-suit="♠"></i><i data-suit="♥"></i><i data-suit="♣"></i></span>
       {{ partial "screenshot.html" (dict "class" "screenshot-frame--files" "src" $home.files.screenshot "alt" $home.files.screenshotAlt) }}
     </div>
   </section>

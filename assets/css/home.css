@@ -157,14 +157,16 @@ h1 { max-width: 10ch; font-size: clamp(4rem, 6.8vw, 7rem); }
 .files-copy h2 em { color: #50a0f6; font-style: italic; font-weight: 400; }
 .files-stage { position: relative; grid-column: 1; grid-row: 1; }
 .screenshot-frame--files { width: 100%; }
-.file-fan { position: absolute; z-index: 3; top: -4.2rem; right: -.5rem; width: 12rem; height: 8rem; filter: drop-shadow(0 1.2rem 1.5rem rgba(0,0,0,.42)); }
-.file-fan i { position: absolute; left: 50%; bottom: 0; width: 3.8rem; height: 5.2rem; border: 0; border-radius: .42rem; color: var(--violet); background: currentColor; clip-path: polygon(0 0, calc(100% - 1.15rem) 0, 100% 1.15rem, 100% 100%, 0 100%); transform-origin: 50% 115%; }
-.file-fan i::before { content: ""; position: absolute; inset: 2px; border-radius: .3rem; background: linear-gradient(225deg, #d9d6cc 0 .72rem, currentColor .76rem .84rem, #f3f1e9 .88rem); clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 1rem, 100% 100%, 0 100%); }
+.file-fan { position: absolute; z-index: 3; top: -4.2rem; right: -.25rem; width: 11rem; height: 7.5rem; filter: drop-shadow(0 1.2rem 1.5rem rgba(0,0,0,.42)); }
+.file-fan i { position: absolute; left: 50%; bottom: 0; width: 3.55rem; height: 5rem; border: 2px solid currentColor; border-radius: .42rem; color: var(--violet); background: #f3f1e9; transform-origin: 50% 120%; }
 .file-fan i::after { content: attr(data-suit); position: absolute; left: .55rem; top: .45rem; font: 700 1.2rem/1 Georgia, serif; text-shadow: 0 0 .65rem currentColor; }
-.file-fan i:nth-child(1) { color: var(--violet); transform: translateX(-112%) rotate(-25deg); }
-.file-fan i:nth-child(2) { color: #df4e86; transform: translateX(-72%) rotate(-9deg); }
-.file-fan i:nth-child(3) { color: var(--yellow); transform: translateX(-28%) rotate(9deg); }
-.file-fan i:nth-child(4) { color: var(--cyan); transform: translateX(14%) rotate(25deg); }
+.file-fan i:nth-child(1) { color: var(--violet); transform: translateX(-116%) rotate(-15deg); }
+.file-fan i:nth-child(2) { color: var(--cyan); transform: translateX(-94%) rotate(-10deg); }
+.file-fan i:nth-child(3) { color: var(--violet); transform: translateX(-72%) rotate(-5deg); }
+.file-fan i:nth-child(4) { color: var(--cyan); transform: translateX(-50%); }
+.file-fan i:nth-child(5) { color: var(--violet); transform: translateX(-28%) rotate(5deg); }
+.file-fan i:nth-child(6) { color: var(--cyan); transform: translateX(-6%) rotate(10deg); }
+.file-fan i:nth-child(7) { color: var(--violet); transform: translateX(16%) rotate(15deg); }
 .calculate-feature {
   display: grid;
   grid-template-columns: minmax(22rem, .8fr) minmax(32rem, 1.2fr);
