@@ -66,8 +66,7 @@
   .launch-stage .screenshot-frame--launch { margin-top: 0; }
   .launch-orbit { right: -8rem; bottom: -5rem; transform: scale(.72) rotate(-16deg); }
   .file-flourish { top: -1.7rem; right: .5rem; transform: scale(.72) rotate(8deg); transform-origin: right top; }
-  .calculate-symbol--plus { top: -2rem; right: 4%; font-size: 4rem; }
-  .calculate-symbol--equals { bottom: -2rem; left: -.5rem; font-size: 3.5rem; }
+  .calculate-trail { top: -2.75rem; right: -2rem; transform: scale(.7) rotate(9deg); transform-origin: right top; }
   .shortcut-trail { left: -.5rem; bottom: -3.5rem; transform: scale(.72) rotate(14deg); transform-origin: left top; }
   .calculate-copy h2 { font-size: clamp(3.7rem,17vw,5.4rem); }
   .calculate-copy p { font-size: 1.05rem; }
