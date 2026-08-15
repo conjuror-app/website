@@ -95,7 +95,7 @@ h1 { max-width: 10ch; font-size: clamp(4rem, 6.8vw, 7rem); }
 .modes-copy p { max-width: 31rem; margin: 1.5rem 0 0 auto; color: #c2c3ca; font-size: 1.15rem; line-height: 1.55; }
 .mode-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin: 4rem 0 0;
   padding: 0;
   border-top: 1px solid var(--line);
@@ -108,6 +108,7 @@ h1 { max-width: 10ch; font-size: clamp(4rem, 6.8vw, 7rem); }
 .mode-list span { color: var(--violet); font: 650 .75rem/1 ui-monospace, "SFMono-Regular", Menlo, monospace; letter-spacing: .08em; }
 .mode-list li:nth-child(2) span { color: var(--cyan); }
 .mode-list li:nth-child(3) span { color: var(--yellow); }
+.mode-list li:nth-child(4) span { color: #50a0f6; }
 .mode-list strong { font-size: 1.3rem; letter-spacing: -.025em; }
 .mode-list small { max-width: 16rem; color: var(--muted); font-size: .95rem; line-height: 1.45; }
 
@@ -123,10 +124,10 @@ h1 { max-width: 10ch; font-size: clamp(4rem, 6.8vw, 7rem); }
 }
 
 .section-heading { position: relative; z-index: 2; }
-.section-heading h2, .emoji-copy h2, .shortcuts-copy h2 { font-size: clamp(3.5rem, 6.5vw, 6.6rem); }
+.section-heading h2, .files-copy h2, .emoji-copy h2, .shortcuts-copy h2 { font-size: clamp(3.5rem, 6.5vw, 6.6rem); }
 .section-heading h2 em { color: var(--cyan); font-style: italic; font-weight: 400; }
-.section-heading p, .emoji-copy p, .shortcuts-copy p { max-width: 28rem; margin: 1.8rem 0 0; color: #c2c3ca; font-size: 1.15rem; line-height: 1.55; }
-.modes-copy p kbd, .section-heading kbd, .emoji-copy kbd, .shortcuts-copy kbd, .calculate-copy kbd {
+.section-heading p, .files-copy p, .emoji-copy p, .shortcuts-copy p { max-width: 28rem; margin: 1.8rem 0 0; color: #c2c3ca; font-size: 1.15rem; line-height: 1.55; }
+.modes-copy p kbd, .section-heading kbd, .files-copy kbd, .emoji-copy kbd, .shortcuts-copy kbd, .calculate-copy kbd {
   display: inline-block;
   padding: 0.12rem 0.38rem;
   border: 1px solid rgba(255,255,255,.2);
@@ -136,6 +137,18 @@ h1 { max-width: 10ch; font-size: clamp(4rem, 6.8vw, 7rem); }
   font: 650 .82em/1.25 ui-monospace, "SFMono-Regular", Menlo, monospace;
   white-space: nowrap;
 }
+.files-feature {
+  display: grid;
+  grid-template-columns: minmax(24rem, .8fr) minmax(36rem, 1.2fr);
+  align-items: center;
+  gap: clamp(3rem, 7vw, 7rem);
+  min-height: 50rem;
+  padding: 7rem var(--page-edge);
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.files-copy h2 em { color: #50a0f6; font-style: italic; font-weight: 400; }
+.screenshot-frame--files { width: 100%; }
 .calculate-feature {
   display: grid;
   grid-template-columns: minmax(22rem, .8fr) minmax(32rem, 1.2fr);
@@ -210,4 +223,3 @@ h1 { max-width: 10ch; font-size: clamp(4rem, 6.8vw, 7rem); }
 .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: 8rem; padding: 1.5rem var(--page-edge); border-top: 1px solid var(--line); background: var(--night); }
 .site-footer > div { display: flex; align-items: center; gap: 2rem; color: var(--muted); font-size: .88rem; }
 .site-footer a:hover { color: var(--yellow); }
-

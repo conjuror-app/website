@@ -3,7 +3,7 @@ hero:
     firstLine: Keep your hands
     secondLine: on the
     emphasis: keyboard
-  description: Open apps, get an answer, grab an emoji, or run a Shortcut. Your mouse can sit this one out.
+  description: Open apps and files, get an answer, grab an emoji, or run a Shortcut. Your mouse can sit this one out.
   screenshotAlt: Conjuror launcher screenshot placeholder
   hotkey:
     label: Option Space
@@ -12,10 +12,10 @@ hero:
       - Space
 modes:
   title:
-    prefix: Three modes, one
+    prefix: Four modes, one
     key: tab
     suffix: apart.
-  descriptionHTML: Press <kbd>Tab</kbd> to cycle through Apps, Shortcuts, and Emoji. When you land on the one you want, just start typing.
+  descriptionHTML: Press <kbd>Tab</kbd> to cycle through Apps, Shortcuts, Emoji, and Files. When you land on the one you want, just start typing.
   screenshotAlt: Conjuror mode switcher screenshot placeholder
   items:
     - name: Apps
@@ -24,6 +24,8 @@ modes:
       description: Find a Shortcut and run it.
     - name: Emoji
       description: Search, choose, and copy.
+    - name: Files
+      description: Find a file or folder and open it.
 launch:
   title:
     firstLine: Type it.
@@ -31,6 +33,13 @@ launch:
     suffix: it.
   descriptionHTML: Press <kbd>⌥ + Space</kbd>, type the app you’re after. Hit <kbd>Return</kbd> and you’re off.
   screenshotAlt: Conjuror application search screenshot placeholder
+files:
+  title:
+    firstLine: Find the file.
+    emphasis: Open
+    suffix: it.
+  descriptionHTML: Type <kbd>/</kbd>, search by name, and press <kbd>Return</kbd>. Files and folders indexed by Spotlight, without leaving the keyboard.
+  screenshotAlt: Conjuror file and folder search screenshot placeholder
 calculate:
   title:
     emphasis: Calculate

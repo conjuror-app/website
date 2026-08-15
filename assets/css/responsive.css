@@ -7,7 +7,7 @@
   .hotkey { right: 6rem; }
   .launch-feature { grid-template-columns: 21rem 1fr; }
   .screenshot-frame--launch { width: 125%; }
-  .emoji-feature, .shortcuts-feature { gap: 3rem; }
+  .files-feature, .emoji-feature, .shortcuts-feature { gap: 3rem; }
 }
 
 @media (max-width: 52rem) {
@@ -15,7 +15,7 @@
   .site-header nav > a:not(.button) { display: none; }
   .docs-header nav > a.nav-active { display: block; }
   .button--small { min-height: 2.55rem; padding: .55rem .9rem; }
-  .hero, .modes-copy, .launch-feature, .calculate-feature, .emoji-feature, .shortcuts-feature { grid-template-columns: 1fr; }
+  .hero, .modes-copy, .launch-feature, .files-feature, .calculate-feature, .emoji-feature, .shortcuts-feature { grid-template-columns: 1fr; }
   .hero { min-height: auto; padding-top: 8.5rem; padding-bottom: 5rem; }
   .hero-copy { padding-right: 0; }
   .hero-product { margin: 2.5rem -4rem 0 0; padding-bottom: 5rem; }
@@ -25,6 +25,7 @@
   .modes-image { width: min(72vw, 22rem); }
   .launch-feature { display: block; min-height: 68rem; padding-top: 6rem; }
   .screenshot-frame--launch { width: 115%; margin: 5rem 0 0 5%; transform: perspective(1000px) rotateY(-5deg) rotateZ(-2deg); }
+  .files-feature { min-height: auto; padding-top: 6rem; padding-bottom: 6rem; }
   .calculate-feature { min-height: auto; padding-top: 6rem; padding-bottom: 6rem; }
   .emoji-feature { min-height: 60rem; padding-top: 6rem; align-content: start; }
   .emoji-copy, .emoji-stage { grid-column: 1; }
@@ -56,7 +57,7 @@
   .mode-list { grid-template-columns: 1fr; margin-top: 3rem; }
   .mode-list li { padding: 1.4rem 0; }
   .mode-list li + li { padding-left: 0; border-top: 1px solid var(--line); border-left: 0; }
-  .section-heading h2, .emoji-copy h2, .shortcuts-copy h2 { font-size: clamp(3.35rem,15vw,5rem); }
+  .section-heading h2, .files-copy h2, .emoji-copy h2, .shortcuts-copy h2 { font-size: clamp(3.35rem,15vw,5rem); }
   .launch-feature { min-height: 58rem; padding-top: 5rem; }
   .screenshot-frame--launch { width: 140%; margin: 4rem 0 0 -2%; }
   .calculate-copy h2 { font-size: clamp(3.7rem,17vw,5.4rem); }

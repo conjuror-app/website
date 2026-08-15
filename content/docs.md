@@ -18,19 +18,20 @@ url: /docs/
 | `⌥ + Space` | Show or hide Conjuror |
 | `↑` `↓` | Move through results |
 | `←` `→` | Move through the emoji grid |
-| `Tab` | Cycle through Applications, Apple Shortcuts, and Emoji modes |
+| `Tab` | Cycle through Applications, Apple Shortcuts, Emoji, and Files modes |
 | `Return` | Open, copy, or run the selection |
 | `Escape` | Clear the query, or close Conjuror when the query is empty |
 
-### Three modes, one launcher
+### Four modes, one launcher
 
 | Mode | How to enter it | What Return does |
 | --- | --- | --- |
 | Applications | Type normally, or start with `;` from another mode | Opens the selected app or copies a calculation |
-| Emoji | Start with `:` | Copies the selected emoji |
 | Apple Shortcuts | Start with `>` | Runs the selected Shortcut |
+| Emoji | Start with `:` | Copies the selected emoji |
+| Files | Start with `/` | Opens the selected file or folder |
 
-Press `Tab` to cycle between all three modes. You can also type a mode prefix at any time: `;` for Applications, `>` for Apple Shortcuts, or `:` for Emoji. The prefix is removed from the search query.
+Press `Tab` to cycle through Applications, Apple Shortcuts, Emoji, and Files. You can also type a mode prefix at any time: `;` for Applications, `>` for Apple Shortcuts, `:` for Emoji, or `/` for Files. The prefix is removed from the search query.
 
 ## Launcher basics
 
@@ -47,6 +48,14 @@ Use the menu bar item to open Settings or quit Conjuror.
 Start typing any part of an application’s name. Conjuror searches your installed apps, including user-facing menu bar apps, and uses recent launches to order similarly matched results.
 
 Use `↑` and `↓` to select an app, then press Return or click the result to open it. Background-only apps, embedded helpers, and Conjuror itself do not appear in the results.
+
+## Files and folders
+
+Type `/` to switch to Files mode, then search by file or folder name. Conjuror searches items indexed by Spotlight that macOS allows it to access. Hidden items do not appear.
+
+Use `↑` and `↓` to select a result, then press Return or click it. Files open in their default app; folders open in Finder. Search stays on your Mac.
+
+Desktop, Documents, and Downloads are protected by macOS. Open **Settings → Files**, choose **Grant Access**, and approve the prompts for any of those folders you want included in results.
 
 ## Calculations
 
@@ -152,6 +161,7 @@ Open Settings from the menu bar item, or press `⌘ + ,` while Conjuror is activ
 - **General:** Change the main shortcut, enable shortcuts that open Apple Shortcuts or Emoji mode directly, turn launch at login on or off, and choose how many results appear before scrolling.
 - **Emoji:** Choose the skin tone Conjuror applies to supported emoji by default.
 - **Calculator:** Turn optional currency conversion on or off.
+- **Files:** Request access to protected Desktop, Documents, and Downloads folders.
 - **About:** Check the installed version or open the GitHub repository and licence.
 
 The visible-results setting accepts values from 3 to 10. Launch at login is off by default. If macOS requires approval after you enable it, use **Open Login Items Settings** to finish the setup.
@@ -162,6 +172,8 @@ Use **Reset to Defaults** in General to restore the keyboard shortcuts, visible-
 
 To search and run Apple Shortcuts, allow Conjuror to control Shortcuts Events when macOS first asks. This Automation permission is only required for Apple Shortcuts mode.
 
+File search uses the on-device Spotlight index. macOS may ask before Conjuror can access Desktop, Documents, or Downloads; you can trigger those prompts from **Settings → Files**.
+
 Currency conversion uses the network to download an exchange-rate snapshot at most once per day. Your search text is never sent, and the latest rates remain available offline.
 
-Application and emoji search, arithmetic, unit conversion, relative dates, and timezone conversion stay on your Mac and do not require network access.
+Application, file, folder, and emoji search, arithmetic, unit conversion, relative dates, and timezone conversion stay on your Mac and do not require network access.

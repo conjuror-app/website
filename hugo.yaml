@@ -5,7 +5,7 @@ disableKinds:
   - taxonomy
   - term
 params:
-  description: A keyboard-first macOS launcher for apps, emoji, Apple Shortcuts, calculations, conversions, dates, and timezones.
+  description: A keyboard-first macOS launcher for apps, files, folders, emoji, Apple Shortcuts, calculations, conversions, dates, and timezones.
   homeTitle: "Conjuror: Keep your hands on the keyboard."
   downloadURL: https://github.com/conjuror-app/conjuror/releases/latest
   minimumMacOS: "26"

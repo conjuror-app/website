@@ -51,6 +51,14 @@
     {{ partial "screenshot.html" (dict "class" "screenshot-frame--launch reveal" "alt" $home.launch.screenshotAlt "delay" "1") }}
   </section>
 
+  <section class="files-feature section-dark" aria-labelledby="files-title">
+    <div class="files-copy reveal">
+      <h2 id="files-title">{{ $home.files.title.firstLine }}<br><em>{{ $home.files.title.emphasis }}</em> {{ $home.files.title.suffix }}</h2>
+      <p>{{ $home.files.descriptionHTML | safeHTML }}</p>
+    </div>
+    {{ partial "screenshot.html" (dict "class" "screenshot-frame--files reveal" "alt" $home.files.screenshotAlt "delay" "1") }}
+  </section>
+
   <section class="calculate-feature" aria-labelledby="calculate-title">
     <div class="calculate-copy reveal">
       <h2 id="calculate-title"><em>{{ $home.calculate.title.emphasis }}</em>.<br>{{ $home.calculate.title.secondLine }}</h2>
