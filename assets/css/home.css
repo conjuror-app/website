@@ -157,7 +157,7 @@ h1 { max-width: 10ch; font-size: clamp(4rem, 6.8vw, 7rem); }
 .files-copy h2 em { color: #50a0f6; font-style: italic; font-weight: 400; }
 .files-stage { position: relative; grid-column: 1; grid-row: 1; }
 .screenshot-frame--files { width: 100%; }
-.file-fan { position: absolute; z-index: 1; top: -5.5rem; right: 1.1rem; width: 11rem; height: 7.5rem; filter: drop-shadow(0 .8rem 1rem rgba(0,0,0,.42)); }
+.file-fan { position: absolute; z-index: 3; top: -5.5rem; right: 1.1rem; width: 11rem; height: 7.5rem; filter: drop-shadow(0 .8rem 1rem rgba(0,0,0,.42)); }
 .file-fan i { position: absolute; left: 50%; bottom: 0; width: 4.3rem; height: 5.8rem; border: 2px solid currentColor; border-radius: .5rem; color: var(--violet); background: var(--night-soft); box-shadow: inset 0 1px rgba(255,255,255,.08), 0 0 .75rem currentColor; transform-origin: 50% 115%; }
 .file-fan i::before { content: attr(data-label); position: absolute; left: .55rem; top: .55rem; color: var(--ivory); font: 750 .72rem/1 ui-monospace, "SFMono-Regular", Menlo, monospace; letter-spacing: .08em; }
 .file-fan i::after { content: attr(data-suit); position: absolute; left: .55rem; top: 1.65rem; font: 700 1.45rem/1 Georgia, serif; text-shadow: 0 0 .65rem currentColor; }
