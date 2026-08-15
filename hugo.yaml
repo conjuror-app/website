@@ -6,3 +6,9 @@ disableKinds:
   - term
 params:
   description: A keyboard-first macOS launcher for apps, emoji, Apple Shortcuts, calculations, conversions, dates, and timezones.
+  downloadURL: https://github.com/conjuror-app/conjuror/releases/latest
+  minimumMacOS: "26"
+  repositoryURL: https://github.com/conjuror-app/conjuror
+  copyright:
+    year: 2026
+    owner: Tom Bell

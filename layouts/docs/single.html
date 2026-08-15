@@ -7,7 +7,7 @@
   <nav aria-label="Main navigation">
     <a href="/#features">Features</a>
     <a class="nav-active" href="/docs/" aria-current="page">Docs</a>
-    <a class="button button--small" href="https://github.com/conjuror-app/conjuror/releases/latest">Download</a>
+    <a class="button button--small" href="{{ site.Params.downloadURL }}">Download</a>
   </nav>
 </header>
 
@@ -39,6 +39,6 @@
     {{ partial "app-icon.html" (dict "class" "app-icon--small") }}
     <span>Conjuror</span>
   </a>
-  <div><a href="https://github.com/conjuror-app/conjuror">GitHub</a><a href="/privacy/">Privacy</a><span>© 2026 Tom Bell</span></div>
+  <div><a href="{{ site.Params.repositoryURL }}">GitHub</a><a href="/privacy/">Privacy</a><span>© {{ site.Params.copyright.year }} {{ site.Params.copyright.owner }}</span></div>
 </footer>
 {{ end }}
