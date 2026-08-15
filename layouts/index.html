@@ -17,7 +17,7 @@
       <div class="magic-trail" aria-hidden="true">
         <span></span><span></span><span></span>
       </div>
-      {{ partial "screenshot.html" (dict "class" "screenshot-frame--hero" "alt" $home.hero.screenshotAlt) }}
+      {{ partial "screenshot.html" (dict "class" "screenshot-frame--hero" "src" $home.hero.screenshot "alt" $home.hero.screenshotAlt) }}
       <div class="hotkey" aria-label="{{ $home.hero.hotkey.label }}">
         {{ range $home.hero.hotkey.keys }}<kbd>{{ . }}</kbd>{{ end }}
       </div>
@@ -26,7 +26,7 @@
 
   <section class="modes-feature section-dark" id="features" aria-labelledby="modes-title">
     <div class="modes-copy reveal">
-      {{ partial "screenshot.html" (dict "class" "modes-image" "alt" $home.modes.screenshotAlt) }}
+      {{ partial "screenshot.html" (dict "class" "modes-image" "src" $home.modes.screenshot "alt" $home.modes.screenshotAlt) }}
       <div class="modes-text">
         <h2 id="modes-title">{{ $home.modes.title.prefix }} <kbd>{{ $home.modes.title.key }}</kbd> {{ $home.modes.title.suffix }}</h2>
         <p>{{ $home.modes.descriptionHTML | safeHTML }}</p>
@@ -48,7 +48,7 @@
       <h2 id="launch-title">{{ $home.launch.title.firstLine }}<br><em>{{ $home.launch.title.emphasis }}</em> {{ $home.launch.title.suffix }}</h2>
       <p>{{ $home.launch.descriptionHTML | safeHTML }}</p>
     </div>
-    {{ partial "screenshot.html" (dict "class" "screenshot-frame--launch reveal" "alt" $home.launch.screenshotAlt "delay" "1") }}
+    {{ partial "screenshot.html" (dict "class" "screenshot-frame--launch reveal" "src" $home.launch.screenshot "alt" $home.launch.screenshotAlt "delay" "1") }}
   </section>
 
   <section class="files-feature section-dark" aria-labelledby="files-title">
@@ -56,7 +56,7 @@
       <h2 id="files-title">{{ $home.files.title.firstLine }}<br><em>{{ $home.files.title.emphasis }}</em> {{ $home.files.title.suffix }}</h2>
       <p>{{ $home.files.descriptionHTML | safeHTML }}</p>
     </div>
-    {{ partial "screenshot.html" (dict "class" "screenshot-frame--files reveal" "alt" $home.files.screenshotAlt "delay" "1") }}
+    {{ partial "screenshot.html" (dict "class" "screenshot-frame--files reveal" "src" $home.files.screenshot "alt" $home.files.screenshotAlt "delay" "1") }}
   </section>
 
   <section class="calculate-feature" aria-labelledby="calculate-title">
@@ -69,7 +69,7 @@
         {{ end }}
       </dl>
     </div>
-    {{ partial "screenshot.html" (dict "class" "screenshot-frame--calculate reveal" "alt" $home.calculate.screenshotAlt "delay" "1") }}
+    {{ partial "screenshot.html" (dict "class" "screenshot-frame--calculate reveal" "src" $home.calculate.screenshot "alt" $home.calculate.screenshotAlt "delay" "1") }}
   </section>
 
   <section class="emoji-feature section-dark" aria-labelledby="emoji-title">
@@ -79,7 +79,7 @@
     </div>
     <div class="emoji-stage reveal" data-delay="1">
       {{ range $home.emoji.decorations }}<span class="floating-emoji {{ .class }}" aria-hidden="true">{{ .symbol }}</span>{{ end }}
-      {{ partial "screenshot.html" (dict "class" "screenshot-frame--emoji" "alt" $home.emoji.screenshotAlt) }}
+      {{ partial "screenshot.html" (dict "class" "screenshot-frame--emoji" "src" $home.emoji.screenshot "alt" $home.emoji.screenshotAlt) }}
     </div>
   </section>
 
@@ -88,7 +88,7 @@
       <h2 id="shortcuts-title">{{ $home.shortcuts.title.firstLine }}<br>{{ $home.shortcuts.title.secondLine }} <em>{{ $home.shortcuts.title.emphasis }}</em>.</h2>
       <p>{{ $home.shortcuts.descriptionHTML | safeHTML }}</p>
     </div>
-    {{ partial "screenshot.html" (dict "class" "screenshot-frame--shortcuts reveal" "alt" $home.shortcuts.screenshotAlt "delay" "1") }}
+    {{ partial "screenshot.html" (dict "class" "screenshot-frame--shortcuts reveal" "src" $home.shortcuts.screenshot "alt" $home.shortcuts.screenshotAlt "delay" "1") }}
   </section>
 
   <section class="closing section-dark" aria-labelledby="closing-title">
