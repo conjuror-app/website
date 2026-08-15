@@ -58,7 +58,7 @@
   .modes-copy p { font-size: 1.05rem; }
   .mode-list { grid-template-columns: 1fr; margin-top: 3rem; }
   .mode-list li { padding: 1.4rem 0; }
-  .mode-list li + li { padding-left: 0; border-top: 1px solid var(--line); border-left: 0; }
+  .mode-list li + li { padding-left: 0; border-top: 1px solid rgba(11,16,34,.2); border-left: 0; }
   .section-heading h2, .files-copy h2, .emoji-copy h2, .shortcuts-copy h2 { font-size: clamp(3.35rem,15vw,5rem); }
   .launch-feature { min-height: 58rem; padding-top: 5rem; }
   .screenshot-frame--launch { width: 140%; margin: 4rem 0 0 -2%; }

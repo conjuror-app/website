@@ -24,7 +24,7 @@
     </div>
   </section>
 
-  <section class="modes-feature section-dark" id="features" aria-labelledby="modes-title">
+  <section class="modes-feature" id="features" aria-labelledby="modes-title">
     <div class="modes-copy reveal">
       {{ partial "screenshot.html" (dict "class" "modes-image" "src" $home.modes.screenshot "alt" $home.modes.screenshotAlt) }}
       <div class="modes-text">
@@ -65,7 +65,7 @@
     </div>
   </section>
 
-  <section class="calculate-feature" aria-labelledby="calculate-title">
+  <section class="calculate-feature section-dark" aria-labelledby="calculate-title">
     <div class="calculate-copy reveal">
       <h2 id="calculate-title"><em>{{ $home.calculate.title.emphasis }}</em>.<br>{{ $home.calculate.title.secondLine }}</h2>
       <p>{{ $home.calculate.descriptionHTML | safeHTML }}</p>
