@@ -157,16 +157,13 @@ h1 { max-width: 10ch; font-size: clamp(4rem, 6.8vw, 7rem); }
 .files-copy h2 em { color: #50a0f6; font-style: italic; font-weight: 400; }
 .files-stage { position: relative; grid-column: 1; grid-row: 1; }
 .screenshot-frame--files { width: 100%; }
-.file-fan { position: absolute; z-index: 3; top: -4.2rem; right: -.25rem; width: 11rem; height: 7.5rem; filter: drop-shadow(0 1.2rem 1.5rem rgba(0,0,0,.42)); }
-.file-fan i { position: absolute; left: 50%; bottom: 0; width: 3.55rem; height: 5rem; border: 2px solid currentColor; border-radius: .42rem; color: var(--violet); background: #f3f1e9; transform-origin: 50% 120%; }
-.file-fan i::after { content: attr(data-suit); position: absolute; left: .55rem; top: .45rem; font: 700 1.2rem/1 Georgia, serif; text-shadow: 0 0 .65rem currentColor; }
-.file-fan i:nth-child(1) { color: var(--violet); transform: translateX(-116%) rotate(-15deg); }
-.file-fan i:nth-child(2) { color: var(--cyan); transform: translateX(-94%) rotate(-10deg); }
-.file-fan i:nth-child(3) { color: var(--violet); transform: translateX(-72%) rotate(-5deg); }
-.file-fan i:nth-child(4) { color: var(--cyan); transform: translateX(-50%); }
-.file-fan i:nth-child(5) { color: var(--violet); transform: translateX(-28%) rotate(5deg); }
-.file-fan i:nth-child(6) { color: var(--cyan); transform: translateX(-6%) rotate(10deg); }
-.file-fan i:nth-child(7) { color: var(--violet); transform: translateX(16%) rotate(15deg); }
+.file-fan { position: absolute; z-index: 1; top: -5.5rem; right: 1.1rem; width: 11rem; height: 7.5rem; filter: drop-shadow(0 .8rem 1rem rgba(0,0,0,.42)); }
+.file-fan i { position: absolute; left: 50%; bottom: 0; width: 4.3rem; height: 5.8rem; border: 2px solid currentColor; border-radius: .5rem; color: var(--violet); background: #f3f1e9; transform-origin: 50% 115%; }
+.file-fan i::before { content: attr(data-label); position: absolute; left: .55rem; top: .55rem; color: var(--ink); font: 750 .72rem/1 ui-monospace, "SFMono-Regular", Menlo, monospace; letter-spacing: .08em; }
+.file-fan i::after { content: attr(data-suit); position: absolute; left: .55rem; top: 1.65rem; font: 700 1.45rem/1 Georgia, serif; text-shadow: 0 0 .65rem currentColor; }
+.file-fan i:nth-child(1) { color: var(--cyan); transform: translateX(-92%) rotate(-13deg); }
+.file-fan i:nth-child(2) { z-index: 1; color: var(--violet); transform: translateX(-50%); }
+.file-fan i:nth-child(3) { z-index: 2; color: var(--cyan); transform: translateX(-8%) rotate(13deg); }
 .calculate-feature {
   display: grid;
   grid-template-columns: minmax(22rem, .8fr) minmax(32rem, 1.2fr);
