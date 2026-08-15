@@ -1,0 +1,8 @@
+<header class="site-header{{ with .class }} {{ . }}{{ end }}" data-header>
+  {{ partial "brand.html" (dict "href" .homeHref "label" "Conjuror home") }}
+  <nav aria-label="Main navigation">
+    <a href="{{ .featuresHref }}">Features</a>
+    <a{{ if eq .active "docs" }} class="nav-active"{{ end }} href="/docs/"{{ if eq .active "docs" }} aria-current="page"{{ end }}>Docs</a>
+    {{ partial "download-button.html" (dict "small" true "label" "Download") }}
+  </nav>
+</header>

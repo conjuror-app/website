@@ -1,0 +1,4 @@
+<a class="brand{{ with .class }} {{ . }}{{ end }}" href="{{ .href }}"{{ with .label }} aria-label="{{ . }}"{{ end }}>
+  {{ partial "app-icon.html" (dict "class" "app-icon--small") }}
+  <span>{{ site.Title }}</span>
+</a>

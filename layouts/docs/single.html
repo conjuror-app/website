@@ -1,15 +1,5 @@
 {{ define "main" }}
-<header class="site-header docs-header" data-header>
-  <a class="brand" href="/" aria-label="Conjuror home">
-    {{ partial "app-icon.html" (dict "class" "app-icon--small") }}
-    <span>Conjuror</span>
-  </a>
-  <nav aria-label="Main navigation">
-    <a href="/#features">Features</a>
-    <a class="nav-active" href="/docs/" aria-current="page">Docs</a>
-    <a class="button button--small" href="{{ site.Params.downloadURL }}">Download</a>
-  </nav>
-</header>
+{{ partial "site-header.html" (dict "homeHref" "/" "featuresHref" "/#features" "active" "docs" "class" "docs-header") }}
 
 <main class="docs-shell">
   <aside class="docs-sidebar" aria-label="Documentation sections" data-docs-sidebar>
@@ -34,11 +24,5 @@
   </article>
 </main>
 
-<footer class="site-footer docs-footer">
-  <a class="brand" href="/">
-    {{ partial "app-icon.html" (dict "class" "app-icon--small") }}
-    <span>Conjuror</span>
-  </a>
-  <div><a href="{{ site.Params.repositoryURL }}">GitHub</a><a href="/privacy/">Privacy</a><span>© {{ site.Params.copyright.year }} {{ site.Params.copyright.owner }}</span></div>
-</footer>
+{{ partial "site-footer.html" (dict "homeHref" "/" "class" "docs-footer") }}
 {{ end }}

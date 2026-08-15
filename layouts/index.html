@@ -1,15 +1,5 @@
 {{ define "main" }}
-<header class="site-header" data-header>
-  <a class="brand" href="#top" aria-label="Conjuror home">
-    {{ partial "app-icon.html" (dict "class" "app-icon--small") }}
-    <span>Conjuror</span>
-  </a>
-  <nav aria-label="Main navigation">
-    <a href="#features">Features</a>
-    <a href="/docs/">Docs</a>
-    <a class="button button--small" href="{{ site.Params.downloadURL }}">Download</a>
-  </nav>
-</header>
+{{ partial "site-header.html" (dict "homeHref" "#top" "featuresHref" "#features") }}
 
 <main id="top">
   <section class="hero section-dark" aria-labelledby="hero-title">
@@ -17,10 +7,7 @@
       <h1 id="hero-title">Keep your hands<br>on the <em>keyboard</em>.</h1>
       <p>Open apps, get an answer, grab an emoji, or run a Shortcut. Your mouse can sit this one out.</p>
       <div class="hero-actions">
-        <a class="button" href="{{ site.Params.downloadURL }}">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg>
-          Download for macOS
-        </a>
+        {{ partial "download-button.html" (dict "icon" true) }}
         <span>Requires macOS {{ site.Params.minimumMacOS }}+</span>
       </div>
     </div>
@@ -128,20 +115,11 @@
     <span class="closing-star" aria-hidden="true">✦</span>
     <div class="closing-inner reveal">
       <h2 id="closing-title">Less pointing.<br><em>More doing.</em></h2>
-      <a class="button" href="{{ site.Params.downloadURL }}">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg>
-        Download for macOS
-      </a>
+      {{ partial "download-button.html" (dict "icon" true) }}
       <span>Requires macOS {{ site.Params.minimumMacOS }}+</span>
     </div>
   </section>
 </main>
 
-<footer class="site-footer">
-  <a class="brand" href="#top">
-    {{ partial "app-icon.html" (dict "class" "app-icon--small") }}
-    <span>Conjuror</span>
-  </a>
-  <div><a href="/docs/">Docs</a><a href="{{ site.Params.repositoryURL }}">GitHub</a><a href="/privacy/">Privacy</a><span>© {{ site.Params.copyright.year }} {{ site.Params.copyright.owner }}</span></div>
-</footer>
+{{ partial "site-footer.html" (dict "homeHref" "#top" "showDocs" true) }}
 {{ end }}

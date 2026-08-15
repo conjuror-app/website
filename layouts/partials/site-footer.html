@@ -1,0 +1,9 @@
+<footer class="site-footer{{ with .class }} {{ . }}{{ end }}">
+  {{ partial "brand.html" (dict "href" .homeHref) }}
+  <div>
+    {{ if .showDocs }}<a href="/docs/">Docs</a>{{ end }}
+    <a href="{{ site.Params.repositoryURL }}">GitHub</a>
+    <a href="/privacy/">Privacy</a>
+    <span>© {{ site.Params.copyright.year }} {{ site.Params.copyright.owner }}</span>
+  </div>
+</footer>
