@@ -42,8 +42,8 @@ files:
     emphasis: Any
     suffix: file.
   descriptionHTML: Type <kbd>/</kbd>, search by name, and press <kbd>Return</kbd>. Files and folders indexed by Spotlight, without leaving the keyboard.
-  screenshot: /images/screenshots/4-files.webp
-  screenshotAlt: Conjuror showing files and folders matching “conjur”
+  screenshot: /images/screenshots/4-files-new.webp
+  screenshotAlt: Conjuror showing PDF files matching “Four Against”
 calculate:
   title:
     emphasis: Calculate
