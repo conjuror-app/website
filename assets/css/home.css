@@ -154,7 +154,7 @@ h1 { max-width: 10ch; font-size: clamp(4rem, 6.8vw, 7rem); }
 }
 
 .files-copy { grid-column: 2; grid-row: 1; }
-.files-copy h2 em { color: #50a0f6; font-style: italic; font-weight: 400; }
+.files-copy h2 em { color: var(--violet); font-style: italic; font-weight: 400; }
 .files-stage { position: relative; grid-column: 1; grid-row: 1; }
 .screenshot-frame--files { width: 100%; }
 .file-fan { position: absolute; z-index: 3; top: -5.5rem; right: 1.1rem; width: 11rem; height: 7.5rem; filter: drop-shadow(0 .8rem 1rem rgba(0,0,0,.42)); }
