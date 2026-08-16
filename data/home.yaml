@@ -4,7 +4,7 @@ hero:
     secondLine: on the
     emphasis: keyboard
   description: Open apps and files, get an answer, grab an emoji, or run a Shortcut. Your mouse can sit this one out.
-  screenshot: /images/screenshots/1-apps.webp
+  screenshot: /images/screenshots/apps.webp
   screenshotAlt: Conjuror showing applications matching “cal” with Calculator selected
   hotkey:
     label: Option Space
@@ -17,7 +17,7 @@ modes:
     key: tab
     suffix: apart.
   descriptionHTML: Press <kbd>Tab</kbd> to cycle through Apps, Shortcuts, Emoji, and Files. When you land on the one you want, just start typing.
-  screenshot: /images/screenshots/3-emoji.webp
+  screenshot: /images/screenshots/emoji.webp
   screenshotAlt: Conjuror Emoji mode showing results for “party”
   items:
     - name: Apps
@@ -34,7 +34,7 @@ launch:
     emphasis: Launch
     suffix: it.
   descriptionHTML: Press <kbd>⌥ + Space</kbd>, type the app you’re after. Hit <kbd>Return</kbd> and you’re off.
-  screenshot: /images/screenshots/1-apps.webp
+  screenshot: /images/screenshots/apps.webp
   screenshotAlt: Conjuror showing applications matching “cal” with Calculator selected
 files:
   title:
@@ -42,14 +42,14 @@ files:
     emphasis: Any
     suffix: file.
   descriptionHTML: Type <kbd>/</kbd>, search by name, and press <kbd>Return</kbd>. Files and folders indexed by Spotlight, without leaving the keyboard.
-  screenshot: /images/screenshots/4-files-new.webp
+  screenshot: /images/screenshots/files.webp
   screenshotAlt: Conjuror showing PDF files matching “Four Against”
 calculate:
   title:
     emphasis: Calculate
     secondLine: Copy the result.
   descriptionHTML: Type what you want to work out. Hit <kbd>Return</kbd> to copy the answer.
-  screenshot: /images/screenshots/5-calc-conversion.webp
+  screenshot: /images/screenshots/calculator-conversion.webp
   screenshotAlt: Conjuror converting 10 kilometres to miles
   examples:
     - label: Arithmetic
@@ -86,7 +86,7 @@ emoji:
     emphasis: Any
     suffix: emoji.
   descriptionHTML: Press <kbd>⌥ + ⇧ + E</kbd>, search by name, and hit <kbd>Return</kbd> to copy.
-  screenshot: /images/screenshots/3-emoji.webp
+  screenshot: /images/screenshots/emoji.webp
   screenshotAlt: Conjuror Emoji mode showing results for “party”
   decorations:
     - symbol: ✨
@@ -101,7 +101,7 @@ shortcuts:
     secondLine: Up your
     emphasis: sleeve
   descriptionHTML: Press <kbd>⌥ + ⇧ + Space</kbd> to open Shortcuts mode. Search by name and press <kbd>Return</kbd> to run.
-  screenshot: /images/screenshots/2-shortcuts.webp
+  screenshot: /images/screenshots/shortcuts.webp
   screenshotAlt: Conjuror showing available Apple Shortcuts
 closing:
   title:

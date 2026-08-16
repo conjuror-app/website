@@ -57,7 +57,7 @@ Use `↑` and `↓` to select a result, then press Return or click it. Files ope
 
 Desktop, Documents, and Downloads are protected by macOS. Open **Settings → Files**, choose **Grant Access**, and approve the prompts for any of those folders you want included in results.
 
-{{< docs-screenshot src="/images/screenshots/2-settings.webp" alt="Conjuror Settings open to Files, with a Grant Access button for protected folders" caption="Grant access to protected folders from Settings → Files." >}}
+{{< docs-screenshot src="/images/screenshots/settings-files.webp" alt="Conjuror Settings open to Files, with a Grant Access button for protected folders" caption="Grant access to protected folders from Settings → Files." >}}
 
 ## Calculations
 
@@ -170,7 +170,7 @@ The visible-results setting accepts values from 3 to 10. Launch at login is off 
 
 Use **Reset to Defaults** in General to restore the keyboard shortcuts, visible-results setting, and preferred emoji skin tone.
 
-{{< docs-screenshot src="/images/screenshots/1-settings.webp" alt="Conjuror General settings showing keyboard shortcuts, launch at login, visible results, and Reset to Defaults" caption="General settings control Conjuror’s shortcuts, launch behaviour, and result count." >}}
+{{< docs-screenshot src="/images/screenshots/settings-general.webp" alt="Conjuror General settings showing keyboard shortcuts, launch at login, visible results, and Reset to Defaults" caption="General settings control Conjuror’s shortcuts, launch behaviour, and result count." >}}
 
 ## Permissions
 
