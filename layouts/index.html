@@ -17,7 +17,7 @@
       <div class="magic-trail" aria-hidden="true">
         <span></span><span></span><span></span>
       </div>
-      {{ partial "screenshot.html" (dict "class" "screenshot-frame--hero" "src" $home.hero.screenshot "alt" $home.hero.screenshotAlt) }}
+      {{ partial "screenshot.html" (dict "class" "screenshot-frame--hero" "src" $home.hero.screenshot "alt" $home.hero.screenshotAlt "fetchPriority" "high") }}
       <div class="hotkey" aria-label="{{ $home.hero.hotkey.label }}">
         {{ range $home.hero.hotkey.keys }}<kbd>{{ . }}</kbd>{{ end }}
       </div>
@@ -29,7 +29,8 @@
       <div class="modes-copy reveal">
         <div class="screenshot-frame modes-image" id="mode-screenshot">
           {{ range $index, $mode := $home.modes.items }}
-            <img class="mode-screenshot{{ if eq $index 0 }} is-active{{ end }}" src="{{ $mode.screenshot | relURL }}" alt="{{ $mode.screenshotAlt }}" width="1404" height="1100" data-mode-image="{{ $index }}"{{ if ne $index 0 }} aria-hidden="true"{{ end }}>
+            {{ $smallScreenshot := replace $mode.screenshot ".webp" "-900.webp" }}
+            <img class="mode-screenshot{{ if eq $index 0 }} is-active{{ end }}" src="{{ $mode.screenshot | relURL }}" srcset="{{ $smallScreenshot | relURL }} 900w, {{ $mode.screenshot | relURL }} 1404w" sizes="(max-width: 30.5rem) 72vw, (max-width: 52rem) 22rem, 28rem" alt="{{ $mode.screenshotAlt }}" width="1404" height="1100" data-mode-image="{{ $index }}"{{ if ne $index 0 }} aria-hidden="true"{{ end }}>
           {{ end }}
         </div>
         <div class="modes-text">
