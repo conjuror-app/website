@@ -2,8 +2,9 @@
 <html lang="{{ site.Language.Locale }}">
   <head>
     {{ $description := .Description | default site.Params.description }}
-    {{ $title := printf "%s | %s" .Title site.Title }}
-    {{ if .IsHome }}{{ $title = site.Params.homeTitle }}{{ end }}
+    {{ $pageTitle := .Params.browserTitle | default .Title }}
+    {{ if .IsHome }}{{ $pageTitle = site.Params.homeTitle }}{{ end }}
+    {{ $title := printf "%s — %s" $pageTitle site.Title }}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#070a18">

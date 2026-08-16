@@ -1,5 +1,6 @@
 ---
 title: Conjuror documentation
+browserTitle: Documentation
 description: Everything you need to move faster on your Mac, without leaving the keyboard.
 type: docs
 url: /docs/

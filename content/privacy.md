@@ -1,5 +1,6 @@
 ---
 title: Privacy
+browserTitle: Privacy policy
 ---
 
 Conjuror is designed to work locally on your Mac. It searches installed applications, performs calculations, finds emoji, and asks macOS to run the Apple Shortcuts you choose. Search text is not sent anywhere.
