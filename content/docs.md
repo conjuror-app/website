@@ -8,9 +8,26 @@ url: /docs/
 
 ## Getting started
 
+### Install with Homebrew
+
+Install the latest alpha from the [Conjuror Homebrew tap](https://github.com/conjuror-app/homebrew-tap):
+
+```sh
+brew install conjuror-app/tap/conjuror@alpha
+```
+
+Homebrew installs Conjuror in your Applications folder. To install a newer alpha when one is available, run:
+
+```sh
+brew upgrade conjuror-app/tap/conjuror@alpha
+```
+
+### Install manually
+
 1. **Download Conjuror.** Get the latest alpha release from the [Conjuror download page](https://github.com/conjuror-app/releases/releases).
 2. **Move it to Applications.** Put Conjuror in your Applications folder so it is easy to find and update.
-3. **Press `⌥ + Space`.** Show the launcher from anywhere on your Mac and start typing.
+
+After installing with either method, open Conjuror and press `⌥ + Space` to show the launcher from anywhere on your Mac.
 
 ### The essentials
 
