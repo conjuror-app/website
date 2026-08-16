@@ -1,4 +1,7 @@
-<span class="button{{ if .small }} button--small{{ end }}" aria-disabled="true">
-  {{ if .icon }}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg>{{ end }}
-  {{ .label | default "Download for macOS" }}
+<span class="download-control{{ if .small }} download-control--small{{ end }}">
+  <span class="button{{ if .small }} button--small{{ end }}" aria-disabled="true">
+    {{ if .icon }}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg>{{ end }}
+    {{ .label | default "Download for macOS" }}
+  </span>
+  <span class="download-status">✦ Coming soon</span>
 </span>

@@ -65,3 +65,24 @@
 
 .button:hover { background: #ffdc66; box-shadow: 0 0 .8rem rgba(255,220,102,.52), 0 0 2.4rem rgba(243,200,75,.32), 0 1rem 2.5rem rgba(113,87,245,.24), inset 0 1px rgba(255,255,255,.58); }
 .button--small { min-height: 2.85rem; padding: 0.65rem 1.15rem; border-radius: 0.7rem; }
+
+.download-control { position: relative; display: inline-flex; }
+.download-status {
+  position: absolute;
+  top: -0.8rem;
+  right: -1.1rem;
+  padding: 0.28rem 0.58rem;
+  border: 1px solid rgba(87,205,238,.72);
+  border-radius: 999px;
+  color: var(--yellow-bright);
+  background: linear-gradient(135deg, #332077, #161b4d);
+  box-shadow: 0 0 .8rem rgba(87,205,238,.25), 0 .45rem 1rem rgba(7,10,24,.42), inset 0 1px rgba(255,255,255,.16);
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: rotate(3deg);
+}
+.download-control--small .download-status { top: -.62rem; right: -.72rem; padding: .22rem .42rem; font-size: .52rem; }
