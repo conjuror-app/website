@@ -1,4 +1,3 @@
-{{ $src := .src | default "/images/screenshots/placeholder.svg" }}
 <div class="screenshot-frame {{ .class }}"{{ with .delay }} data-delay="{{ . }}"{{ end }}>
-  <img src="{{ $src | relURL }}" alt="{{ .alt }}" width="1404" height="878">
+  <img src="{{ .src | relURL }}" alt="{{ .alt }}" width="1404" height="878">
 </div>
