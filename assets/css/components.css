@@ -74,8 +74,8 @@
   padding: 0.28rem 0.58rem;
   border: 1px solid rgba(87,205,238,.72);
   border-radius: 999px;
-  color: var(--yellow-bright);
-  background: linear-gradient(135deg, #332077, #161b4d);
+  color: white;
+  background: #08798a;
   box-shadow: 0 0 .8rem rgba(87,205,238,.25), 0 .45rem 1rem rgba(7,10,24,.42), inset 0 1px rgba(255,255,255,.16);
   font-size: .66rem;
   font-weight: 800;
