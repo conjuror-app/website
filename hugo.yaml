@@ -9,7 +9,7 @@ params:
   homeTitle: "Conjuror: Keep your hands on the keyboard."
   downloadURL: https://github.com/conjuror-app/conjuror/releases/latest
   minimumMacOS: "26"
-  repositoryURL: https://github.com/conjuror-app/conjuror
+  organizationURL: https://github.com/conjuror-app
   copyright:
     year: 2026
     owner: Tom Bell
