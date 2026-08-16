@@ -63,5 +63,5 @@
   transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
 }
 
-.button:hover { transform: translateY(-2px); background: #ffdc66; box-shadow: 0 0 .8rem rgba(255,220,102,.52), 0 0 2.4rem rgba(243,200,75,.32), 0 1rem 2.5rem rgba(113,87,245,.24), inset 0 1px rgba(255,255,255,.58); }
+.button:hover { background: #ffdc66; box-shadow: 0 0 .8rem rgba(255,220,102,.52), 0 0 2.4rem rgba(243,200,75,.32), 0 1rem 2.5rem rgba(113,87,245,.24), inset 0 1px rgba(255,255,255,.58); }
 .button--small { min-height: 2.85rem; padding: 0.65rem 1.15rem; border-radius: 0.7rem; }
