@@ -1,6 +1,10 @@
 <span class="download-control{{ if .small }} download-control--small{{ end }}">
   <span class="button{{ if .small }} button--small{{ end }}" aria-disabled="true">
-    {{ if .icon }}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg>{{ end }}
+    {{ if eq .icon "apple" }}
+      <svg class="icon--filled" viewBox="0 -1 24 26" aria-hidden="true"><path d="M18.71 12.61c-.03-3.18 2.6-4.73 2.72-4.8-1.49-2.18-3.8-2.48-4.62-2.51-1.94-.2-3.82 1.16-4.81 1.16-1.01 0-2.54-1.14-4.18-1.11-2.11.03-4.09 1.26-5.17 3.17-2.23 3.86-.57 9.54 1.57 12.66 1.07 1.53 2.31 3.24 3.95 3.18 1.6-.07 2.2-1.02 4.13-1.02 1.91 0 2.47 1.02 4.14.98 1.72-.03 2.8-1.54 3.83-3.08 1.23-1.75 1.72-3.48 1.74-3.57-.04-.01-3.27-1.24-3.3-5.06ZM15.54 3.24A5.15 5.15 0 0 0 16.72-.45a5.24 5.24 0 0 0-3.39 1.75 4.91 4.91 0 0 0-1.21 3.55 4.33 4.33 0 0 0 3.42-1.61Z"/></svg>
+    {{ else if .icon }}
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg>
+    {{ end }}
     {{ .label | default "Download for macOS" }}
   </span>
   <span class="download-status">✦ Coming soon</span>

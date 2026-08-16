@@ -8,7 +8,7 @@
       <h1 id="hero-title">{{ $home.hero.title.firstLine }}<br>{{ $home.hero.title.secondLine }} <em>{{ $home.hero.title.emphasis }}.</em></h1>
       <p>{{ $home.hero.description }}</p>
       <div class="hero-actions">
-        {{ partial "download-button.html" (dict "icon" true) }}
+        {{ partial "download-button.html" (dict "icon" "apple") }}
         <span>Requires macOS {{ site.Params.minimumMacOS }}+</span>
       </div>
     </div>
