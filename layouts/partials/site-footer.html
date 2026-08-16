@@ -4,6 +4,9 @@
     {{ if .showDocs }}<a href="/docs/">Docs</a>{{ end }}
     <a href="{{ site.Params.repositoryURL }}">GitHub</a>
     <a href="/privacy/">Privacy</a>
-    <span>© {{ site.Params.copyright.year }} {{ site.Params.copyright.owner }}</span>
+    <span class="copyright">
+      <button class="copyright-trigger" type="button" data-copyright-trigger>© {{ site.Params.copyright.year }} {{ site.Params.copyright.owner }}</button>
+      <span class="copyright-surprise" data-copyright-surprise aria-live="polite"></span>
+    </span>
   </div>
 </footer>
