@@ -88,9 +88,8 @@ calculate:
       input: 100 USD to EUR
 emoji:
   title:
-    firstLine: Pick an emoji.
-    emphasis: Any
-    suffix: emoji.
+    firstLine: Say it with an
+    emphasis: emoji.
   descriptionHTML: Press <kbd>⌥ + ⇧ + E</kbd>, search by name, and hit <kbd>Return</kbd> to copy.
   screenshot: /images/screenshots/emoji.webp
   screenshotAlt: Conjuror Emoji mode showing results for “party”
