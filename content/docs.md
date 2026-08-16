@@ -8,7 +8,7 @@ url: /docs/
 
 ## Getting started
 
-1. **Download Conjuror.** Get the latest release from the [Conjuror download page](#).
+1. **Download Conjuror.** Get the latest alpha release from the [Conjuror download page](https://github.com/conjuror-app/releases/releases).
 2. **Move it to Applications.** Put Conjuror in your Applications folder so it is easy to find and update.
 3. **Press `⌥ + Space`.** Show the launcher from anywhere on your Mac and start typing.
 
