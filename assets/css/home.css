@@ -248,7 +248,7 @@ h1 { max-width: 10ch; font-size: clamp(4rem, 6.8vw, 7rem); }
 .closing-inner { display: flex; flex-direction: column; align-items: center; }
 .closing h2 { font-size: clamp(4rem,7.8vw,7.8rem); }
 .closing h2 em { color: var(--yellow); font-style: italic; }
-.closing .button { margin: 2.2rem 0 .8rem; }
+.closing .download-control { margin: 2.2rem 0 .8rem; }
 .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: 8rem; padding: 1.5rem var(--page-edge); border-top: 1px solid var(--line); background: var(--night); }
 .site-footer > div { display: flex; align-items: center; gap: 2rem; color: var(--muted); font-size: .88rem; }
 .site-footer a:hover { color: var(--yellow); }
