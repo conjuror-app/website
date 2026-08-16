@@ -25,22 +25,30 @@
   </section>
 
   <section class="modes-feature" id="features" aria-labelledby="modes-title">
-    <div class="modes-copy reveal">
-      {{ partial "screenshot.html" (dict "class" "modes-image" "src" $home.modes.screenshot "alt" $home.modes.screenshotAlt) }}
-      <div class="modes-text">
-        <h2 id="modes-title">{{ $home.modes.title.prefix }} <kbd>{{ $home.modes.title.key }}</kbd> {{ $home.modes.title.suffix }}</h2>
-        <p>{{ $home.modes.descriptionHTML | safeHTML }}</p>
+    <div class="modes-demo" data-modes-demo>
+      <div class="modes-copy reveal">
+        <div class="screenshot-frame modes-image" id="mode-screenshot">
+          {{ range $index, $mode := $home.modes.items }}
+            <img class="mode-screenshot{{ if eq $index 0 }} is-active{{ end }}" src="{{ $mode.screenshot | relURL }}" alt="{{ $mode.screenshotAlt }}" width="1404" height="1100" data-mode-image="{{ $index }}"{{ if ne $index 0 }} aria-hidden="true"{{ end }}>
+          {{ end }}
+        </div>
+        <div class="modes-text">
+          <h2 id="modes-title">{{ $home.modes.title.prefix }} <kbd>{{ $home.modes.title.key }}</kbd> {{ $home.modes.title.suffix }}</h2>
+          <p>{{ $home.modes.descriptionHTML | safeHTML }}</p>
+        </div>
       </div>
+      <ol class="mode-list reveal" data-delay="1" aria-label="Conjuror modes">
+        {{ range $index, $mode := $home.modes.items }}
+          <li{{ if eq $index 0 }} class="is-active"{{ end }}>
+            <button type="button" data-mode-button="{{ $index }}" aria-controls="mode-screenshot" aria-pressed="{{ if eq $index 0 }}true{{ else }}false{{ end }}">
+              <span>{{ printf "%02d" (add $index 1) }}</span>
+              <strong>{{ $mode.name }}</strong>
+              <small>{{ $mode.description }}</small>
+            </button>
+          </li>
+        {{ end }}
+      </ol>
     </div>
-    <ol class="mode-list reveal" data-delay="1">
-      {{ range $index, $mode := $home.modes.items }}
-        <li>
-          <span>{{ printf "%02d" (add $index 1) }}</span>
-          <strong>{{ $mode.name }}</strong>
-          <small>{{ $mode.description }}</small>
-        </li>
-      {{ end }}
-    </ol>
   </section>
 
   <section class="launch-feature section-dark" aria-labelledby="launch-title">

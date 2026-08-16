@@ -17,17 +17,23 @@ modes:
     key: tab
     suffix: apart.
   descriptionHTML: Press <kbd>Tab</kbd> to cycle through Apps, Shortcuts, Emoji, and Files. When you land on the one you want, just start typing.
-  screenshot: /images/screenshots/emoji.webp
-  screenshotAlt: Conjuror Emoji mode showing results for “party”
   items:
     - name: Apps
       description: Open an app or type a calculation.
+      screenshot: /images/screenshots/mode-apps.webp
+      screenshotAlt: Conjuror in Apps mode
     - name: Shortcuts
       description: Find a Shortcut and run it.
+      screenshot: /images/screenshots/mode-shortcuts.webp
+      screenshotAlt: Conjuror in Shortcuts mode
     - name: Emoji
       description: Search, choose, and copy.
+      screenshot: /images/screenshots/mode-emoji.webp
+      screenshotAlt: Conjuror in Emoji mode
     - name: Files
       description: Find a file or folder and open it.
+      screenshot: /images/screenshots/mode-files.webp
+      screenshotAlt: Conjuror in Files mode
 launch:
   title:
     firstLine: Type it.
