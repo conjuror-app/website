@@ -5,6 +5,7 @@
     {{ $pageTitle := .Params.browserTitle | default .Title }}
     {{ if .IsHome }}{{ $pageTitle = site.Params.homeTitle }}{{ end }}
     {{ $title := printf "%s — %s" $pageTitle site.Title }}
+    {{ $shareImage := site.Params.shareImage | absURL }}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#070a18">
@@ -14,6 +15,15 @@
     <meta property="og:site_name" content="{{ site.Title }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:image" content="{{ $shareImage }}">
+    <meta property="og:image:alt" content="{{ site.Params.shareImageAlt }}">
+    <meta property="og:image:width" content="96">
+    <meta property="og:image:height" content="96">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ $title }}">
+    <meta name="twitter:description" content="{{ $description }}">
+    <meta name="twitter:image" content="{{ $shareImage }}">
+    <meta name="twitter:image:alt" content="{{ site.Params.shareImageAlt }}">
     <link rel="canonical" href="{{ .Permalink }}">
     <title>{{ $title }}</title>
     <link rel="preload" href="/fonts/instrument-serif-regular.woff2" as="font" type="font/woff2" crossorigin>

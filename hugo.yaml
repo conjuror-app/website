@@ -7,6 +7,8 @@ disableKinds:
 params:
   description: A keyboard-first macOS launcher for apps, files, folders, emoji, Apple Shortcuts, calculations, conversions, dates, and timezones.
   homeTitle: Keyboard-first macOS launcher
+  shareImage: /images/icon-c.webp
+  shareImageAlt: Conjuror app icon
   downloadURL: https://github.com/conjuror-app/releases/releases
   minimumMacOS: "26"
   organizationURL: https://github.com/conjuror-app
