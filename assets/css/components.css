@@ -7,9 +7,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: min(calc(100% - (2 * var(--gutter))), var(--max));
+  width: min(calc(100% - (2 * var(--gutter)) + 1.5rem), calc(var(--max) + 1.5rem));
   margin: 1.15rem auto 0;
-  padding: 0.65rem 0.75rem 0.65rem 0.65rem;
+  padding: 0.65rem 0.75rem;
   border: 1px solid transparent;
   border-radius: 1rem;
   transition: background 180ms ease, border-color 180ms ease, backdrop-filter 180ms ease;
