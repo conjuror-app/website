@@ -5,7 +5,7 @@
 <main id="top">
   <section class="hero section-dark" aria-labelledby="hero-title">
     <div class="hero-copy reveal">
-      <h1 id="hero-title">{{ $home.hero.title.firstLine }}<br>{{ $home.hero.title.secondLine }} <em>{{ $home.hero.title.emphasis }}</em>.</h1>
+      <h1 id="hero-title">{{ $home.hero.title.firstLine }}<br>{{ $home.hero.title.secondLine }} <em>{{ $home.hero.title.emphasis }}.</em></h1>
       <p>{{ $home.hero.description }}</p>
       <div class="hero-actions">
         {{ partial "download-button.html" (dict "icon" true) }}
@@ -67,7 +67,7 @@
 
   <section class="calculate-feature section-dark" aria-labelledby="calculate-title">
     <div class="calculate-copy reveal">
-      <h2 id="calculate-title"><em>{{ $home.calculate.title.emphasis }}</em>.<br>{{ $home.calculate.title.secondLine }}</h2>
+      <h2 id="calculate-title"><em>{{ $home.calculate.title.emphasis }}.</em><br>{{ $home.calculate.title.secondLine }}</h2>
       <p>{{ $home.calculate.descriptionHTML | safeHTML }}</p>
       <dl class="answer-examples">
         {{ range $home.calculate.examples }}
@@ -94,7 +94,7 @@
 
   <section class="shortcuts-feature section-dark" aria-labelledby="shortcuts-title">
     <div class="shortcuts-copy reveal">
-      <h2 id="shortcuts-title">{{ $home.shortcuts.title.firstLine }}<br>{{ $home.shortcuts.title.secondLine }} <em>{{ $home.shortcuts.title.emphasis }}</em>.</h2>
+      <h2 id="shortcuts-title">{{ $home.shortcuts.title.firstLine }}<br>{{ $home.shortcuts.title.secondLine }} <em>{{ $home.shortcuts.title.emphasis }}.</em></h2>
       <p>{{ $home.shortcuts.descriptionHTML | safeHTML }}</p>
     </div>
     <div class="shortcuts-stage reveal" data-delay="1">
