@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{ partial "site-header.html" (dict "homeHref" "/" "featuresHref" "/#features" "active" "changelog" "class" "docs-header") }}
+
+<main class="changelog-shell">
+  <article class="changelog-copy">
+    <header class="changelog-intro">
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Params.description }}</p>
+    </header>
+    {{ .Content }}
+  </article>
+</main>
+
+{{ partial "site-footer.html" (dict "homeHref" "/" "showDocs" true "class" "docs-footer") }}
+{{ end }}

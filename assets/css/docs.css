@@ -49,3 +49,20 @@
 .docs-screenshot img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 0.9rem; box-shadow: 0 1.25rem 3rem rgba(0, 0, 0, 0.24); }
 .docs-screenshot figcaption { margin-top: 0.75rem; color: #989aa6; font-size: 0.88rem; line-height: 1.5; }
 .docs-footer { background: #050713; }
+
+.changelog-shell {
+  min-height: 100vh;
+  padding: 10.5rem var(--page-edge) 8rem;
+  background:
+    radial-gradient(circle at 72% 18%, rgba(71, 88, 182, 0.1), transparent 30rem),
+    radial-gradient(rgba(255, 255, 255, 0.38) 0.5px, transparent 0.7px) 0 0 / 37px 37px,
+    var(--night);
+}
+.changelog-copy { width: min(100%, 50rem); margin: 0 auto; }
+.changelog-intro { margin-bottom: 4rem; }
+.changelog-intro h1 { max-width: none; font-size: clamp(3.5rem, 5vw, 5.25rem); line-height: 0.98; }
+.changelog-intro p { max-width: 39rem; margin: 1.5rem 0 0; color: #c5c4c7; font-size: clamp(1.1rem, 1.7vw, 1.35rem); line-height: 1.55; }
+.changelog-copy h2 { margin: 4rem 0 1.35rem; color: var(--ivory); font-size: clamp(2rem, 3vw, 2.7rem); letter-spacing: -0.035em; line-height: 1.1; }
+.changelog-copy li { padding-left: 0.35rem; color: #c9c9cf; font-size: 1rem; line-height: 1.75; }
+.changelog-copy ul { margin: 1.4rem 0 2rem; padding-left: 1.4rem; }
+.changelog-copy li + li { margin-top: 0.65rem; }
