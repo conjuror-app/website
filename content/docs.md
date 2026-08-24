@@ -55,7 +55,7 @@ Press `Tab` to cycle through Applications, Apple Shortcuts, Emoji, and Files. Yo
 
 Press `⌥ + Space` to show Conjuror, then start typing. Use the arrow keys to select a result and press Return to open, copy, or run it. Conjuror hides after completing the action.
 
-To change the main shortcut, open **Settings → General** and record a new key combination. Apple Shortcuts, Emoji, and Files each have a shortcut in their own Settings pane. Their defaults are `⌥ + ⇧ + Space`, `⌥ + ⇧ + E`, and `⌘ + ⇧ + F`.
+To change the main shortcut, open **Settings → Apps** and record a new key combination. Apple Shortcuts, Emoji, and Files each have a shortcut in their own Settings pane. Their defaults are `⌥ + ⇧ + Space`, `⌥ + ⇧ + E`, and `⌘ + ⇧ + F`.
 
 While the search field is active, you can use the standard shortcuts for copy, paste, cut, select all, undo, and redo.
 
@@ -63,21 +63,29 @@ Use the menu bar item to open Settings or quit Conjuror.
 
 ## Applications
 
-Start typing any part of an application’s name. Conjuror searches your installed apps, including user-facing menu bar apps, and uses recent launches to order similarly matched results.
+Start typing any part of an application’s name. Conjuror searches your installed apps, including user-facing menu bar apps such as Keychain Access and Passwords, and uses recent launches to order similarly matched results.
 
 Use `↑` and `↓` to select an app, then press Return or click the result to open it. Background-only apps, embedded helpers, and Conjuror itself do not appear in the results.
 
+Applications mode also includes sections from System Settings. Search for a section such as `Bluetooth`, `Displays`, or `Software Update`, then open it to go directly to that pane. These results are on by default; turn off **System Settings results** under **Settings → Apps** if you only want applications.
+
+{{< docs-screenshot src="/images/screenshots/settings-apps.webp" alt="Conjuror Apps settings showing the main keyboard shortcut and enabled System Settings results" caption="Apps settings control the main launcher shortcut and System Settings results." >}}
+
 ## Files and folders
 
-Type `/` to switch to Files mode, then search by file or folder name. Conjuror searches items indexed by Spotlight that macOS allows it to access. Hidden items do not appear.
+Type `/` to switch to Files mode, then enter at least two characters from a file or folder name. Each query word is matched independently, and its letters only have to appear in order: a short query such as `qtr rpt` can find “Quarterly Report”. Exact names and prefixes rank ahead of looser fuzzy matches.
+
+Conjuror searches items indexed by Spotlight that macOS allows it to access. Hidden items do not appear.
 
 Use `↑` and `↓` to select a result, then press Return or click it. Files open in their default app; folders open in Finder. Search stays on your Mac.
 
-Desktop, Documents, and Downloads are protected by macOS. Open **Settings → Files**, choose **Grant Access**, and approve the prompts for any of those folders you want included in results.
+Desktop, Documents, Downloads, and iCloud Drive are protected by macOS. Conjuror requests access when you first run a file search. You can also open **Settings → Files**, choose **Grant Access**, and approve the prompts for any of those folders you want included in results.
 
 Use `⌘ + ⇧ + F` to open Conjuror directly in Files mode. You can turn this shortcut off or record a different key combination under **Settings → Files**.
 
-{{< docs-screenshot src="/images/screenshots/settings-files.webp" alt="Conjuror Settings open to Files, with a Grant Access button for protected folders" caption="Grant access to protected folders from Settings → Files." >}}
+To remove Files mode from the launcher, turn off **Files module** in the same Settings pane.
+
+{{< docs-screenshot src="/images/screenshots/settings-files.webp" alt="Conjuror Files settings showing the enabled Files module, direct shortcut, and protected-folder access including iCloud Drive" caption="Enable file search, configure its shortcut, and grant protected-folder access from Settings → Files." >}}
 
 ## Calculations
 
@@ -178,26 +186,27 @@ Recently run Shortcuts appear first when the search is empty and can rank higher
 
 ## Settings
 
-Open Settings from the menu bar item, or press `⌘ + ,` while Conjuror is active.
+Open Settings from the menu bar item, or press `⌘ + ,` while Conjuror is active. The window opens on your currently active macOS Space.
 
-- **General:** Change the main shortcut, turn launch at login on or off, and choose how many results appear before scrolling.
+- **General:** Turn launch at login on or off, choose the accent colour shared by the launcher border and mode icons, and set how many results appear before scrolling. Accent choices include Cyan, Purple, Yellow, a custom colour, or Disabled.
+- **Apps:** Change the main launcher shortcut and choose whether application search includes System Settings sections.
 - **Emoji:** Configure the shortcut that opens Emoji mode directly and choose the skin tone Conjuror applies to supported emoji by default.
 - **Shortcuts:** Configure the shortcut that opens Apple Shortcuts mode directly.
 - **Calculator:** Turn optional currency conversion on or off.
-- **Files:** Configure the shortcut that opens Files mode directly and request access to protected Desktop, Documents, and Downloads folders.
+- **Files:** Turn file and folder search on or off, configure its direct shortcut, and request access to the protected Desktop, Documents, Downloads, and iCloud Drive locations.
 - **About:** Check the installed version or open the GitHub repository and licence.
 
 The visible-results setting accepts values from 3 to 10. Launch at login is off by default. If macOS requires approval after you enable it, use **Open Login Items Settings** to finish the setup.
 
-Use **Reset to Defaults** in General to restore all keyboard shortcuts, the visible-results setting, and the preferred emoji skin tone.
+Use **Reset to Defaults** under Apps to restore all keyboard shortcuts, the accent colour, the visible-results setting, and the preferred emoji skin tone.
 
-{{< docs-screenshot src="/images/screenshots/settings-general.webp" alt="Conjuror General settings showing keyboard shortcuts, launch at login, visible results, and Reset to Defaults" caption="General settings control Conjuror’s shortcuts, launch behaviour, and result count." >}}
+{{< docs-screenshot src="/images/screenshots/settings-general.webp" alt="Conjuror General settings showing launch at login, accent colour, and visible results" caption="General settings control launch behaviour, the launcher accent, and result count." >}}
 
 ## Permissions
 
 To search and run Apple Shortcuts, allow Conjuror to control Shortcuts Events when macOS first asks. This Automation permission is only required for Apple Shortcuts mode.
 
-File search uses the on-device Spotlight index. macOS may ask before Conjuror can access Desktop, Documents, or Downloads; you can trigger those prompts from **Settings → Files**.
+File search uses the on-device Spotlight index. macOS may ask before Conjuror can access Desktop, Documents, Downloads, or iCloud Drive; you can trigger those prompts from **Settings → Files**.
 
 Currency conversion uses the network to download an exchange-rate snapshot at most once per day. Your search text is never sent, and the latest rates remain available offline.
 
