@@ -1,9 +1,12 @@
 <header class="site-header{{ with .class }} {{ . }}{{ end }}" data-header>
   {{ partial "brand.html" (dict "href" .homeHref "label" "Conjuror home") }}
-  <nav aria-label="Main navigation">
+  <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="Open menu" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+  </button>
+  <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
     <a href="{{ .featuresHref }}">Features</a>
     <a{{ if eq .active "docs" }} class="nav-active"{{ end }} href="/docs/"{{ if eq .active "docs" }} aria-current="page"{{ end }}>Docs</a>
     <a{{ if eq .active "changelog" }} class="nav-active"{{ end }} href="/changelog/"{{ if eq .active "changelog" }} aria-current="page"{{ end }}>Changelog</a>
-    {{ partial "download-button.html" (dict "small" true "label" "Download") }}
   </nav>
+  {{ partial "download-button.html" (dict "small" true "label" "Download") }}
 </header>

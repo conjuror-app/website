@@ -49,3 +49,5 @@ kbd { font: inherit; }
     radial-gradient(circle at 75% 30%, rgba(71, 88, 182, 0.1), transparent 32rem),
     var(--night);
 }
+
+[id] { scroll-margin-top: 7rem; }

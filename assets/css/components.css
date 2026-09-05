@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.5rem;
   width: min(calc(100% - (2 * var(--gutter)) + 1.5rem), calc(var(--max) + 1.5rem));
   margin: 1.15rem auto 0;
   padding: 0.65rem 0.75rem;
@@ -15,7 +16,7 @@
   transition: background 180ms ease, border-color 180ms ease, backdrop-filter 180ms ease;
 }
 
-.site-header.is-scrolled {
+.site-header.is-scrolled, .site-header.is-menu-open {
   border-color: var(--line);
   background: rgba(7, 10, 24, 0.76);
   box-shadow: 0 0.75rem 2.5rem rgba(0, 0, 0, 0.25);
@@ -24,7 +25,7 @@
 
 .brand { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 1.2rem; font-weight: 760; letter-spacing: -0.025em; }
 .brand:focus-visible, nav a:focus-visible, .button:focus-visible { outline: 3px solid var(--cyan); outline-offset: 4px; }
-.site-header nav { display: flex; align-items: center; gap: clamp(1rem, 3vw, 2.4rem); font-size: 0.96rem; }
+.site-header nav { margin-left: auto; display: flex; align-items: center; gap: clamp(1rem, 3vw, 2.4rem); font-size: 0.96rem; }
 .site-header nav > a:not(.button) { color: #e7e5dc; transition: color 150ms ease; }
 .site-header nav > a:not(.button):hover { color: var(--yellow); }
 .site-header nav .nav-active { color: #9a83ff; }
@@ -86,3 +87,6 @@
   transform: rotate(3deg);
 }
 .download-control--small .download-status { top: -.62rem; right: -.72rem; padding: .22rem .42rem; font-size: .52rem; }
+
+.menu-toggle { display: none; align-items: center; justify-content: center; flex-shrink: 0; width: 2.75rem; height: 2.75rem; padding: .6rem; border: 1px solid var(--line); border-radius: .65rem; color: var(--ivory); background: var(--night-soft); cursor: pointer; }
+.menu-toggle:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
