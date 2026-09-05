@@ -48,8 +48,10 @@
   :root { --gutter: 1.15rem; }
   .brand { gap: .55rem; font-size: 1.02rem; }
   .app-icon--small { width: 2.3rem; }
-  .site-header { width: calc(100% - 1rem); padding-left: .45rem; }
-  .button--small { font-size: .82rem; }
+  .site-header { width: calc(100% - 1rem); padding-inline: .45rem; gap: .35rem; }
+  .site-header .brand { gap: .4rem; }
+  .site-header .app-icon--small { width: 2rem; }
+  .button--small { font-size: .78rem; padding-inline: .65rem; }
   h1 { font-size: clamp(3rem,12vw,4.5rem); }
   .hero-copy > p { font-size: 1.05rem; }
   .hero-copy > .hero-category { font-size: .85rem; }

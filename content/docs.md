@@ -24,8 +24,9 @@ brew upgrade conjuror-app/tap/conjuror@alpha
 
 ### Install manually
 
-1. **Download Conjuror.** Get the latest alpha release from the [Conjuror download page](https://github.com/conjuror-app/releases/releases).
-2. **Move it to Applications.** Put Conjuror in your Applications folder so it is easy to find and update.
+1. **Download Conjuror.** Get the free alpha from the [Conjuror download section](/#download).
+2. **Open the ZIP file.** Double-click the downloaded archive to extract Conjuror.
+3. **Move it to Applications.** Put Conjuror in your Applications folder, then open it.
 
 After installing with either method, open Conjuror and press `⌥ + Space` to show the launcher from anywhere on your Mac.
 

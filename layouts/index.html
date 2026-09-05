@@ -10,7 +10,7 @@
       <p>{{ $home.hero.description }}</p>
       <div class="hero-actions">
         {{ partial "download-button.html" (dict "icon" "apple") }}
-        <span>Requires macOS {{ site.Params.minimumMacOS }}+</span>
+        {{ partial "download-details.html" . }}
       </div>
     </div>
 
@@ -104,12 +104,12 @@
 
   </div>
 
-  <section class="closing section-dark" aria-labelledby="closing-title">
+  <section class="closing section-dark" id="download" aria-labelledby="closing-title">
     <span class="closing-star" aria-hidden="true">✦</span>
     <div class="closing-inner reveal">
       <h2 id="closing-title">{{ $home.closing.title.firstLine }}<br><em>{{ $home.closing.title.emphasis }}</em></h2>
       {{ partial "download-button.html" (dict "icon" true) }}
-      <span>Requires macOS {{ site.Params.minimumMacOS }}+</span>
+      {{ partial "download-details.html" . }}
     </div>
   </section>
 </main>
