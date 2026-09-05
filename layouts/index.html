@@ -37,7 +37,8 @@
           <p>{{ $home.modes.descriptionHTML | safeHTML }}</p>
         </div>
       </div>
-      <ol class="mode-list reveal" data-delay="1" aria-label="Conjuror modes">
+      <p class="mode-selector-label" id="mode-selector-label">Choose a mode to preview</p>
+      <ol class="mode-list reveal" data-delay="1" aria-labelledby="mode-selector-label">
         {{ range $index, $mode := $home.modes.items }}
           <li{{ if eq $index 0 }} class="is-active"{{ end }}>
             <button type="button" data-mode-button="{{ $index }}" aria-controls="mode-screenshot" aria-pressed="{{ if eq $index 0 }}true{{ else }}false{{ end }}">
@@ -57,7 +58,6 @@
       <p>{{ $home.files.descriptionHTML | safeHTML }}</p>
     </div>
     <div class="files-stage reveal" data-delay="1">
-      <span class="file-fan" aria-hidden="true"><i data-label="TXT" data-suit="♥"></i><i data-label="PDF" data-suit="♠"></i><i data-label="JPG" data-suit="♦"></i></span>
       {{ partial "screenshot.html" (dict "class" "screenshot-frame--files" "src" $home.files.screenshot "alt" $home.files.screenshotAlt) }}
     </div>
   </section>
@@ -74,33 +74,30 @@
       <a class="text-link" href="/docs/#calculations">See all calculations and conversions</a>
     </div>
     <div class="calculate-stage reveal" data-delay="1">
-      <span class="calculate-trail" aria-hidden="true"><i>+</i><i>×</i><i>÷</i><i>✦</i><i>$</i></span>
       {{ partial "screenshot.html" (dict "class" "screenshot-frame--calculate" "src" $home.calculate.screenshot "alt" $home.calculate.screenshotAlt) }}
     </div>
   </section>
 
   <div class="everyday-features section-dark">
-  <section class="emoji-feature" aria-labelledby="emoji-title">
-    <div class="emoji-copy reveal">
-      <h2 id="emoji-title">{{ $home.emoji.title.firstLine }}<br><em>{{ $home.emoji.title.emphasis }}</em> {{ $home.emoji.title.suffix }}</h2>
-      <p>{{ $home.emoji.descriptionHTML | safeHTML }}</p>
-    </div>
-    <div class="emoji-stage reveal" data-delay="1">
-      {{ range $home.emoji.decorations }}<span class="floating-emoji {{ .class }}" aria-hidden="true">{{ .symbol }}</span>{{ end }}
-      {{ partial "screenshot.html" (dict "class" "screenshot-frame--emoji" "src" $home.emoji.screenshot "alt" $home.emoji.screenshotAlt) }}
-    </div>
-  </section>
+    <section class="emoji-feature" aria-labelledby="emoji-title">
+      <div class="emoji-copy reveal">
+        <h2 id="emoji-title">{{ $home.emoji.title.firstLine }}<br><em>{{ $home.emoji.title.emphasis }}</em> {{ $home.emoji.title.suffix }}</h2>
+        <p>{{ $home.emoji.descriptionHTML | safeHTML }}</p>
+      </div>
+      <div class="emoji-stage reveal" data-delay="1">
+        {{ partial "screenshot.html" (dict "class" "screenshot-frame--emoji" "src" $home.emoji.screenshot "alt" $home.emoji.screenshotAlt) }}
+      </div>
+    </section>
 
-  <section class="shortcuts-feature" aria-labelledby="shortcuts-title">
-    <div class="shortcuts-copy reveal">
-      <h2 id="shortcuts-title">{{ $home.shortcuts.title.firstLine }}<br>{{ $home.shortcuts.title.secondLine }} <em>{{ $home.shortcuts.title.emphasis }}.</em></h2>
-      <p>{{ $home.shortcuts.descriptionHTML | safeHTML }}</p>
-    </div>
-    <div class="shortcuts-stage reveal" data-delay="1">
-      <span class="shortcut-trail" aria-hidden="true"><i></i><i></i><i></i></span>
-      {{ partial "screenshot.html" (dict "class" "screenshot-frame--shortcuts" "src" $home.shortcuts.screenshot "alt" $home.shortcuts.screenshotAlt) }}
-    </div>
-  </section>
+    <section class="shortcuts-feature" aria-labelledby="shortcuts-title">
+      <div class="shortcuts-copy reveal">
+        <h2 id="shortcuts-title">{{ $home.shortcuts.title.firstLine }}<br>{{ $home.shortcuts.title.secondLine }} <em>{{ $home.shortcuts.title.emphasis }}.</em></h2>
+        <p>{{ $home.shortcuts.descriptionHTML | safeHTML }}</p>
+      </div>
+      <div class="shortcuts-stage reveal" data-delay="1">
+        {{ partial "screenshot.html" (dict "class" "screenshot-frame--shortcuts" "src" $home.shortcuts.screenshot "alt" $home.shortcuts.screenshotAlt) }}
+      </div>
+    </section>
 
   </div>
 

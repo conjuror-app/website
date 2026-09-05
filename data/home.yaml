@@ -63,13 +63,6 @@ emoji:
   descriptionHTML: Find the emoji you mean with everyday words like “lol”. Type <kbd>:</kbd> to search, then press <kbd>Return</kbd> to copy.
   screenshot: /images/screenshots/emoji.webp
   screenshotAlt: Conjuror Emoji mode showing results for “party”
-  decorations:
-    - symbol: ✨
-      class: emoji-one
-    - symbol: 🥳
-      class: emoji-two
-    - symbol: 🎉
-      class: emoji-three
 shortcuts:
   title:
     firstLine: Shortcuts.

@@ -3,7 +3,6 @@
   .files-copy, .files-stage { grid-column: 1; grid-row: auto; }
   .files-copy p, .calculate-copy p { max-width: 38rem; }
   .files-stage, .calculate-stage { width: min(100%, 42rem); justify-self: center; }
-  .file-fan { top: -3rem; transform: scale(.65); transform-origin: right bottom; }
 }
 
 @keyframes float { 50% { transform: translateY(-.8rem) rotate(3deg); } }
@@ -28,7 +27,9 @@
   .hero-product { margin: 0; padding: 0; }
   .screenshot-frame--hero { transform: none; }
   .modes-feature { padding-top: 5rem; padding-bottom: 5rem; }
-  .modes-image { width: min(72vw, 22rem); }
+  .modes-image { width: min(100%, 34rem); justify-self: center; }
+  .modes-text { order: -1; justify-self: start; text-align: left; }
+  .modes-copy p { margin-left: 0; }
   .files-feature { min-height: auto; padding-top: 6rem; padding-bottom: 6rem; }
   .files-copy, .files-stage { grid-column: 1; grid-row: auto; }
   .calculate-feature { min-height: auto; padding-top: 6rem; padding-bottom: 6rem; }
@@ -59,13 +60,14 @@
   .magic-trail { left: -12rem; }
   .modes-copy h2 { font-size: clamp(3.2rem, 15vw, 4.8rem); }
   .modes-copy p { font-size: 1.05rem; }
-  .mode-list { grid-template-columns: 1fr; margin-top: 3rem; }
-  .mode-list button { padding: 1.4rem 1rem; }
-  .mode-list li + li { padding-left: 0; border-top: 1px solid rgba(11,16,34,.2); border-left: 0; }
+  .mode-list { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: .8rem; }
+  .mode-list button { padding: 1.1rem .6rem; }
+  .mode-list strong { font-size: 1.1rem; }
+  .mode-list small { font-size: .85rem; }
+  .mode-list li + li { border-left: 0; }
+  .mode-list li:nth-child(even) { border-left: 1px solid rgba(11,16,34,.2); }
+  .mode-list li:nth-child(n+3) { border-top: 1px solid rgba(11,16,34,.2); }
   .files-copy h2, .emoji-copy h2, .shortcuts-copy h2 { font-size: clamp(3.35rem,15vw,5rem); }
-  .file-fan { top: -4.4rem; right: .25rem; transform: scale(.72); transform-origin: right bottom; }
-  .calculate-trail { top: -2.75rem; right: -2rem; transform: scale(.7) rotate(9deg); transform-origin: right top; }
-  .shortcut-trail { left: -.5rem; bottom: -3.5rem; transform: scale(.72) rotate(14deg); transform-origin: left top; }
   .calculate-copy h2 { font-size: clamp(3.7rem,17vw,5.4rem); }
   .calculate-copy p { font-size: 1.05rem; }
   .answer-examples > div { grid-template-columns: 1fr; gap: 0.35rem; padding: 0.75rem 0; }
@@ -73,9 +75,6 @@
   .answer-examples code { font-size: 0.78rem; }
   .closing { min-height: 26rem; }
   .closing h2 { font-size: clamp(3.7rem,17vw,5.4rem); }
-  .closing::before { left: 5%; top: 20%; }
-  .closing::after { right: 3%; bottom: 14%; }
-  .closing-star { right: 22%; top: 12%; font-size: 2.5rem; }
   .site-footer { align-items: flex-start; flex-direction: column; padding-top: 2.5rem; padding-bottom: 2.5rem; }
   .site-footer > div { flex-wrap: wrap; gap: 1rem 1.4rem; }
   .docs-copy table { display: block; overflow-x: auto; white-space: nowrap; }
