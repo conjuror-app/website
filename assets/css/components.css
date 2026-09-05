@@ -90,3 +90,7 @@
 
 .menu-toggle { display: none; align-items: center; justify-content: center; flex-shrink: 0; width: 2.75rem; height: 2.75rem; padding: .6rem; border: 1px solid var(--line); border-radius: .65rem; color: var(--ivory); background: var(--night-soft); cursor: pointer; }
 .menu-toggle:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+
+.text-link { display: inline-block; margin-top: 1.4rem; color: var(--yellow); font-size: .95rem; line-height: 1.5; text-decoration: underline; text-underline-offset: .25em; }
+.text-link:hover { color: var(--ivory); }
+.text-link:focus-visible { outline: 3px solid var(--cyan); outline-offset: 4px; }

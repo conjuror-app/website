@@ -47,34 +47,15 @@ calculate:
   screenshot: /images/screenshots/calculator-conversion.webp
   screenshotAlt: Conjuror converting 10 kilometres to miles
   examples:
-    - label: Arithmetic
-      input: 2 plus 3 times 4
-      output: "14"
     - label: Percentages
-      input: 123 + 25% + 10%
-      output: "169.125"
-    - label: Functions
-      input: sqrt 9 + abs(-5)
-      output: "8"
-    - label: Units
+      input: 20% of 50
+      output: "10"
+    - label: Distance
       input: 10 km to miles
-      output: 6.21371 mi
+      output: ≈ 6.21 mi
     - label: Temperature
       input: 30 °C to °F
       output: 86 °F
-    - label: Data
-      input: 1 GiB to MiB
-      output: 1024 MiB
-    - label: Number bases
-      input: 255 to hex
-      output: "0xFF"
-    - label: Relative dates
-      input: 5 days from now
-    - label: Timezones
-      input: 9am GMT
-      output: PDT
-    - label: Currencies
-      input: 100 USD to EUR
 emoji:
   title:
     firstLine: Think of an emoji.
