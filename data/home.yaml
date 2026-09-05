@@ -1,9 +1,10 @@
 hero:
+  category: A keyboard-first launcher for macOS
   title:
     firstLine: Keep your hands
     secondLine: on the
     emphasis: keyboard
-  description: Open apps and files, get an answer, grab an emoji, or run a Shortcut. Your mouse can sit this one out.
+  description: Open apps, find files, calculate answers, and run Apple Shortcuts—all from your keyboard.
   screenshot: /images/screenshots/apps.webp
   screenshotAlt: Conjuror showing applications matching “cal” with Calculator selected
   hotkey:
