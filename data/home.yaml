@@ -13,10 +13,10 @@ modes:
     prefix: Four modes, one
     key: tab
     suffix: apart.
-  descriptionHTML: Press <kbd>Tab</kbd> to cycle through Apps, Shortcuts, Emoji, and Files. When you land on the one you want, just start typing.
+  descriptionHTML: Open apps and System Settings, with recent launches helping to order similar matches. Press <kbd>Tab</kbd> to switch to Shortcuts, Emoji, or Files.
   items:
     - name: Apps
-      description: Open an app or type a calculation.
+      description: Open apps, find settings, or calculate.
       screenshot: /images/screenshots/mode-apps.webp
       screenshotAlt: Conjuror in Apps mode
     - name: Shortcuts
@@ -33,17 +33,17 @@ modes:
       screenshotAlt: Conjuror in Files mode
 files:
   title:
-    firstLine: Pick a file.
-    emphasis: Any
-    suffix: file.
-  descriptionHTML: Type <kbd>/</kbd>, search by name, and press <kbd>Return</kbd>. Files and folders indexed by Spotlight, without leaving the keyboard.
+    firstLine: Your files.
+    emphasis: A few keys
+    suffix: away.
+  descriptionHTML: Find files without the exact filename. Type <kbd>/</kbd>, enter what you remember, and press <kbd>Return</kbd> to open a match from your Spotlight index.
   screenshot: /images/screenshots/files.webp
   screenshotAlt: Conjuror showing PDF files matching “Four Against”
 calculate:
   title:
     emphasis: Calculate
     secondLine: Copy the result.
-  descriptionHTML: Type what you want to work out. Hit <kbd>Return</kbd> to copy the answer.
+  descriptionHTML: Work out a percentage or convert a measurement without opening another app. Type your calculation, then press <kbd>Return</kbd> to copy the answer.
   screenshot: /images/screenshots/calculator-conversion.webp
   screenshotAlt: Conjuror converting 10 kilometres to miles
   examples:
@@ -79,7 +79,7 @@ emoji:
   title:
     firstLine: Think of an emoji.
     emphasis: Presto.
-  descriptionHTML: Press <kbd>⌥ + ⇧ + E</kbd>, search by name, and hit <kbd>Return</kbd> to copy.
+  descriptionHTML: Find the emoji you mean with everyday words like “lol”. Type <kbd>:</kbd> to search, then press <kbd>Return</kbd> to copy.
   screenshot: /images/screenshots/emoji.webp
   screenshotAlt: Conjuror Emoji mode showing results for “party”
   decorations:
@@ -94,7 +94,7 @@ shortcuts:
     firstLine: Shortcuts.
     secondLine: Up your
     emphasis: sleeve
-  descriptionHTML: Press <kbd>⌥ + ⇧ + Space</kbd> to open Shortcuts mode. Search by name and press <kbd>Return</kbd> to run.
+  descriptionHTML: Keep your favourite Apple Shortcuts close at hand. Type <kbd>&gt;</kbd>, search by name, and press <kbd>Return</kbd> to run.
   screenshot: /images/screenshots/shortcuts.webp
   screenshotAlt: Conjuror showing available Apple Shortcuts
 closing:
