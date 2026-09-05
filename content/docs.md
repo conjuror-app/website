@@ -169,7 +169,7 @@ $50 in GBP
 1 CAD
 ```
 
-If you omit the target currency, Conjuror uses the currency from your regional settings. It downloads a complete rate snapshot from [Frankfurter](https://frankfurter.dev) at most once per day; your search text is never sent. The latest snapshot remains available offline, and disabling currency conversion removes the cached rates.
+If you omit the target currency, Conjuror uses the currency from your regional settings. It downloads a complete rate snapshot from [Frankfurter](https://frankfurter.dev) daily after a successful refresh; failed requests may be retried sooner. Your search text is never sent. The latest snapshot remains available offline, and disabling currency conversion removes the cached rates.
 
 ## Emoji
 
@@ -209,6 +209,6 @@ To search and run Apple Shortcuts, allow Conjuror to control Shortcuts Events wh
 
 File search uses the on-device Spotlight index. macOS may ask before Conjuror can access Desktop, Documents, Downloads, or iCloud Drive; you can trigger those prompts from **Settings → Files**.
 
-Currency conversion uses the network to download an exchange-rate snapshot at most once per day. Your search text is never sent, and the latest rates remain available offline.
+Currency conversion uses the network to refresh an exchange-rate snapshot daily; failed requests may be retried sooner. Your search text is never sent, and the latest rates remain available offline.
 
 Application, file, folder, and emoji search, arithmetic, unit conversion, relative dates, and timezone conversion stay on your Mac and do not require network access.

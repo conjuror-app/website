@@ -22,7 +22,7 @@
   .site-header .site-nav a { padding: .75rem; border-radius: .5rem; }
   .site-header .site-nav a:hover { background: rgba(255,255,255,.06); }
   .button--small { min-height: 2.55rem; padding: .55rem .9rem; }
-  .hero, .modes-copy, .files-feature, .calculate-feature, .everyday-features { grid-template-columns: 1fr; }
+  .hero, .modes-copy, .files-feature, .calculate-feature, .everyday-features, .privacy-feature { grid-template-columns: 1fr; }
   .hero { min-height: auto; padding-top: 7.5rem; padding-bottom: 3rem; }
   .hero-copy { padding-right: 0; }
   .hero-product { margin: 0; padding: 0; }

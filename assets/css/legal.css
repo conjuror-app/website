@@ -2,6 +2,7 @@
 .legal-brand { margin-bottom: 6rem; }
 .legal-copy { width: min(100%,48rem); margin: 0 auto; }
 .legal-copy h1 { max-width: none; font-size: clamp(3.5rem,7vw,6rem); }
+.legal-copy h2 { margin: 2.5rem 0 1rem; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.1; }
 .legal-copy p { color: #cfced1; font-size: 1.1rem; line-height: 1.75; }
 .legal-copy a { color: var(--yellow); text-decoration: underline; text-underline-offset: .2em; }
 

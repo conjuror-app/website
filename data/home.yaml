@@ -78,6 +78,10 @@ shortcuts:
   descriptionHTML: Keep your favourite Apple Shortcuts close at hand. Type <kbd>&gt;</kbd>, search by name, and press <kbd>Return</kbd> to run.
   screenshot: /images/screenshots/shortcuts.webp
   screenshotAlt: Conjuror showing available Apple Shortcuts
+privacy:
+  title: Your searches stay on your Mac.
+  description: Find apps and files, choose emoji, and calculate answers locally. No account needed.
+  detail: Currency conversion is optional. It downloads exchange rates, never your search text.
 closing:
   title:
     firstLine: Less pointing.

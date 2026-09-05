@@ -246,3 +246,8 @@ h1 { font-size: clamp(3.5rem, 6.2vw, 6rem); }
 }
 
 .hero > *, .modes-copy > *, .files-feature > *, .calculate-feature > * { min-width: 0; }
+
+.privacy-feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem clamp(3rem, 6vw, 6rem); padding: 4.5rem var(--page-edge); border-top: 1px solid var(--line); background: var(--night-soft); }
+.privacy-feature h2 { max-width: 14ch; font-size: clamp(3rem, 4.5vw, 4.5rem); }
+.privacy-feature p { max-width: 32rem; margin: 0 0 1rem; color: #c2c3ca; font-size: 1.05rem; line-height: 1.6; }
+.privacy-feature .text-link { margin-top: 0; }
