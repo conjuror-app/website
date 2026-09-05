@@ -7,11 +7,7 @@ hero:
   description: Open apps, find files, calculate answers, and run Apple Shortcuts—all from your keyboard.
   screenshot: /images/screenshots/apps.webp
   screenshotAlt: Conjuror showing applications matching “cal” with Calculator selected
-  hotkey:
-    label: Option Space
-    keys:
-      - ⌥
-      - Space
+  instructionsHTML: Press <kbd>⌥ Space</kbd>, type an app, then <kbd>Return</kbd> to launch.
 modes:
   title:
     prefix: Four modes, one
@@ -35,14 +31,6 @@ modes:
       description: Find a file or folder and open it.
       screenshot: /images/screenshots/mode-files.webp
       screenshotAlt: Conjuror in Files mode
-launch:
-  title:
-    firstLine: Type it.
-    emphasis: Launch
-    suffix: it.
-  descriptionHTML: Press <kbd>⌥ + Space</kbd>, type the app you’re after. Hit <kbd>Return</kbd> and you’re off.
-  screenshot: /images/screenshots/apps.webp
-  screenshotAlt: Conjuror showing applications matching “cal” with Calculator selected
 files:
   title:
     firstLine: Pick a file.

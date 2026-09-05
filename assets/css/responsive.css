@@ -1,9 +1,7 @@
 @keyframes float { 50% { transform: translateY(-.8rem) rotate(3deg); } }
 
 @media (max-width: 70rem) {
-  .launch-feature { grid-template-columns: 21rem 1fr; }
-  .screenshot-frame--launch { width: 125%; }
-  .files-feature, .emoji-feature, .shortcuts-feature { gap: 3rem; }
+  .files-feature { gap: 3rem; }
 }
 
 @media (max-width: 52rem) {
@@ -11,25 +9,17 @@
   .site-header nav > a:not(.button) { display: none; }
   .docs-header nav > a.nav-active { display: block; }
   .button--small { min-height: 2.55rem; padding: .55rem .9rem; }
-  .hero, .modes-copy, .launch-feature, .files-feature, .calculate-feature, .emoji-feature, .shortcuts-feature { grid-template-columns: 1fr; }
+  .hero, .modes-copy, .files-feature, .calculate-feature, .everyday-features { grid-template-columns: 1fr; }
   .hero { min-height: auto; padding-top: 7.5rem; padding-bottom: 3rem; }
   .hero-copy { padding-right: 0; }
-  .hero-product { margin: 0; padding: 0 0 5rem; }
+  .hero-product { margin: 0; padding: 0; }
   .screenshot-frame--hero { transform: none; }
-  .hotkey { right: 2rem; }
   .modes-feature { padding-top: 5rem; padding-bottom: 5rem; }
   .modes-image { width: min(72vw, 22rem); }
-  .launch-feature { display: block; min-height: 68rem; padding-top: 6rem; }
-  .screenshot-frame--launch { width: 115%; margin: 5rem 0 0 5%; transform: perspective(1000px) rotateY(-5deg) rotateZ(-2deg); }
-  .launch-stage { margin-top: 5rem; }
-  .launch-stage .screenshot-frame--launch { margin-top: 0; }
   .files-feature { min-height: auto; padding-top: 6rem; padding-bottom: 6rem; }
   .files-copy, .files-stage { grid-column: 1; grid-row: auto; }
   .calculate-feature { min-height: auto; padding-top: 6rem; padding-bottom: 6rem; }
-  .emoji-feature { min-height: 60rem; padding-top: 6rem; align-content: start; }
-  .emoji-copy, .emoji-stage { grid-column: 1; }
-  .emoji-stage { grid-row: auto; margin-top: 2rem; }
-  .shortcuts-feature { min-height: auto; padding-top: 6rem; padding-bottom: 6rem; }
+  .everyday-features { gap: 5rem; padding-top: 4rem; padding-bottom: 4rem; }
   .docs-shell { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 7.5rem; }
   .docs-sidebar { position: static; margin: 0 calc(-1 * var(--gutter)); padding: 0 var(--gutter) 0.75rem; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--line); scrollbar-width: none; }
   .docs-sidebar::-webkit-scrollbar { display: none; }
@@ -51,19 +41,13 @@
   .hero-copy > p { font-size: 1.05rem; }
   .hero-copy > .hero-category { font-size: .85rem; }
   .screenshot-frame--hero { border-radius: 1rem; }
-  .hotkey { right: .5rem; bottom: 1.6rem; transform: scale(.82); transform-origin: right bottom; }
   .magic-trail { left: -12rem; }
   .modes-copy h2 { font-size: clamp(3.2rem, 15vw, 4.8rem); }
   .modes-copy p { font-size: 1.05rem; }
   .mode-list { grid-template-columns: 1fr; margin-top: 3rem; }
   .mode-list button { padding: 1.4rem 1rem; }
   .mode-list li + li { padding-left: 0; border-top: 1px solid rgba(11,16,34,.2); border-left: 0; }
-  .section-heading h2, .files-copy h2, .emoji-copy h2, .shortcuts-copy h2 { font-size: clamp(3.35rem,15vw,5rem); }
-  .launch-feature { min-height: 58rem; padding-top: 5rem; }
-  .screenshot-frame--launch { width: 140%; margin: 4rem 0 0 -2%; }
-  .launch-stage { margin-top: 4rem; }
-  .launch-stage .screenshot-frame--launch { margin-top: 0; }
-  .launch-orbit { right: -8rem; bottom: -5rem; transform: scale(.72) rotate(-16deg); }
+  .files-copy h2, .emoji-copy h2, .shortcuts-copy h2 { font-size: clamp(3.35rem,15vw,5rem); }
   .file-fan { top: -4.4rem; right: .25rem; transform: scale(.72); transform-origin: right bottom; }
   .calculate-trail { top: -2.75rem; right: -2rem; transform: scale(.7) rotate(9deg); transform-origin: right top; }
   .shortcut-trail { left: -.5rem; bottom: -3.5rem; transform: scale(.72) rotate(14deg); transform-origin: left top; }
@@ -72,13 +56,7 @@
   .answer-examples > div { grid-template-columns: 1fr; gap: 0.35rem; padding: 0.75rem 0; }
   .answer-examples dd { gap: 0.35rem; }
   .answer-examples code { font-size: 0.78rem; }
-  .emoji-feature { min-height: 53rem; }
-  .emoji-stage { min-height: 27rem; margin-top: 0; }
-  .screenshot-frame--emoji { top: 7rem; }
-  .emoji-one { left: 5%; font-size: 3.5rem; }
-  .emoji-two { right: 0; font-size: 4rem; }
-  .emoji-three { bottom: 0; font-size: 4rem; }
-  .closing { min-height: 32rem; }
+  .closing { min-height: 26rem; }
   .closing h2 { font-size: clamp(3.7rem,17vw,5.4rem); }
   .closing::before { left: 5%; top: 20%; }
   .closing::after { right: 3%; bottom: 14%; }

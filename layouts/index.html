@@ -19,9 +19,7 @@
         <span></span><span></span><span></span>
       </div>
       {{ partial "screenshot.html" (dict "class" "screenshot-frame--hero" "src" $home.hero.screenshot "alt" $home.hero.screenshotAlt "fetchPriority" "high") }}
-      <div class="hotkey" aria-label="{{ $home.hero.hotkey.label }}">
-        {{ range $home.hero.hotkey.keys }}<kbd>{{ . }}</kbd>{{ end }}
-      </div>
+      <p class="hero-instructions">{{ $home.hero.instructionsHTML | safeHTML }}</p>
     </div>
   </section>
 
@@ -53,17 +51,6 @@
     </div>
   </section>
 
-  <section class="launch-feature section-dark" aria-labelledby="launch-title">
-    <div class="section-heading reveal">
-      <h2 id="launch-title">{{ $home.launch.title.firstLine }}<br><em>{{ $home.launch.title.emphasis }}</em> {{ $home.launch.title.suffix }}</h2>
-      <p>{{ $home.launch.descriptionHTML | safeHTML }}</p>
-    </div>
-    <div class="launch-stage reveal" data-delay="1">
-      <span class="launch-orbit" aria-hidden="true"><i></i><i></i><i></i></span>
-      {{ partial "screenshot.html" (dict "class" "screenshot-frame--launch" "src" $home.launch.screenshot "alt" $home.launch.screenshotAlt) }}
-    </div>
-  </section>
-
   <section class="files-feature section-dark" aria-labelledby="files-title">
     <div class="files-copy reveal">
       <h2 id="files-title">{{ $home.files.title.firstLine }}<br><em>{{ $home.files.title.emphasis }}</em> {{ $home.files.title.suffix }}</h2>
@@ -91,7 +78,8 @@
     </div>
   </section>
 
-  <section class="emoji-feature section-dark" aria-labelledby="emoji-title">
+  <div class="everyday-features section-dark">
+  <section class="emoji-feature" aria-labelledby="emoji-title">
     <div class="emoji-copy reveal">
       <h2 id="emoji-title">{{ $home.emoji.title.firstLine }}<br><em>{{ $home.emoji.title.emphasis }}</em> {{ $home.emoji.title.suffix }}</h2>
       <p>{{ $home.emoji.descriptionHTML | safeHTML }}</p>
@@ -102,7 +90,7 @@
     </div>
   </section>
 
-  <section class="shortcuts-feature section-dark" aria-labelledby="shortcuts-title">
+  <section class="shortcuts-feature" aria-labelledby="shortcuts-title">
     <div class="shortcuts-copy reveal">
       <h2 id="shortcuts-title">{{ $home.shortcuts.title.firstLine }}<br>{{ $home.shortcuts.title.secondLine }} <em>{{ $home.shortcuts.title.emphasis }}.</em></h2>
       <p>{{ $home.shortcuts.descriptionHTML | safeHTML }}</p>
@@ -112,6 +100,8 @@
       {{ partial "screenshot.html" (dict "class" "screenshot-frame--shortcuts" "src" $home.shortcuts.screenshot "alt" $home.shortcuts.screenshotAlt) }}
     </div>
   </section>
+
+  </div>
 
   <section class="closing section-dark" aria-labelledby="closing-title">
     <span class="closing-star" aria-hidden="true">✦</span>
