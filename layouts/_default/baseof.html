@@ -4,7 +4,7 @@
     {{ $description := .Description | default site.Params.description }}
     {{ $pageTitle := .Params.browserTitle | default .Title }}
     {{ if .IsHome }}{{ $pageTitle = site.Params.homeTitle }}{{ end }}
-    {{ $title := printf "%s — %s" $pageTitle site.Title }}
+    {{ $title := printf "%s | %s" $pageTitle site.Title }}
     {{ $shareImage := site.Params.shareImage | absURL }}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -4,7 +4,7 @@ hero:
     firstLine: Keep your hands
     secondLine: on the
     emphasis: keyboard
-  description: Open apps, find files, calculate answers, and run Apple Shortcuts—all from your keyboard.
+  description: Open apps, find files, calculate answers, and run Apple Shortcuts, all from your keyboard.
   screenshot: /images/screenshots/apps.webp
   screenshotAlt: Conjuror showing applications matching “cal” with Calculator selected
   instructionsHTML: Press <kbd>⌥ Space</kbd>, type an app, then <kbd>Return</kbd> to launch.
