@@ -5,6 +5,33 @@ type: changelog
 url: /changelog/
 ---
 
+## 1.0 alpha (14)
+
+- Showed separate installations of the same app in search with distinct names and preserved launch history.
+- Refreshed application results when app folders change.
+- Included executable apps such as Icon Composer in application search.
+- Fixed scrolling to the selected file result when navigating with the keyboard.
+- Ignored invalid saved hotkey values.
+- Rejected relative date calculations with amounts too large to represent.
+
+## 1.0 alpha (13)
+
+- Added a Minimal launcher appearance with tighter spacing and smaller result rows.
+- Fixed launcher resizing and hide/show transitions flickering as results change.
+- Reduced Shortcuts icon memory by generating thumbnails in the catalog helper.
+- Released the Settings window and SwiftUI view hierarchy when closed.
+- Reduced typing allocations by reusing the application search index until its catalog changes.
+- Released the decompressed emoji source text after parsing the catalog.
+
+## 1.0 alpha (12)
+
+- Reduced idle memory usage by loading emoji, Shortcuts, and application icons on demand.
+- Reduced memory after hiding the launcher by releasing its window and SwiftUI view hierarchy.
+- Reduced loaded Shortcuts memory by moving catalog extraction into a short-lived helper process.
+- Reduced search memory usage by compacting application, Shortcut, and emoji indexes.
+- Reduced search allocations by precomputing candidate acronyms.
+- Removed action counts from Shortcut results.
+
 ## 1.0 alpha (11)
 
 - Added iCloud Drive to protected folder access requests.

@@ -58,13 +58,17 @@ Press `⌥ + Space` to show Conjuror, then start typing. Use the arrow keys to s
 
 To change the main shortcut, open **Settings → Apps** and record a new key combination. Apple Shortcuts, Emoji, and Files each have a shortcut in their own Settings pane. Their defaults are `⌥ + ⇧ + Space`, `⌥ + ⇧ + E`, and `⌘ + ⇧ + F`.
 
+To change how the launcher looks, open **Settings → General** and choose **Launcher appearance**. Standard is the default. Minimal uses tighter spacing and smaller result rows, and hides the footer.
+
 While the search field is active, you can use the standard shortcuts for copy, paste, cut, select all, undo, and redo.
 
 Use the menu bar item to open Settings or quit Conjuror.
 
 ## Applications
 
-Start typing any part of an application’s name. Conjuror searches your installed apps, including user-facing menu bar apps such as Keychain Access and Passwords, and uses recent launches to order similarly matched results.
+Start typing any part of an application’s name. Conjuror searches your installed apps, including user-facing menu bar apps such as Keychain Access and Passwords, and uses recent launches to order similarly matched results. The results update when app folders change.
+
+When Conjuror finds separate installations of the same app, it lists each one. It uses the app filename, and sometimes its folder, to distinguish copies with the same name.
 
 Use `↑` and `↓` to select an app, then press Return or click the result to open it. Background-only apps, embedded helpers, and Conjuror itself do not appear in the results.
 
@@ -189,7 +193,7 @@ Recently run Shortcuts appear first when the search is empty and can rank higher
 
 Open Settings from the menu bar item, or press `⌘ + ,` while Conjuror is active. The window opens on your currently active macOS Space.
 
-- **General:** Turn launch at login on or off, choose the accent colour shared by the launcher border and mode icons, and set how many results appear before scrolling. Accent choices include Cyan, Purple, Yellow, a custom colour, or Disabled.
+- **General:** Turn launch at login on or off, choose the launcher appearance and accent colour, and set how many results appear before scrolling. Accent choices include Cyan, Purple, Yellow, a custom colour, or Disabled.
 - **Apps:** Change the main launcher shortcut and choose whether application search includes System Settings sections.
 - **Emoji:** Configure the shortcut that opens Emoji mode directly and choose the skin tone Conjuror applies to supported emoji by default.
 - **Shortcuts:** Configure the shortcut that opens Apple Shortcuts mode directly.
