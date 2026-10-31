@@ -5,6 +5,18 @@ type: changelog
 url: /changelog/
 ---
 
+## 1.0 alpha (16)
+
+- Restored focus to the previous app after copying an emoji or calculation result, or running a Shortcut.
+- Restored focus to the previous app when closing the launcher with Escape or its hotkey.
+
+## 1.0 alpha (15)
+
+- Rendered the menu bar icon as a bolder monochrome symbol.
+- Ranked multi-word and acronym file searches the same way as application search.
+- Fixed a failed file open replacing file results with a search error.
+- Restored file search and its error when reopening the launcher after a failed file open.
+
 ## 1.0 alpha (14)
 
 - Showed separate installations of the same app in search with distinct names and preserved launch history.

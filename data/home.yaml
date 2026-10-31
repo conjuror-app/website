@@ -43,7 +43,7 @@ calculate:
   title:
     emphasis: Calculate
     secondLine: Copy the result.
-  descriptionHTML: Work out a percentage or convert a measurement without opening another app. Type your calculation, then press <kbd>Return</kbd> to copy the answer.
+  descriptionHTML: Work out a percentage or convert a measurement without opening another app. Type your calculation, then press <kbd>Return</kbd> to copy the answer and return to your previous app.
   screenshot: /images/screenshots/calculator-conversion.webp
   screenshotAlt: Conjuror converting 10 kilometres to miles
   examples:
@@ -60,7 +60,7 @@ emoji:
   title:
     firstLine: Think of an emoji.
     emphasis: Presto.
-  descriptionHTML: Find the emoji you mean with everyday words like “lol”. Type <kbd>:</kbd> to search, then press <kbd>Return</kbd> to copy.
+  descriptionHTML: Find the emoji you mean with everyday words like “lol”. Type <kbd>:</kbd> to search, then press <kbd>Return</kbd> to copy and return to your previous app, ready to paste.
   screenshot: /images/screenshots/emoji.webp
   screenshotAlt: Conjuror Emoji mode showing results for “party”
 shortcuts:

@@ -9,9 +9,9 @@ params:
   homeTitle: Keyboard-first macOS launcher
   shareImage: /images/avatar-conjuror.png
   shareImageAlt: Conjuror app icon
-  downloadURL: https://github.com/conjuror-app/releases/releases/download/1.0-alpha.14/conjuror-1.0-alpha.14.zip
-  releaseURL: https://github.com/conjuror-app/releases/releases/tag/1.0-alpha.14
-  releaseName: Alpha 14
+  downloadURL: https://github.com/conjuror-app/releases/releases/download/1.0-alpha.16/conjuror-1.0-alpha.16.zip
+  releaseURL: https://github.com/conjuror-app/releases/releases/tag/1.0-alpha.16
+  releaseName: Alpha 16
   feedbackURL: https://github.com/conjuror-app/releases/issues
   availability: Free
   minimumMacOS: "26"

@@ -54,7 +54,9 @@ Press `Tab` to cycle through Applications, Apple Shortcuts, Emoji, and Files. Yo
 
 ## Launcher basics
 
-Press `⌥ + Space` to show Conjuror, then start typing. Use the arrow keys to select a result and press Return to open, copy, or run it. Conjuror hides after completing the action.
+Press `⌥ + Space` to show Conjuror, then start typing. Use the arrow keys to select a result and press Return to open, copy, or run it. Conjuror hides after completing the action. After copying an emoji or calculation result, or running a Shortcut, focus returns to the app you were using before opening Conjuror.
+
+Closing the launcher with Escape or its hotkey also returns focus to the previous app. If the query is not empty, press Escape once to clear it and again to close the launcher.
 
 To change the main shortcut, open **Settings → Apps** and record a new key combination. Apple Shortcuts, Emoji, and Files each have a shortcut in their own Settings pane. Their defaults are `⌥ + ⇧ + Space`, `⌥ + ⇧ + E`, and `⌘ + ⇧ + F`.
 
@@ -78,11 +80,13 @@ Applications mode also includes sections from System Settings. Search for a sect
 
 ## Files and folders
 
-Type `/` to switch to Files mode, then enter at least two characters from a file or folder name. Each query word is matched independently, and its letters only have to appear in order: a short query such as `qtr rpt` can find “Quarterly Report”. Exact names and prefixes rank ahead of looser fuzzy matches.
+Type `/` to switch to Files mode, then enter at least two characters from a file or folder name. Each query word is matched independently, and its letters only have to appear in order: a short query such as `qtr rpt` can find “Quarterly Report”. Exact names and prefixes rank ahead of looser fuzzy matches. Multi-word and acronym searches use the same ranking as application search. For example, `qr` can match “Quarterly Report”.
 
 Conjuror searches items indexed by Spotlight that macOS allows it to access. Hidden items do not appear.
 
 Use `↑` and `↓` to select a result, then press Return or click it. Files open in their default app; folders open in Finder. Search stays on your Mac.
+
+If a file cannot be opened, the results remain visible alongside the error. Closing and reopening the launcher restores the file search and its error.
 
 Desktop, Documents, Downloads, and iCloud Drive are protected by macOS. Conjuror requests access when you first run a file search. You can also open **Settings → Files**, choose **Grant Access**, and approve the prompts for any of those folders you want included in results.
 
