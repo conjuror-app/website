@@ -21,3 +21,7 @@ The script reads `../conjuror/CHANGELOG.md` by default, omits the `Unreleased` s
 ## Download release
 
 The download buttons link directly to the app ZIP. When publishing a new alpha, update `params.downloadURL`, `params.releaseURL`, and `params.releaseName` in `hugo.yaml` together. Use the app archive, not the `.dSYM.zip` debug symbols. Alpha releases are prereleases, so GitHub’s `/releases/latest` shortcut does not select them.
+
+Releases are published in `conjuror-app/conjuror`. Source tags use `1.0.0-alpha.N`,
+while archive filenames can use `1.0-alpha.N`; copy the exact asset URL from the
+release instead of deriving the filename from its tag.

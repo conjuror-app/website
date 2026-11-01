@@ -4,7 +4,7 @@ browserTitle: Privacy policy
 description: How Conjuror handles local searches, preferences, permissions, and optional exchange-rate downloads.
 ---
 
-Updated 5 September 2026.
+Updated 1 November 2026.
 
 Conjuror is a macOS app made by Tom Bell. Your launcher searches are processed on your Mac. Conjuror does not send your search text to a server or require an account.
 
@@ -36,4 +36,4 @@ If you post an issue or discussion, the information you submit is visible public
 
 ## Questions and changes
 
-You can ask Tom about Conjuror’s privacy behaviour through [Conjuror Discussions](https://github.com/conjuror-app/releases/discussions). This page will be updated when that behaviour changes, with the revision date shown above.
+You can ask Tom about Conjuror's privacy behaviour through [Conjuror Issues](https://github.com/conjuror-app/conjuror/issues). This page will be updated when that behaviour changes, with the revision date shown above.
