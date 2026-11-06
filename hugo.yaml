@@ -5,13 +5,13 @@ disableKinds:
   - taxonomy
   - term
 params:
-  description: A keyboard-first macOS launcher for apps, files, folders, emoji, Apple Shortcuts, calculations, conversions, dates, and timezones.
+  description: A keyboard-first macOS launcher for apps, running apps, files, folders, quicklinks, emoji, Apple Shortcuts, system commands, calculations, conversions, dates, and timezones.
   homeTitle: Keyboard-first macOS launcher
   shareImage: /images/avatar-conjuror.png
   shareImageAlt: Conjuror app icon
-  downloadURL: https://github.com/conjuror-app/conjuror/releases/download/1.0.0-alpha.16/conjuror-1.0-alpha.16.zip
-  releaseURL: https://github.com/conjuror-app/conjuror/releases/tag/1.0.0-alpha.16
-  releaseName: Alpha 16
+  downloadURL: https://github.com/conjuror-app/conjuror/releases/download/1.0.0-alpha.17/conjuror-1.0-alpha.17.zip
+  releaseURL: https://github.com/conjuror-app/conjuror/releases/tag/1.0.0-alpha.17
+  releaseName: Alpha 17
   feedbackURL: https://github.com/conjuror-app/conjuror/issues
   availability: Free
   minimumMacOS: "26"

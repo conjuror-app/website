@@ -37,26 +37,32 @@ After installing with either method, open Conjuror and press `⌥ + Space` to sh
 | `⌥ + Space` | Show or hide Conjuror |
 | `↑` `↓` | Move through results |
 | `←` `→` | Move through the emoji grid |
-| `Tab` | Cycle through Applications, Apple Shortcuts, Emoji, and Files modes |
+| `Tab` | Cycle through the launcher modes |
 | `Return` | Open, copy, or run the selection |
+| `⌘ + Return` | Reveal the selected app or file in Finder |
+| `⌥ + Return` | Search the web for the query |
 | `Escape` | Clear the query, or close Conjuror when the query is empty |
 
-### Four modes, one launcher
+### Six modes, one launcher
 
 | Mode | How to enter it | What Return does |
 | --- | --- | --- |
-| Applications | Type normally, or start with `;` from another mode | Opens the selected app or copies a calculation |
+| Applications | Type normally, or start with `;` from another mode | Opens the selected app, quicklink, or System Settings section, runs a system command, or copies a calculation |
 | Apple Shortcuts | Start with `>` | Runs the selected Shortcut |
 | Emoji | Start with `:` | Copies the selected emoji |
 | Files | Start with `/` | Opens the selected file or folder |
+| Running apps | Start with `@` | Switches to the selected app |
+| System commands | Start with `!` | Runs the selected command |
 
-Press `Tab` to cycle through Applications, Apple Shortcuts, Emoji, and Files. You can also type a mode prefix at any time: `;` for Applications, `>` for Apple Shortcuts, `:` for Emoji, or `/` for Files. The prefix is removed from the search query.
+Press `Tab` to cycle through Applications, Apple Shortcuts, Emoji, Files, Running apps, and System commands. Modes you have turned off in Settings are skipped. You can also type a mode prefix at any time: `;` for Applications, `>` for Apple Shortcuts, `:` for Emoji, `/` for Files, `@` for Running apps, or `!` for System commands. The prefix is removed from the search query.
 
 ## Launcher basics
 
 Press `⌥ + Space` to show Conjuror, then start typing. Use the arrow keys to select a result and press Return to open, copy, or run it. Conjuror hides after completing the action. After copying an emoji or calculation result, or running a Shortcut, focus returns to the app you were using before opening Conjuror.
 
 Closing the launcher with Escape or its hotkey also returns focus to the previous app. If the query is not empty, press Escape once to clear it and again to close the launcher.
+
+Press `⌘ + Return` to reveal the selected app or file in Finder instead of opening it. Holding Return down does not repeat the action.
 
 To change the main shortcut, open **Settings → Apps** and record a new key combination. Apple Shortcuts, Emoji, and Files each have a shortcut in their own Settings pane. Their defaults are `⌥ + ⇧ + Space`, `⌥ + ⇧ + E`, and `⌘ + ⇧ + F`.
 
@@ -76,7 +82,75 @@ Use `↑` and `↓` to select an app, then press Return or click the result to o
 
 Applications mode also includes sections from System Settings. Search for a section such as `Bluetooth`, `Displays`, or `Software Update`, then open it to go directly to that pane. These results are on by default; turn off **System Settings results** under **Settings → Apps** if you only want applications.
 
-{{< docs-screenshot src="/images/screenshots/settings-apps.webp" alt="Conjuror Apps settings showing the main keyboard shortcut and enabled System Settings results" caption="Apps settings control the main launcher shortcut and System Settings results." >}}
+### Aliases and hotkeys
+
+Give an app a short alias to rank it first. For example, with the alias `vs` for Visual Studio Code, typing `vs` puts Visual Studio Code at the top of the results. Typing the start of an alias also finds the app, and the alias appears next to the app in results.
+
+An app hotkey opens the app from anywhere, or switches to it if it is already running. Press the hotkey again while the app is in front to hide it. App hotkeys work without opening the launcher.
+
+{{< docs-screenshot src="/images/screenshots/alias.webp" alt="Conjuror showing Helium first for the query “brow”, with its alias “browse” next to the result" caption="Typing the start of an alias ranks its app first and shows the alias beside it." >}}
+
+To add an alias or hotkey, open **Settings → Apps**, choose **Aliases & Hotkeys**, then click **Add…** and pick an app. Aliases and hotkeys follow an app if you move it, as long as only one copy is installed. If a hotkey cannot be registered, for example because another app already uses it, your other hotkeys keep working.
+
+### Excluded apps
+
+To hide an app from search and recent results, open **Settings → Apps**, choose **Excluded**, then click **Add…** and pick the app. Exclusions match the app’s location, so exclude it again if you move it. An excluded app’s alias stops working, but its hotkey still works.
+
+{{< docs-screenshot src="/images/screenshots/settings-apps.webp" alt="Conjuror Apps settings showing the main keyboard shortcut, System Settings results and System commands toggles, and the Aliases & Hotkeys and Excluded lists" caption="Apps settings control the main launcher shortcut, System Settings results, system commands, app aliases and hotkeys, and excluded apps." >}}
+
+## Quicklinks and web search
+
+A quicklink opens a URL from the launcher. Type its keyword followed by search text, such as `gh swift testing`, to search GitHub for “swift testing”. Typing part of a quicklink’s name also finds it, listed after matching apps. If you press Return on a keyword with nothing after it, Conjuror fills in the keyword so you can keep typing.
+
+{{< docs-screenshot src="/images/screenshots/quicklink.webp" alt="Conjuror showing the GitHub quicklink for “gh swift testing” and a DuckDuckGo web search row" caption="The GitHub quicklink searches for the text after its keyword. The last row searches the web." >}}
+
+Conjuror includes Google (`g`), DuckDuckGo (`ddg`), GitHub (`gh`), and Wikipedia (`wiki`). Add, edit, or remove quicklinks under **Settings → Quicklinks**. Put `{query}` in the URL where the search text should go, as in `https://kagi.com/search?q={query}`. A URL without `{query}` opens as it is. Each quicklink opens in the default app for its URL unless you choose a different app. **Restore Built-ins** brings back any of the four built-in quicklinks you have removed.
+
+The last row in application results searches the web for your query. Select it and press Return, or press `⌥ + Return` from any row. DuckDuckGo is the default search engine. Choose a different quicklink, or **None** to remove the row, under **Web search fallback** in **Settings → Quicklinks**.
+
+Your search text is only sent to a site when you open one of its quicklinks or a web search.
+
+{{< docs-screenshot src="/images/screenshots/settings-quicklinks.webp" alt="Conjuror Quicklinks settings showing DuckDuckGo as the web search fallback and the built-in Google, DuckDuckGo, GitHub, and Wikipedia quicklinks" caption="Manage quicklinks and choose the web search fallback from Settings → Quicklinks." >}}
+
+## Running apps
+
+Type `@` to list running apps, then press Return to switch to one. Excluded apps do not appear.
+
+| Keys | Action |
+| --- | --- |
+| `⌘ + H` | Hide the app |
+| `⌥ + ⌘ + H` | Hide other apps and switch to this one |
+| `⌘ + ⌫` | Quit the app |
+| `⌥ + ⌘ + ⌫` | Force quit the app |
+| `⌘ + R` | Quit and reopen the app |
+| `⇧ + ⌘ + ⌫` | Quit every listed app except Finder |
+| `⌘ + Return` | Reveal the app in Finder |
+
+Force quitting and quitting every app ask first: press Return to confirm or Escape to cancel. Apps you hide stay hidden when the launcher closes.
+
+{{< docs-screenshot src="/images/screenshots/running-confirm.webp" alt="Conjuror in Running apps mode asking to confirm force quitting Discord, with Cancel and Force Quit buttons" caption="Force quit asks for confirmation before it runs." >}}
+
+## System commands
+
+Type a command’s name, such as `lock`, `sleep`, or `empty trash`, and it appears alongside your apps. Type `!` to list every command:
+
+- Lock Screen
+- Sleep
+- Sleep Displays
+- Start Screen Saver
+- Show Desktop
+- Toggle Dark Mode
+- Eject All Disks
+- Empty Trash
+- Log Out
+- Restart
+- Shut Down
+
+Empty Trash and Eject All Disks wait for a second Return before they run; press Escape to cancel. Log Out, Restart, and Shut Down show the standard macOS confirmation.
+
+{{< docs-screenshot src="/images/screenshots/confirm.webp" alt="Conjuror showing Empty Trash selected with the prompt “Empty Trash now? Press Return again”" caption="Empty Trash waits for a second Return." >}}
+
+To remove system commands from the launcher, turn off **System commands** under **Settings → Apps**.
 
 ## Files and folders
 
@@ -144,15 +218,27 @@ If you omit the target unit, Conjuror chooses a common counterpart. For example,
 
 ### Relative dates
 
-Enter a duration followed by `from now` or `ago` to calculate a relative date. You can use minutes, hours, days, weeks, months, or years. The answer includes the resulting local date and time.
+Enter a duration followed by `from now` or `ago`, or add it to or subtract it from `now`, to calculate a relative date. You can use seconds, minutes, hours, days, weeks, months, or years. The answer includes the resulting local date and time.
 
 ```text
 5 days from now
 1.5 hours from now
 2 weeks ago
+now + 90 seconds
+now - 3 months
 ```
 
-You can use decimal values for minutes, hours, days, and weeks. Use whole numbers for months and years.
+You can use decimal values for seconds, minutes, hours, days, and weeks. Use whole numbers for months and years.
+
+### Dates
+
+Subtract one date from another to find the time between them. The answer is in days unless you add `in` and a unit such as `weeks`, `months`, or `years`. You can also add a duration to, or subtract one from, a typed date. Use `now`, `today`, `tomorrow`, `yesterday`, or a date such as `1 aug 2025` or `2025-01-01`.
+
+```text
+now - 1 aug 2025 in days
+today - 1 jan 1990 in years
+1 aug 2025 + 30 days
+```
 
 ### Timezones
 
@@ -175,7 +261,11 @@ To convert currencies, first enable **Currency conversion** under **Settings →
 $50 in GBP
 20 EUR → ¥
 1 CAD
+500*21 GBP in USD
+500*21 in GBP in USD
 ```
+
+You can use arithmetic in the amount. To name the source currency after the arithmetic, add it with a connector before the target currency, as in `500*21 in GBP in USD`.
 
 If you omit the target currency, Conjuror uses the currency from your regional settings. It downloads a complete rate snapshot from [Frankfurter](https://frankfurter.dev) daily after a successful refresh; failed requests may be retried sooner. Your search text is never sent. The latest snapshot remains available offline, and disabling currency conversion removes the cached rates.
 
@@ -195,28 +285,33 @@ Recently run Shortcuts appear first when the search is empty and can rank higher
 
 ## Settings
 
-Open Settings from the menu bar item, or press `⌘ + ,` while Conjuror is active. The window opens on your currently active macOS Space.
+Open Settings from the menu bar item, or press `⌘ + ,` while Conjuror is active. The window opens on your currently active macOS Space. You can resize it vertically, and it remembers its height.
 
 - **General:** Turn launch at login on or off, choose the launcher appearance and accent colour, and set how many results appear before scrolling. Accent choices include Cyan, Purple, Yellow, a custom colour, or Disabled.
-- **Apps:** Change the main launcher shortcut and choose whether application search includes System Settings sections.
+- **Apps:** Change the main launcher shortcut, choose whether application search includes System Settings sections and system commands, manage app aliases and hotkeys, and exclude apps from search.
 - **Emoji:** Configure the shortcut that opens Emoji mode directly and choose the skin tone Conjuror applies to supported emoji by default.
 - **Shortcuts:** Configure the shortcut that opens Apple Shortcuts mode directly.
 - **Calculator:** Turn optional currency conversion on or off.
 - **Files:** Turn file and folder search on or off, configure its direct shortcut, and request access to the protected Desktop, Documents, Downloads, and iCloud Drive locations.
+- **Quicklinks:** Add, edit, or remove quicklinks, restore the built-in ones, and choose the web search fallback.
 - **About:** Check the installed version or open the GitHub repository and licence.
 
 The visible-results setting accepts values from 3 to 10. Launch at login is off by default. If macOS requires approval after you enable it, use **Open Login Items Settings** to finish the setup.
 
-Use **Reset to Defaults** under Apps to restore all keyboard shortcuts, the accent colour, the visible-results setting, and the preferred emoji skin tone.
+Use **Reset to Defaults** under Apps to restore all keyboard shortcuts, the accent colour, the visible-results setting, and the preferred emoji skin tone. It also removes all app aliases, app hotkeys, and excluded apps.
 
-{{< docs-screenshot src="/images/screenshots/settings-general.webp" alt="Conjuror General settings showing launch at login, accent colour, and visible results" caption="General settings control launch behaviour, the launcher accent, and result count." >}}
+{{< docs-screenshot src="/images/screenshots/settings-general.webp" alt="Conjuror General settings showing launch at login, launcher appearance, accent colour, and visible results" caption="General settings control launch behaviour, the launcher appearance and accent, and result count." >}}
 
 ## Permissions
 
 To search and run Apple Shortcuts, allow Conjuror to control Shortcuts Events when macOS first asks. This Automation permission is only required for Apple Shortcuts mode.
 
+Some system commands also need Automation permission. macOS asks whether Conjuror can control Finder the first time you empty the Trash, and System Events the first time you toggle dark mode.
+
 File search uses the on-device Spotlight index. macOS may ask before Conjuror can access Desktop, Documents, Downloads, or iCloud Drive; you can trigger those prompts from **Settings → Files**.
 
 Currency conversion uses the network to refresh an exchange-rate snapshot daily; failed requests may be retried sooner. Your search text is never sent, and the latest rates remain available offline.
 
-Application, file, folder, and emoji search, arithmetic, unit conversion, relative dates, and timezone conversion stay on your Mac and do not require network access.
+Quicklinks and web search open a site in your browser or the app you chose, which sends your search text to that site.
+
+Application, running app, file, folder, and emoji search, arithmetic, unit conversion, dates, and timezone conversion stay on your Mac and do not require network access.

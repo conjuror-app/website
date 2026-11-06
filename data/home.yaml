@@ -4,16 +4,16 @@ hero:
     firstLine: Keep your hands
     secondLine: on the
     emphasis: keyboard
-  description: Open apps, find files, calculate answers, and run Apple Shortcuts, all from your keyboard.
+  description: Open apps, files, and links, switch between running apps, calculate answers, and run Apple Shortcuts, all from your keyboard.
   screenshot: /images/screenshots/apps.webp
   screenshotAlt: Conjuror showing applications matching “cal” with Calculator selected
   instructionsHTML: Press <kbd>⌥ Space</kbd>, type an app, then <kbd>Return</kbd> to launch.
 modes:
   title:
-    prefix: Four modes, one
+    prefix: Six modes, one
     key: tab
     suffix: apart.
-  descriptionHTML: Open apps and System Settings, with recent launches helping to order similar matches. Press <kbd>Tab</kbd> to switch to Shortcuts, Emoji, or Files.
+  descriptionHTML: Open apps, quicklinks, and System Settings, with aliases and recent launches helping to order matches. Press <kbd>Tab</kbd> to switch to Shortcuts, Emoji, Files, Running apps, or System commands.
   items:
     - name: Apps
       description: Open apps, find settings, or calculate.
@@ -31,6 +31,14 @@ modes:
       description: Find a file or folder and open it.
       screenshot: /images/screenshots/mode-files.webp
       screenshotAlt: Conjuror in Files mode
+    - name: Running apps
+      description: Switch to, hide, or quit an app.
+      screenshot: /images/screenshots/mode-running.webp
+      screenshotAlt: Conjuror in Running apps mode listing open apps
+    - name: System commands
+      description: Lock, sleep, restart, and more.
+      screenshot: /images/screenshots/mode-commands.webp
+      screenshotAlt: Conjuror in System commands mode
 files:
   title:
     firstLine: Your files.
@@ -74,7 +82,7 @@ shortcuts:
 privacy:
   title: Your searches stay on your Mac.
   description: Find apps and files, choose emoji, and calculate answers locally. No account needed.
-  detail: Currency conversion is optional. It downloads exchange rates, never your search text.
+  detail: Currency conversion is optional. It downloads exchange rates, never your search text. Quicklinks and web search send your query only to the site you open.
 closing:
   title:
     firstLine: Less pointing.

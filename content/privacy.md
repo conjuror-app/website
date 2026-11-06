@@ -1,18 +1,18 @@
 ---
 title: Privacy
 browserTitle: Privacy policy
-description: How Conjuror handles local searches, preferences, permissions, and optional exchange-rate downloads.
+description: How Conjuror handles local searches, preferences, permissions, quicklinks, and optional exchange-rate downloads.
 ---
 
-Updated 1 November 2026.
+Updated 6 November 2026.
 
-Conjuror is a macOS app made by Tom Bell. Your launcher searches are processed on your Mac. Conjuror does not send your search text to a server or require an account.
+Conjuror is a macOS app made by Tom Bell. Your launcher searches are processed on your Mac. Conjuror does not send your search text to a Conjuror server or require an account. Search text only leaves your Mac when you open a quicklink or web search, as described below.
 
 ## What stays on your Mac
 
-Application and System Settings search, file and folder search, emoji search, arithmetic, unit conversions, relative dates, and timezone conversions work locally.
+Application, System Settings, system command, and running app search, file and folder search, emoji search, arithmetic, unit conversions, dates, and timezone conversions work locally.
 
-Conjuror stores your settings and a limited history of recently launched apps, run Shortcuts, and copied emoji in local preferences. This history helps order results and show recently used emoji. It is not uploaded to a Conjuror service.
+Conjuror stores your settings, including app aliases, app hotkeys, excluded apps, and quicklinks, and a limited history of recently launched apps, run Shortcuts, and copied emoji in local preferences. This history helps order results and show recently used emoji. It is not uploaded to a Conjuror service.
 
 When you choose an emoji or calculation result, Conjuror writes it to the macOS clipboard so you can paste it. macOS and any clipboard tools you use control what happens to copied content afterwards.
 
@@ -21,6 +21,14 @@ When you choose an emoji or calculation result, Conjuror writes it to the macOS 
 File search uses the Spotlight index on your Mac and respects the access macOS grants to Conjuror. macOS may ask for permission to search protected locations such as Desktop, Documents, Downloads, and iCloud Drive. You can review those permissions in **System Settings → Privacy & Security**.
 
 Conjuror asks for Automation permission to search and run Apple Shortcuts through Shortcuts Events. A Shortcut you choose to run may access files, use the network, or contact other services according to its own actions and permissions.
+
+Some system commands also use Automation: Empty Trash controls Finder, and Toggle Dark Mode controls System Events. macOS asks for each permission the first time you run the command.
+
+## Quicklinks and web search
+
+When you open a quicklink or the web search row, Conjuror opens its URL in your default browser, or in the app you chose for that quicklink. If the URL contains `{query}`, the text you typed after the keyword, or your whole query for web search, is included in that URL and sent to the site. Conjuror sends nothing until you open one. The site's own privacy policy applies to what it receives.
+
+To stop showing the web search row, choose **None** for **Web search fallback** under **Settings → Quicklinks**.
 
 ## Optional currency conversion
 
