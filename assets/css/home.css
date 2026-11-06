@@ -65,10 +65,11 @@ h1 { font-size: clamp(3.5rem, 6.2vw, 6rem); }
 }
 
 
-.screenshot-frame--hero { width: min(100%, 46rem); margin-left: auto; }
-.screenshot-frame--calculate { --screenshot-height: 380; }
-.screenshot-frame--emoji { --screenshot-height: 450; }
-.screenshot-frame--shortcuts { --screenshot-y: 100; --screenshot-height: 680; }
+.screenshot-frame--hero { --screenshot-height: 533; width: min(100%, 46rem); margin-left: auto; }
+.screenshot-frame--calculate { --screenshot-height: 335; }
+.screenshot-frame--files { --screenshot-height: 533; }
+.screenshot-frame--emoji { --screenshot-height: 352; }
+.screenshot-frame--shortcuts { --screenshot-height: 533; }
 .magic-trail { position: absolute; z-index: 1; left: -7rem; bottom: 1rem; width: 22rem; height: 11rem; border-bottom: 2px solid var(--violet); border-radius: 0 0 60% 60%; transform: rotate(-24deg); filter: drop-shadow(0 0 8px rgba(113,87,245,.5)); }
 .magic-trail span { position: absolute; width: .45rem; height: .45rem; background: var(--yellow); box-shadow: 0 0 1.2rem var(--yellow); animation: star-twinkle 3.8s ease-in-out infinite; --star-rotation: 45deg; }
 .magic-trail span:nth-child(1) { right: 7%; top: 68%; }
@@ -87,7 +88,7 @@ h1 { font-size: clamp(3.5rem, 6.2vw, 6rem); }
   gap: 1.5rem clamp(2rem, 6vw, 6rem);
 }
 
-.modes-image { --screenshot-y: 210; --screenshot-height: 720; width: 100%; }
+.modes-image { --screenshot-y: 210; --screenshot-height: 700; width: 100%; }
 .modes-image img {
   position: absolute;
   opacity: 0;

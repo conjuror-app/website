@@ -1,4 +1,6 @@
+{{ $src := .Get "src" }}
+{{ $config := imageConfig (path.Join "static" $src) }}
 <figure class="docs-screenshot">
-  <img src="{{ .Get "src" | relURL }}" alt="{{ .Get "alt" }}" width="1404" height="1100" loading="lazy">
+  <img src="{{ $src | relURL }}" alt="{{ .Get "alt" }}" width="{{ $config.Width }}" height="{{ $config.Height }}" loading="lazy">
   {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
 </figure>

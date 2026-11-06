@@ -38,7 +38,7 @@ files:
     suffix: away.
   descriptionHTML: Find files without the exact filename. Type <kbd>/</kbd>, enter what you remember, and press <kbd>Return</kbd> to open a match from your Spotlight index.
   screenshot: /images/screenshots/files.webp
-  screenshotAlt: Conjuror showing PDF files matching “Four Against”
+  screenshotAlt: Conjuror showing a folder and PDF files matching “Four Against”
 calculate:
   title:
     emphasis: Calculate
