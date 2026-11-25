@@ -4,7 +4,7 @@ hero:
     firstLine: Keep your hands
     secondLine: on the
     emphasis: keyboard
-  description: Open apps, files, and links, switch between running apps, calculate answers, and run Apple Shortcuts, all from your keyboard.
+  description: Open apps, files, and links, switch between running apps, paste from your clipboard history, calculate answers, and run Apple Shortcuts, all from your keyboard.
   screenshot: /images/screenshots/apps.webp
   screenshotAlt: Conjuror showing applications matching “cal” with Calculator selected
   instructionsHTML: Press <kbd>⌥ Space</kbd>, type an app, then <kbd>Return</kbd> to launch.
@@ -68,7 +68,7 @@ emoji:
   title:
     firstLine: Think of an emoji.
     emphasis: Presto.
-  descriptionHTML: Find the emoji you mean with everyday words like “lol”. Type <kbd>:</kbd> to search, then press <kbd>Return</kbd> to copy and return to your previous app, ready to paste.
+  descriptionHTML: Find the emoji you mean with everyday words like “lol”. Type <kbd>:</kbd> to search, then press <kbd>Return</kbd> to paste it straight into the app you were using.
   screenshot: /images/screenshots/emoji.webp
   screenshotAlt: Conjuror Emoji mode showing results for “party”
 shortcuts:
@@ -81,7 +81,7 @@ shortcuts:
   screenshotAlt: Conjuror showing available Apple Shortcuts
 privacy:
   title: Your searches stay on your Mac.
-  description: Find apps and files, choose emoji, and calculate answers locally. No account needed.
+  description: Find apps and files, choose emoji, search your clipboard history, and calculate answers locally. No account needed.
   detail: Currency conversion is optional. It downloads exchange rates, never your search text. Quicklinks and web search send your query only to the site you open.
 closing:
   title:
