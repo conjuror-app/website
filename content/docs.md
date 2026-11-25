@@ -38,35 +38,40 @@ After installing with either method, open Conjuror and press `⌥ + Space` to sh
 | `↑` `↓` | Move through results |
 | `←` `→` | Move through the emoji grid |
 | `Tab` | Cycle through the launcher modes |
-| `Return` | Open, copy, or run the selection |
-| `⌘ + Return` | Reveal the selected app or file in Finder |
+| `Return` | Open, paste, copy, or run the selection |
+| `⌘ + Return` | Reveal the selected app or file in Finder, or copy the selected emoji or clipboard item |
 | `⌥ + Return` | Search the web for the query |
 | `Escape` | Clear the query, or close Conjuror when the query is empty |
 
-### Six modes, one launcher
+### Seven modes, one launcher
 
 | Mode | How to enter it | What Return does |
 | --- | --- | --- |
 | Applications | Type normally, or start with `;` from another mode | Opens the selected app, quicklink, or System Settings section, runs a system command, or copies a calculation |
 | Apple Shortcuts | Start with `>` | Runs the selected Shortcut |
-| Emoji | Start with `:` | Copies the selected emoji |
+| Emoji | Start with `:` | Pastes the selected emoji into the app you were using |
+| Clipboard history | Start with `#` | Pastes the selected item into the app you were using |
 | Files | Start with `/` | Opens the selected file or folder |
 | Running apps | Start with `@` | Switches to the selected app |
 | System commands | Start with `!` | Runs the selected command |
 
-Press `Tab` to cycle through Applications, Apple Shortcuts, Emoji, Files, Running apps, and System commands. Modes you have turned off in Settings are skipped. You can also type a mode prefix at any time: `;` for Applications, `>` for Apple Shortcuts, `:` for Emoji, `/` for Files, `@` for Running apps, or `!` for System commands. The prefix is removed from the search query.
+Press `Tab` to cycle through Applications, Apple Shortcuts, Emoji, Clipboard history, Files, Running apps, and System commands. Modes you have turned off in Settings are skipped, and clipboard history is off until you turn it on. You can also type a mode prefix at any time: `;` for Applications, `>` for Apple Shortcuts, `:` for Emoji, `#` for Clipboard history, `/` for Files, `@` for Running apps, or `!` for System commands. The prefix is removed from the search query.
+
+Pasting needs Accessibility access. Until you allow it, Return copies the emoji or clipboard item instead.
 
 ## Launcher basics
 
-Press `⌥ + Space` to show Conjuror, then start typing. Use the arrow keys to select a result and press Return to open, copy, or run it. Conjuror hides after completing the action. After copying an emoji or calculation result, or running a Shortcut, focus returns to the app you were using before opening Conjuror.
+Press `⌥ + Space` to show Conjuror, then start typing. Use the arrow keys to select a result and press Return to open, copy, or run it. Conjuror hides after completing the action. After pasting or copying an emoji, clipboard item, or calculation result, or running a Shortcut, focus returns to the app you were using before opening Conjuror.
 
 Closing the launcher with Escape or its hotkey also returns focus to the previous app. If the query is not empty, press Escape once to clear it and again to close the launcher.
 
 Press `⌘ + Return` to reveal the selected app or file in Finder instead of opening it. Holding Return down does not repeat the action.
 
-To change the main shortcut, open **Settings → Apps** and record a new key combination. Apple Shortcuts, Emoji, and Files each have a shortcut in their own Settings pane. Their defaults are `⌥ + ⇧ + Space`, `⌥ + ⇧ + E`, and `⌘ + ⇧ + F`.
+To change the main shortcut, open **Settings → Apps** and record a new key combination. Apple Shortcuts, Emoji, Clipboard, and Files each have a shortcut in their own Settings pane. Their defaults are `⌥ + ⇧ + Space`, `⌥ + ⇧ + E`, `⌥ + ⇧ + V`, and `⌘ + ⇧ + F`. The Clipboard shortcut only works while clipboard history is on.
 
-To change how the launcher looks, open **Settings → General** and choose **Launcher appearance**. Standard is the default. Minimal uses tighter spacing and smaller result rows, and hides the footer.
+A mode shortcut can also be a tap of `fn` (🌐) on its own. This needs Accessibility access. macOS can also act on the 🌐 key, so Settings shows a warning until **Press 🌐 key to** is set to **Do Nothing** under **System Settings → Keyboard**. If a shortcut can’t be registered, for example `fn` before you allow Accessibility access, Conjuror tries again each time it becomes active.
+
+To change how the launcher looks, open **Settings → General** and choose **Launcher appearance**. Standard is the default. Minimal uses tighter spacing and smaller result rows, and hides the footer. Command Bar shows keyboard hints for the available actions, and previews the selected file or clipboard item beside the results.
 
 While the search field is active, you can use the standard shortcuts for copy, paste, cut, select all, undo, and redo.
 
@@ -273,9 +278,21 @@ If you omit the target currency, Conjuror uses the currency from your regional s
 
 Type `:` to switch to Emoji mode, then search by emoji name or common keyword. For example, `lol` finds 😂 even though the word is not part of its Unicode name. Results include gender and skin-tone variants from the latest Unicode catalog.
 
-Use all four arrow keys to move through the grid. Press Return, or click an emoji, to copy it and close the launcher.
+Use all four arrow keys to move through the grid. Press Return, or click an emoji, to paste it into the app you were using and close the launcher. Pasting needs Accessibility access; until you allow it, Return copies the emoji instead. Press `⌘ + Return` to copy the emoji without pasting.
 
-Leave the search empty to see recently copied emoji first. To apply the same skin tone to supported emoji automatically, choose one under **Settings → Emoji**. Searching for a specific skin tone shows that variant instead.
+Leave the search empty to see recently used emoji first. To apply the same skin tone to supported emoji automatically, choose one under **Settings → Emoji**. Searching for a specific skin tone shows that variant instead.
+
+To remove Emoji mode from the launcher, turn it off under **Settings → Emoji**.
+
+## Clipboard history
+
+Clipboard history is off by default. Turn it on under **Settings → Clipboard**, then type `#` or press `⌥ + ⇧ + V` to search text you have copied. Your most recent items come first, and each one shows the app it came from and how long ago you copied it.
+
+Press Return, or click an item, to paste it into the app you were using. Pasting needs Accessibility access; until you allow it, Return copies the item instead. Press `⌘ + Return` to copy an item without pasting, or `⌃ + X` to remove it from your history.
+
+Conjuror keeps plain text only. It skips text copied from password managers such as 1Password, Bitwarden, KeePassXC, Keychain Access, and Passwords, and anything an app marks as concealed or temporary. macOS may ask whether Conjuror can paste from other apps the first time it reads text you copied elsewhere.
+
+Under **Keep history for**, choose 1 day, 7 days, 30 days, 3 months, or forever. The default is 30 days, and Conjuror keeps up to 1,000 items. **Clear History…** deletes every item, and turning clipboard history off deletes it too. Your history stays on your Mac.
 
 ## Apple Shortcuts
 
@@ -283,18 +300,21 @@ Type `>` to switch to Apple Shortcuts mode, then search by name or subtitle. Use
 
 Recently run Shortcuts appear first when the search is empty and can rank higher among similar matches. Shortcuts that require input do not appear in the results.
 
+Conjuror refreshes your Shortcuts each time you open Apple Shortcuts mode. Your existing list stays searchable while it refreshes. To remove Apple Shortcuts mode from the launcher, turn it off under **Settings → Shortcuts**.
+
 ## Settings
 
-Open Settings from the menu bar item, or press `⌘ + ,` while Conjuror is active. The window opens on your currently active macOS Space. You can resize it vertically, and it remembers its height.
+Open Settings from the menu bar item, or press `⌘ + ,` while Conjuror is active. The window opens on your currently active macOS Space. Choose a pane from the sidebar. You can resize the window vertically, and it remembers its height.
 
-- **General:** Turn launch at login on or off, choose the launcher appearance and accent colour, and set how many results appear before scrolling. Accent choices include Cyan, Purple, Yellow, a custom colour, or Disabled.
+- **General:** Turn launch at login on or off, choose the launcher appearance and accent colour, and set how many results appear before scrolling. Appearance choices are Standard, Minimal, and Command Bar. Accent choices include Cyan, Purple, Yellow, a custom colour, or Disabled.
 - **Apps:** Change the main launcher shortcut, choose whether application search includes System Settings sections and system commands, manage app aliases and hotkeys, and exclude apps from search.
-- **Emoji:** Configure the shortcut that opens Emoji mode directly and choose the skin tone Conjuror applies to supported emoji by default.
-- **Shortcuts:** Configure the shortcut that opens Apple Shortcuts mode directly.
+- **Emoji:** Turn Emoji mode on or off, configure the shortcut that opens it directly, and choose the skin tone Conjuror applies to supported emoji by default.
+- **Clipboard:** Turn clipboard history on or off, configure the shortcut that opens it directly, check whether Return can paste, choose how long to keep history, and clear it.
+- **Shortcuts:** Turn Apple Shortcuts mode on or off and configure the shortcut that opens it directly.
 - **Calculator:** Turn optional currency conversion on or off.
 - **Files:** Turn file and folder search on or off, configure its direct shortcut, and request access to the protected Desktop, Documents, Downloads, and iCloud Drive locations.
 - **Quicklinks:** Add, edit, or remove quicklinks, restore the built-in ones, and choose the web search fallback.
-- **About:** Check the installed version or open the GitHub repository and licence.
+- **About:** Check the installed version and the status of each permission, report a bug, copy diagnostics for a bug report, and open the GitHub repository, licence, and credits.
 
 The visible-results setting accepts values from 3 to 10. Launch at login is off by default. If macOS requires approval after you enable it, use **Open Login Items Settings** to finish the setup.
 
@@ -308,10 +328,16 @@ To search and run Apple Shortcuts, allow Conjuror to control Shortcuts Events wh
 
 Some system commands also need Automation permission. macOS asks whether Conjuror can control Finder the first time you empty the Trash, and System Events the first time you toggle dark mode.
 
+Accessibility access lets Return paste an emoji or clipboard item into the app you were using, and lets a tap of `fn` work as a mode shortcut. Without it, Return copies instead of pasting. You can grant it from **Settings → Clipboard** or **Settings → About**.
+
+Clipboard history needs permission to read text you copy in other apps. macOS asks the first time Conjuror reads it, and only while clipboard history is on.
+
+**Settings → About** shows the status of each permission and opens the matching page in System Settings.
+
 File search uses the on-device Spotlight index. macOS may ask before Conjuror can access Desktop, Documents, Downloads, or iCloud Drive; you can trigger those prompts from **Settings → Files**.
 
 Currency conversion uses the network to refresh an exchange-rate snapshot daily; failed requests may be retried sooner. Your search text is never sent, and the latest rates remain available offline.
 
 Quicklinks and web search open a site in your browser or the app you chose, which sends your search text to that site.
 
-Application, running app, file, folder, and emoji search, arithmetic, unit conversion, dates, and timezone conversion stay on your Mac and do not require network access.
+Application, running app, file, folder, emoji, and clipboard history search, arithmetic, unit conversion, dates, and timezone conversion stay on your Mac and do not require network access.
