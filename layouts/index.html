@@ -29,7 +29,7 @@
         <div class="screenshot-frame modes-image" id="mode-screenshot">
           {{ range $index, $mode := $home.modes.items }}
             {{ $smallScreenshot := replace $mode.screenshot ".webp" "-900.webp" }}
-            <img class="mode-screenshot{{ if eq $index 0 }} is-active{{ end }}" src="{{ $mode.screenshot | relURL }}" srcset="{{ $smallScreenshot | relURL }} 900w, {{ $mode.screenshot | relURL }} 1404w" sizes="(max-width: 30.5rem) 72vw, (max-width: 52rem) 22rem, 28rem" alt="{{ $mode.screenshotAlt }}" width="1404" height="1100" data-mode-image="{{ $index }}"{{ if ne $index 0 }} aria-hidden="true"{{ end }}>
+            <img class="mode-screenshot{{ if eq $index 0 }} is-active{{ end }}" src="{{ $mode.screenshot | relURL }}" srcset="{{ $smallScreenshot | relURL }} 900w, {{ $mode.screenshot | relURL }} 1500w" sizes="(max-width: 30.5rem) 72vw, (max-width: 52rem) 22rem, 28rem" alt="{{ $mode.screenshotAlt }}" width="1500" height="1080" data-mode-image="{{ $index }}"{{ if ne $index 0 }} aria-hidden="true"{{ end }}>
           {{ end }}
         </div>
         <div class="modes-text">

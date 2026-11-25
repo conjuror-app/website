@@ -61,6 +61,9 @@
   .modes-copy h2 { font-size: clamp(3.2rem, 15vw, 4.8rem); }
   .modes-copy p { font-size: 1.05rem; }
   .mode-list { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: .8rem; }
+  .mode-list li,
+  .mode-list li:nth-child(n+5) { grid-column: auto; }
+  .mode-list li:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .mode-list button { padding: 1.1rem .6rem; }
   .mode-list strong { font-size: 1.1rem; }
   .mode-list small { font-size: .85rem; }
