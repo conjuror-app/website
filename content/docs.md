@@ -61,17 +61,19 @@ Pasting needs Accessibility access. Until you allow it, Return copies the emoji 
 
 ## Launcher basics
 
-Press `⌥ + Space` to show Conjuror, then start typing. Use the arrow keys to select a result and press Return to open, copy, or run it. Conjuror hides after completing the action. After pasting or copying an emoji, clipboard item, or calculation result, or running a Shortcut, focus returns to the app you were using before opening Conjuror.
+Press `⌥ + Space` to show Conjuror, then start typing. Use the arrow keys to select a result and press Return to open, paste, copy, or run it. Conjuror hides after completing the action. After pasting or copying an emoji, clipboard item, or calculation result, or running a Shortcut, focus returns to the app you were using before opening Conjuror.
 
 Closing the launcher with Escape or its hotkey also returns focus to the previous app. If the query is not empty, press Escape once to clear it and again to close the launcher.
 
-Press `⌘ + Return` to reveal the selected app or file in Finder instead of opening it. Holding Return down does not repeat the action.
+Press `⌘ + Return` to reveal the selected app or file in Finder instead of opening it, or to copy the selected emoji or clipboard item without pasting. Holding Return down does not repeat the action.
 
 To change the main shortcut, open **Settings → Apps** and record a new key combination. Apple Shortcuts, Emoji, Clipboard, and Files each have a shortcut in their own Settings pane. Their defaults are `⌥ + ⇧ + Space`, `⌥ + ⇧ + E`, `⌥ + ⇧ + V`, and `⌘ + ⇧ + F`. The Clipboard shortcut only works while clipboard history is on.
 
-A mode shortcut can also be a tap of `fn` (🌐) on its own. This needs Accessibility access. macOS can also act on the 🌐 key, so Settings shows a warning until **Press 🌐 key to** is set to **Do Nothing** under **System Settings → Keyboard**. If a shortcut can’t be registered, for example `fn` before you allow Accessibility access, Conjuror tries again each time it becomes active.
+A mode shortcut can also be a tap of `fn` (🌐) on its own. This needs Accessibility access. macOS can also act on the 🌐 key, so Settings shows a warning until **Press 🌐 key to** is set to **Do Nothing** under **System Settings → Keyboard**. If a shortcut cannot be registered, for example `fn` before you allow Accessibility access, Conjuror tries again each time it becomes active.
 
 To change how the launcher looks, open **Settings → General** and choose **Launcher appearance**. Standard is the default. Minimal uses tighter spacing and smaller result rows, and hides the footer. Command Bar shows keyboard hints for the available actions, and previews the selected file or clipboard item beside the results.
+
+{{< docs-screenshot src="/images/screenshots/command-mode-files.webp" alt="Conjuror in Command Bar appearance searching files for “Four Against”, showing a side-by-side preview of the selected PDF and keyboard hints for Open item and Reveal" caption="Command Bar appearance adds keyboard hints and a side-by-side preview in Files and Clipboard modes." >}}
 
 While the search field is active, you can use the standard shortcuts for copy, paste, cut, select all, undo, and redo.
 
@@ -93,7 +95,7 @@ Give an app a short alias to rank it first. For example, with the alias `vs` for
 
 An app hotkey opens the app from anywhere, or switches to it if it is already running. Press the hotkey again while the app is in front to hide it. App hotkeys work without opening the launcher.
 
-{{< docs-screenshot src="/images/screenshots/alias.webp" alt="Conjuror showing Helium first for the query “brow”, with its alias “browse” next to the result" caption="Typing the start of an alias ranks its app first and shows the alias beside it." >}}
+{{< docs-screenshot src="/images/screenshots/alias.webp" alt="Conjuror showing Helium first for the query “bro”, with its alias “browser” next to the result" caption="Typing the start of an alias ranks its app first and shows the alias beside it." >}}
 
 To add an alias or hotkey, open **Settings → Apps**, choose **Aliases & Hotkeys**, then click **Add…** and pick an app. Aliases and hotkeys follow an app if you move it, as long as only one copy is installed. If a hotkey cannot be registered, for example because another app already uses it, your other hotkeys keep working.
 
@@ -107,7 +109,7 @@ To hide an app from search and recent results, open **Settings → Apps**, choos
 
 A quicklink opens a URL from the launcher. Type its keyword followed by search text, such as `gh swift testing`, to search GitHub for “swift testing”. Typing part of a quicklink’s name also finds it, listed after matching apps. If you press Return on a keyword with nothing after it, Conjuror fills in the keyword so you can keep typing.
 
-{{< docs-screenshot src="/images/screenshots/quicklink.webp" alt="Conjuror showing the GitHub quicklink for “gh swift testing” and a DuckDuckGo web search row" caption="The GitHub quicklink searches for the text after its keyword. The last row searches the web." >}}
+{{< docs-screenshot src="/images/screenshots/quicklink.webp" alt="Conjuror showing the GitHub quicklink for “gh swift testing” and a Kagi web search row" caption="The GitHub quicklink searches for the text after its keyword. The last row searches the web." >}}
 
 Conjuror includes Google (`g`), DuckDuckGo (`ddg`), GitHub (`gh`), and Wikipedia (`wiki`). Add, edit, or remove quicklinks under **Settings → Quicklinks**. Put `{query}` in the URL where the search text should go, as in `https://kagi.com/search?q={query}`. A URL without `{query}` opens as it is. Each quicklink opens in the default app for its URL unless you choose a different app. **Restore Built-ins** brings back any of the four built-in quicklinks you have removed.
 
@@ -115,7 +117,7 @@ The last row in application results searches the web for your query. Select it a
 
 Your search text is only sent to a site when you open one of its quicklinks or a web search.
 
-{{< docs-screenshot src="/images/screenshots/settings-quicklinks.webp" alt="Conjuror Quicklinks settings showing DuckDuckGo as the web search fallback and the built-in Google, DuckDuckGo, GitHub, and Wikipedia quicklinks" caption="Manage quicklinks and choose the web search fallback from Settings → Quicklinks." >}}
+{{< docs-screenshot src="/images/screenshots/settings-quicklinks.webp" alt="Conjuror Quicklinks settings showing Kagi as the web search fallback and the GitHub, Wikipedia, and Kagi quicklinks" caption="Manage quicklinks and choose the web search fallback from Settings → Quicklinks." >}}
 
 ## Running apps
 
@@ -133,7 +135,7 @@ Type `@` to list running apps, then press Return to switch to one. Excluded apps
 
 Force quitting and quitting every app ask first: press Return to confirm or Escape to cancel. Apps you hide stay hidden when the launcher closes.
 
-{{< docs-screenshot src="/images/screenshots/running-confirm.webp" alt="Conjuror in Running apps mode asking to confirm force quitting Discord, with Cancel and Force Quit buttons" caption="Force quit asks for confirmation before it runs." >}}
+{{< docs-screenshot src="/images/screenshots/running-confirm.webp" alt="Conjuror in Running apps mode asking to confirm force quitting Rex, with Cancel and Force Quit buttons" caption="Force quit asks for confirmation before it runs." >}}
 
 ## System commands
 
@@ -171,9 +173,9 @@ Desktop, Documents, Downloads, and iCloud Drive are protected by macOS. Conjuror
 
 Use `⌘ + ⇧ + F` to open Conjuror directly in Files mode. You can turn this shortcut off or record a different key combination under **Settings → Files**.
 
-To remove Files mode from the launcher, turn off **Files module** in the same Settings pane.
+To remove Files mode from the launcher, turn off **Files** in the same Settings pane.
 
-{{< docs-screenshot src="/images/screenshots/settings-files.webp" alt="Conjuror Files settings showing the enabled Files module, direct shortcut, and protected-folder access including iCloud Drive" caption="Enable file search, configure its shortcut, and grant protected-folder access from Settings → Files." >}}
+{{< docs-screenshot src="/images/screenshots/settings-files.webp" alt="Conjuror Files settings showing Files enabled, the direct keyboard shortcut, and protected-folder access including iCloud Drive" caption="Enable file search, configure its shortcut, and grant protected-folder access from Settings → Files." >}}
 
 ## Calculations
 
@@ -217,9 +219,13 @@ Use `to`, `in`, `->`, or `→` to convert a quantity to a specific unit. You can
 30 °C to °F
 5 ft 3 in
 100 lbs
+90 days in months
+2 years in days
 ```
 
-If you omit the target unit, Conjuror chooses a common counterpart. For example, it converts pounds to kilograms, centimetres to inches, or miles to kilometres. US customary volume units use US definitions.
+If you omit the target unit, Conjuror chooses a common counterpart. For example, it converts pounds to kilograms, centimetres to inches, miles to kilometres, or bare days to weeks (such as `1000 days`). US customary volume units use US definitions.
+
+Duration conversions support seconds, minutes, hours, days, weeks, months, and years, using fixed average durations (365.25 days per year and 30.4375 days per month) rather than calendar intervals. Results use unit symbols such as `wk`, `mo`, and `yr`.
 
 ### Relative dates
 
@@ -274,6 +280,8 @@ You can use arithmetic in the amount. To name the source currency after the arit
 
 If you omit the target currency, Conjuror uses the currency from your regional settings. It downloads a complete rate snapshot from [Frankfurter](https://frankfurter.dev) daily after a successful refresh; failed requests may be retried sooner. Your search text is never sent. The latest snapshot remains available offline, and disabling currency conversion removes the cached rates.
 
+{{< docs-screenshot src="/images/screenshots/settings-calculator.webp" alt="Conjuror Calculator settings showing the optional Currency conversion toggle enabled" caption="Turn optional daily exchange-rate downloads on or off from Settings → Calculator." >}}
+
 ## Emoji
 
 Type `:` to switch to Emoji mode, then search by emoji name or common keyword. For example, `lol` finds 😂 even though the word is not part of its Unicode name. Results include gender and skin-tone variants from the latest Unicode catalog.
@@ -284,15 +292,23 @@ Leave the search empty to see recently used emoji first. To apply the same skin 
 
 To remove Emoji mode from the launcher, turn it off under **Settings → Emoji**.
 
+{{< docs-screenshot src="/images/screenshots/settings-emoji.webp" alt="Conjuror Emoji settings showing Emoji enabled, the fn keyboard shortcut, and Light selected as the preferred skin tone" caption="Turn Emoji mode on or off, set its shortcut, and pick a default skin tone from Settings → Emoji." >}}
+
 ## Clipboard history
 
 Clipboard history is off by default. Turn it on under **Settings → Clipboard**, then type `#` or press `⌥ + ⇧ + V` to search text you have copied. Your most recent items come first, and each one shows the app it came from and how long ago you copied it.
 
+{{< docs-screenshot src="/images/screenshots/clipboard.webp" alt="Conjuror in Clipboard history mode listing recent text copies with their source app and age" caption="Clipboard history lists recent copies alongside the app they came from and when you copied them." >}}
+
 Press Return, or click an item, to paste it into the app you were using. Pasting needs Accessibility access; until you allow it, Return copies the item instead. Press `⌘ + Return` to copy an item without pasting, or `⌃ + X` to remove it from your history.
+
+{{< docs-screenshot src="/images/screenshots/command-mode-clipboard.webp" alt="Conjuror in Command Bar appearance showing Clipboard history with a side-by-side text preview, source, character count, and Paste and Copy keyboard hints" caption="In Command Bar appearance, Clipboard history previews the selected copy beside the list." >}}
 
 Conjuror keeps plain text only. It skips text copied from password managers such as 1Password, Bitwarden, KeePassXC, Keychain Access, and Passwords, and anything an app marks as concealed or temporary. macOS may ask whether Conjuror can paste from other apps the first time it reads text you copied elsewhere.
 
 Under **Keep history for**, choose 1 day, 7 days, 30 days, 3 months, or forever. The default is 30 days, and Conjuror keeps up to 1,000 items. **Clear History…** deletes every item, and turning clipboard history off deletes it too. Your history stays on your Mac.
+
+{{< docs-screenshot src="/images/screenshots/settings-clipboard.webp" alt="Conjuror Clipboard settings showing clipboard history enabled, the ⌥⇧V keyboard shortcut, Paste into apps allowed, 30 Days retention, and Clear History" caption="Enable clipboard history, check paste access, and manage retention from Settings → Clipboard." >}}
 
 ## Apple Shortcuts
 
@@ -302,17 +318,19 @@ Recently run Shortcuts appear first when the search is empty and can rank higher
 
 Conjuror refreshes your Shortcuts each time you open Apple Shortcuts mode. Your existing list stays searchable while it refreshes. To remove Apple Shortcuts mode from the launcher, turn it off under **Settings → Shortcuts**.
 
+{{< docs-screenshot src="/images/screenshots/settings-shortcuts.webp" alt="Conjuror Shortcuts settings showing Apple Shortcuts enabled and the ⌥⇧Space keyboard shortcut" caption="Turn Apple Shortcuts mode on or off and set its shortcut from Settings → Shortcuts." >}}
+
 ## Settings
 
 Open Settings from the menu bar item, or press `⌘ + ,` while Conjuror is active. The window opens on your currently active macOS Space. Choose a pane from the sidebar. You can resize the window vertically, and it remembers its height.
 
 - **General:** Turn launch at login on or off, choose the launcher appearance and accent colour, and set how many results appear before scrolling. Appearance choices are Standard, Minimal, and Command Bar. Accent choices include Cyan, Purple, Yellow, a custom colour, or Disabled.
 - **Apps:** Change the main launcher shortcut, choose whether application search includes System Settings sections and system commands, manage app aliases and hotkeys, and exclude apps from search.
+- **Shortcuts:** Turn Apple Shortcuts mode on or off and configure the shortcut that opens it directly.
 - **Emoji:** Turn Emoji mode on or off, configure the shortcut that opens it directly, and choose the skin tone Conjuror applies to supported emoji by default.
 - **Clipboard:** Turn clipboard history on or off, configure the shortcut that opens it directly, check whether Return can paste, choose how long to keep history, and clear it.
-- **Shortcuts:** Turn Apple Shortcuts mode on or off and configure the shortcut that opens it directly.
-- **Calculator:** Turn optional currency conversion on or off.
 - **Files:** Turn file and folder search on or off, configure its direct shortcut, and request access to the protected Desktop, Documents, Downloads, and iCloud Drive locations.
+- **Calculator:** Turn optional currency conversion on or off.
 - **Quicklinks:** Add, edit, or remove quicklinks, restore the built-in ones, and choose the web search fallback.
 - **About:** Check the installed version and the status of each permission, report a bug, copy diagnostics for a bug report, and open the GitHub repository, licence, and credits.
 
@@ -333,6 +351,8 @@ Accessibility access lets Return paste an emoji or clipboard item into the app y
 Clipboard history needs permission to read text you copy in other apps. macOS asks the first time Conjuror reads it, and only while clipboard history is on.
 
 **Settings → About** shows the status of each permission and opens the matching page in System Settings.
+
+{{< docs-screenshot src="/images/screenshots/settings-about.webp" alt="Conjuror About settings showing the app version, support and diagnostics buttons, and permission statuses for Accessibility, Paste from other apps, and Protected folders" caption="Check permission status, copy diagnostics, and open System Settings from Settings → About." >}}
 
 File search uses the on-device Spotlight index. macOS may ask before Conjuror can access Desktop, Documents, Downloads, or iCloud Drive; you can trigger those prompts from **Settings → Files**.
 

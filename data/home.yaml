@@ -10,10 +10,10 @@ hero:
   instructionsHTML: Press <kbd>⌥ Space</kbd>, type an app, then <kbd>Return</kbd> to launch.
 modes:
   title:
-    prefix: Six modes, one
+    prefix: Seven modes, one
     key: tab
     suffix: apart.
-  descriptionHTML: Open apps, quicklinks, and System Settings, with aliases and recent launches helping to order matches. Press <kbd>Tab</kbd> to switch to Shortcuts, Emoji, Files, Running apps, or System commands.
+  descriptionHTML: Open apps, quicklinks, and System Settings, with aliases and recent launches helping to order matches. Press <kbd>Tab</kbd> to switch to Shortcuts, Emoji, Clipboard, Files, Running apps, or System commands.
   items:
     - name: Apps
       description: Open apps, find settings, or calculate.
@@ -24,9 +24,13 @@ modes:
       screenshot: /images/screenshots/mode-shortcuts.webp
       screenshotAlt: Conjuror in Shortcuts mode
     - name: Emoji
-      description: Search, choose, and copy.
+      description: Search, choose, and paste.
       screenshot: /images/screenshots/mode-emoji.webp
       screenshotAlt: Conjuror in Emoji mode
+    - name: Clipboard
+      description: Search and paste text you copied.
+      screenshot: /images/screenshots/mode-clipboard.webp
+      screenshotAlt: Conjuror in Clipboard history mode listing recent copies
     - name: Files
       description: Find a file or folder and open it.
       screenshot: /images/screenshots/mode-files.webp
@@ -46,7 +50,7 @@ files:
     suffix: away.
   descriptionHTML: Find files without the exact filename. Type <kbd>/</kbd>, enter what you remember, and press <kbd>Return</kbd> to open a match from your Spotlight index.
   screenshot: /images/screenshots/files.webp
-  screenshotAlt: Conjuror showing a folder and PDF files matching “Four Against”
+  screenshotAlt: Conjuror showing the Four Against Darkness folder and matching PDF files
 calculate:
   title:
     emphasis: Calculate
